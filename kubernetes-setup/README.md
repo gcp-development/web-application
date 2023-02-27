@@ -1,6 +1,6 @@
 
 ```bash
-minikube start -p demo
+minikube start --driver=docker -p demo
 ```
 
 ```bash
@@ -21,6 +21,10 @@ kubectl apply -f 4_postgres-pvc.yml
 
 ```bash
 kubectl apply -f 5_postgres-deployment.yml
+```
+
+```bash
+minikube tunnel -p demo
 ```
 
 ```bash
