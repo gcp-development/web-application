@@ -1,0 +1,13 @@
+[package]
+name = "library-service"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.3.0"
+actix-rt = "2.8.0"
+serde = { version = "1.0.152", features = ["derive"] }
+chrono = { version = "0.4.23", features = ["serde"] }
+sqlx = { version = "0.7.0-alpha.1", default_features = false, features =["postgres","runtime-tokio-native-tls", "macros","chrono"] }
+openssl = { version = "0.10.41", features = ["vendored"] }
+dotenv = "0.15.0"

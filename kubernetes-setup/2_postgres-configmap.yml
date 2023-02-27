@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-secret
+  namespace: web-application
+  labels:
+    app: postgres
+data:
+  POSTGRES_DB: library
+  POSTGRES_USER: admin_library
+  POSTGRES_PASSWORD: libDB2023
