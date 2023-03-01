@@ -2,7 +2,7 @@
 
 ## Motivation
 
-There is no "one-size-fits-all" for any technology and everything comes down to "what we are trying to solve?". For Web3, we are dealing with distributed applications working on distributed software infrastructure (P2P networks). Meaning, right from the beginning our mandatory requirements are "resource-efficient","minimize latency" and "support high concurrency". In business terms this means we are going to lose money if we don't get the right trade-offs in our technology selection. For startups these technical choices and trade-offs will be crucial in their product development and ability to scale. 
+There is no "one-size-fits-all" for any technology and everything comes down to "what we are trying to solve?". For Web3, we are dealing with distributed applications working on distributed software infrastructure (P2P networks). In business terms this means we are going to lose money if we don't get the right trade-offs in our technology stack. For startups these technical choices and trade-offs will be crucial in their product development and ability to scale.Meaning, right from the beginning our mandatory requirements are "resource-efficient","minimize latency" and "support high concurrency". 
 
 <hr>
 References:<br>
