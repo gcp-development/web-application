@@ -8,11 +8,11 @@ pub fn general_routes(cfg: &mut web::ServiceConfig) {
 pub fn book_routes(cfg: &mut web::ServiceConfig) {
     cfg.service(
         web::scope("/library")
-            .route("", web::get().to(get_all_books))
-            .route("/", web::post().to(new_book))
+            .route("/", web::post().to(post_add_book))
+            .route("/bulk", web::post().to(post_bulk_insert))
+            .route("", web::get().to(get_books))
             .route("/{id}", web::get().to(get_book_by_id))
-            .route("/{id}", web::delete().to(delete_book_by_id))
-            .route("/{id}", web::put().to(update_book_by_id))
-            .route("/bulk", web::post().to(bulk)),
+            .route("/{id}", web::put().to(put_book_by_id))
+            .route("/{id}", web::delete().to(delete_book_by_id)),
     );
 }
