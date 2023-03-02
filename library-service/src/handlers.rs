@@ -69,7 +69,6 @@ mod tests {
     use std::sync::Mutex;
     use actix_web::http::StatusCode;
     use actix_web::web;
-    //use chrono::NaiveDate;
     use dotenv::dotenv;
     use sqlx::postgres::PgPoolOptions;
     use chrono::Utc;

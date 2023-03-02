@@ -1,18 +1,17 @@
 use actix_web::HttpResponse;
-//use sqlx::{Execute};
 use super::errors::BookError;
 use super::model::Book;
 use sqlx::postgres::PgPool;
 
 pub async fn db_add_book(pool: &PgPool, book: Book) -> Result<HttpResponse, BookError> {
-    let queryResult = sqlx::query!("INSERT INTO public.books(id, title, author) VALUES ( $1, $2, $3)",
+    let query_result = sqlx::query!("INSERT INTO public.books(id, title, author) VALUES ( $1, $2, $3)",
         book.id,
         book.title,
         book.author)
         .execute(pool)
         .await?;
 
-    if queryResult.rows_affected() > 0 {
+    if query_result.rows_affected() > 0 {
         Ok(HttpResponse::Ok().json("Book inserted"))
     } else {
         Err(BookError::NotFound("Book not inserted.".into(), ))
@@ -29,14 +28,14 @@ pub async fn db_bulk_insert(pool: &PgPool, rows: Vec<Book>) -> Result<HttpRespon
         book_author.push(book.author.into());
     });
 
-    let queryResult = sqlx::query!("INSERT INTO public.books(id, title, author) SELECT * FROM UNNEST ($1::int4[], $2::text[], $3::text[])",
+    let query_result = sqlx::query!("INSERT INTO public.books(id, title, author) SELECT * FROM UNNEST ($1::int4[], $2::text[], $3::text[])",
         &book_id[..],
         &book_title[..],
         &book_author[..]
     )
         .execute(pool)
         .await?;
-    if queryResult.rows_affected() > 0 {
+    if query_result.rows_affected() > 0 {
         Ok(HttpResponse::Ok().json("Books inserted"))
     } else {
         Err(BookError::NotFound("Books not inserted.".into(), ))
@@ -84,7 +83,7 @@ pub async fn db_read_book_by_id(id: i32, pool: &PgPool) -> Result<Book, BookErro
 }
 
 pub async fn db_update_book_by_id(id: i32, updated_book: Book, pool: &PgPool) -> Result<Book, BookError> {
-    let queryResult = sqlx::query!("UPDATE books SET title= $2, author= $3, record_timestamp = $4 WHERE id = $1;",
+    let query_result = sqlx::query!("UPDATE books SET title= $2, author= $3, record_timestamp = $4 WHERE id = $1;",
         id,
         updated_book.title,
         updated_book.author,
@@ -93,7 +92,7 @@ pub async fn db_update_book_by_id(id: i32, updated_book: Book, pool: &PgPool) ->
         .await
         .unwrap();
 
-    if queryResult.rows_affected() > 0 {
+    if query_result.rows_affected() > 0 {
         Ok(Book {
             id: updated_book.id,
             title: updated_book.title.clone(),
@@ -106,11 +105,11 @@ pub async fn db_update_book_by_id(id: i32, updated_book: Book, pool: &PgPool) ->
 }
 
 pub async fn db_delete_book_by_id(id: i32, pool: &PgPool) -> Result<HttpResponse, BookError> {
-    let queryResult = sqlx::query!("DELETE FROM books WHERE id = $1;", id)
+    let query_result = sqlx::query!("DELETE FROM books WHERE id = $1;", id)
         .execute(pool)
         .await
         .unwrap();
-    if queryResult.rows_affected() > 0 {
+    if query_result.rows_affected() > 0 {
         Ok(HttpResponse::Ok().json("Book deleted."))
     } else {
         Err(BookError::NotFound("Book not updated.".into(), ))
