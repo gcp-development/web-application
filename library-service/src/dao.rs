@@ -1,30 +1,25 @@
 use actix_web::HttpResponse;
-use sqlx::{Execute, Executor, Row};
+//use sqlx::{Execute};
 use super::errors::BookError;
 use super::model::Book;
 use sqlx::postgres::PgPool;
 
-pub async fn db_add_book(pool: &PgPool, book: Book) -> Result<Book, BookError> {
-    let row = sqlx::query!("INSERT INTO public.books(id, title, author) VALUES ( $1, $2, $3)
-    returning
-    id,
-    title,
-    author",
-    book.id,
-    book.title,
-    book.author
-    )
-        .fetch_one(pool)
+pub async fn db_add_book(pool: &PgPool, book: Book) -> Result<HttpResponse, BookError> {
+    let queryResult = sqlx::query!("INSERT INTO public.books(id, title, author) VALUES ( $1, $2, $3)",
+        book.id,
+        book.title,
+        book.author)
+        .execute(pool)
         .await?;
-    Ok(Book {
-        id: row.id,
-        title: row.title.clone(),
-        author: row.author.clone(),
-        posted_time: Some(book.posted_time.unwrap()),
-    })
+
+    if queryResult.rows_affected() > 0 {
+        Ok(HttpResponse::Ok().json("Book inserted"))
+    } else {
+        Err(BookError::NotFound("Book not inserted.".into(), ))
+    }
 }
 
-pub async fn db_bulk_insert(pool: &PgPool, rows: Vec<Book>) -> Result<bool, BookError> {
+pub async fn db_bulk_insert(pool: &PgPool, rows: Vec<Book>) -> Result<HttpResponse, BookError> {
     let mut book_id: Vec<i32> = Vec::new();
     let mut book_title: Vec<String> = Vec::new();
     let mut book_author: Vec<String> = Vec::new();
@@ -34,17 +29,21 @@ pub async fn db_bulk_insert(pool: &PgPool, rows: Vec<Book>) -> Result<bool, Book
         book_author.push(book.author.into());
     });
 
-    let todo = sqlx::query!("INSERT INTO public.books(id, title, author) SELECT * FROM UNNEST ($1::int4[], $2::text[], $3::text[])",
+    let queryResult = sqlx::query!("INSERT INTO public.books(id, title, author) SELECT * FROM UNNEST ($1::int4[], $2::text[], $3::text[])",
         &book_id[..],
-    &book_title[..],
-    &book_author[..]
+        &book_title[..],
+        &book_author[..]
     )
         .execute(pool)
         .await?;
-    Ok(true)
+    if queryResult.rows_affected() > 0 {
+        Ok(HttpResponse::Ok().json("Books inserted"))
+    } else {
+        Err(BookError::NotFound("Books not inserted.".into(), ))
+    }
 }
 
-pub async fn db_books(pool: &PgPool) -> Result<Vec<Book>, BookError> {
+pub async fn db_read_books(pool: &PgPool) -> Result<Vec<Book>, BookError> {
     let query_rows = sqlx::query!("SELECT id, title, author, record_timestamp FROM public.books;")
         .fetch_all(pool)
         .await
@@ -67,17 +66,17 @@ pub async fn db_books(pool: &PgPool) -> Result<Vec<Book>, BookError> {
 }
 
 pub async fn db_read_book_by_id(id: i32, pool: &PgPool) -> Result<Book, BookError> {
-    let row = sqlx::query!("SELECT id, title, author, record_timestamp FROM public.books WHERE id = $1",id)
+    let query_row = sqlx::query!("SELECT id, title, author, record_timestamp FROM public.books WHERE id = $1",id)
         .fetch_all(pool)
         .await
         .unwrap();
 
-    if row.len() > 0 {
+    if query_row.len() > 0 {
         Ok(Book {
-            id: row[0].id,
-            title: row[0].title.clone(),
-            author: row[0].author.clone(),
-            posted_time: Some(chrono::NaiveDateTime::from(row[0].record_timestamp.unwrap())),
+            id: query_row[0].id,
+            title: query_row[0].title.clone(),
+            author: query_row[0].author.clone(),
+            posted_time: Some(chrono::NaiveDateTime::from(query_row[0].record_timestamp.unwrap())),
         })
     } else {
         Err(BookError::NotFound("Book not found.".into(), ))
@@ -85,16 +84,16 @@ pub async fn db_read_book_by_id(id: i32, pool: &PgPool) -> Result<Book, BookErro
 }
 
 pub async fn db_update_book_by_id(id: i32, updated_book: Book, pool: &PgPool) -> Result<Book, BookError> {
-    let row = sqlx::query!("UPDATE books SET title= $2, author= $3, record_timestamp = $4 WHERE id = $1;",
-        updated_book.id,
+    let queryResult = sqlx::query!("UPDATE books SET title= $2, author= $3, record_timestamp = $4 WHERE id = $1;",
+        id,
         updated_book.title,
         updated_book.author,
         updated_book.posted_time)
-        .fetch_all(pool)
+        .execute(pool)
         .await
         .unwrap();
 
-    if row.len() > 0 {
+    if queryResult.rows_affected() > 0 {
         Ok(Book {
             id: updated_book.id,
             title: updated_book.title.clone(),
@@ -106,14 +105,13 @@ pub async fn db_update_book_by_id(id: i32, updated_book: Book, pool: &PgPool) ->
     }
 }
 
-pub async fn db_delete_book_by_id(id: i32, pool: &PgPool) -> Result<String, BookError> {
-    let queryResult = sqlx::query!("DELETE FROM books WHERE id = $1;",
-        id)
-        .fetch_one(pool)
+pub async fn db_delete_book_by_id(id: i32, pool: &PgPool) -> Result<HttpResponse, BookError> {
+    let queryResult = sqlx::query!("DELETE FROM books WHERE id = $1;", id)
+        .execute(pool)
         .await
         .unwrap();
-    if queryResult.is_empty() == true {
-        Ok("Book deleted.".to_string())
+    if queryResult.rows_affected() > 0 {
+        Ok(HttpResponse::Ok().json("Book deleted."))
     } else {
         Err(BookError::NotFound("Book not updated.".into(), ))
     }

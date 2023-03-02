@@ -2,7 +2,6 @@ use super::dao::*;
 use super::state::AppState;
 use actix_web::{web, HttpResponse};
 use super::model::Book;
-use chrono::Utc;
 use crate::errors::BookError;
 
 pub async fn get_probe(app_state: web::Data<AppState>) -> HttpResponse {
@@ -13,29 +12,21 @@ pub async fn get_probe(app_state: web::Data<AppState>) -> HttpResponse {
 pub async fn post_add_book(
     new_book: web::Json<Book>,
     app_state: web::Data<AppState>,
-) -> HttpResponse {
-    println!("Received new book");
-    let book = db_add_book(&app_state.db, new_book.into()).await;
-    HttpResponse::Ok().json(book)
+) ->  Result<HttpResponse, BookError> {
+    db_add_book(&app_state.db, new_book.into()).await
 }
 
 pub async fn post_bulk_insert(
     new_books: web::Json<Vec<Book>>,
     app_state: web::Data<AppState>,
-) -> HttpResponse {
-    let result = db_bulk_insert(&app_state.db, new_books.into_inner()).await;
-    if result.unwrap() == true {
-        HttpResponse::Ok().json("Bulk insert done.")
-    } else {
-        HttpResponse::Ok().json("Bulk insert failure.")
-    }
+) -> Result<HttpResponse, BookError> {
+    db_bulk_insert(&app_state.db, new_books.into_inner()).await
 }
 
 pub async fn get_books(
     app_state: web::Data<AppState>
 ) -> Result<HttpResponse, BookError> {
-    db_books(&app_state.db)
-        .await
+    db_read_books(&app_state.db).await
         .map(|books| HttpResponse::Ok().json(books))
 }
 
@@ -68,9 +59,7 @@ pub async fn delete_book_by_id(
 ) -> Result<HttpResponse, BookError> {
     let tuple = param.into_inner();
     let id: i32 = tuple;
-    db_delete_book_by_id(id, &app_state.db)
-        .await
-        .map(|book| HttpResponse::Ok().json("kkju"))
+    db_delete_book_by_id(id, &app_state.db).await
 }
 
 #[cfg(test)]
@@ -80,10 +69,24 @@ mod tests {
     use std::sync::Mutex;
     use actix_web::http::StatusCode;
     use actix_web::web;
-    use chrono::NaiveDate;
+    //use chrono::NaiveDate;
     use dotenv::dotenv;
     use sqlx::postgres::PgPoolOptions;
-    /*
+    use chrono::Utc;
+
+    const BOOK_ID0: i32 = 103;
+    const BOOK_TITLE0: &str = "Unit Test title 0";
+    const BOOK_AUTHOR0: &str = "Unit Test author 0";
+    const BOOK_ID1: i32 = 101;
+    const BOOK_TITLE1: &str = "Unit Test title 1";
+    const BOOK_AUTHOR1: &str = "Unit Test author 1";
+    const BOOK_ID2: i32 = 102;
+    const BOOK_TITLE2: &str = "Unit Test title 2";
+    const BOOK_AUTHOR2: &str = "Unit Test author 2";
+    const BOOK_ID3: i32 = 103;
+    const BOOK_TITLE3: &str = "Unit Test title 3";
+    const BOOK_AUTHOR3: &str = "Unit Test author 3";
+
     #[actix_rt::test]
     async fn test_add_book() {
         dotenv().ok();
@@ -101,14 +104,14 @@ mod tests {
         });
 
         let new_book = Book {
-            id: 99,
-            title: "Unit Test title".into(),
-            author: "Unit Test author".into(),
-            posted_time: Some(NaiveDate::from_ymd_opt(2023, 02, 28).expect("none").and_hms_opt(06, 30, 0).unwrap()),
+            id: BOOK_ID0,
+            title: BOOK_TITLE0.into(),
+            author: BOOK_AUTHOR0.into(),
+            posted_time: Some(Utc::now().naive_utc()),
         };
 
         let json_new_book = web::Json(new_book);
-        let http_response = post_add_book(json_new_book, shared_data).await;
+        let http_response = post_add_book(json_new_book, shared_data).await.unwrap();
         assert_eq!(http_response.status(), StatusCode::OK);
     }
 
@@ -128,36 +131,36 @@ mod tests {
             db: db_pool,
         });
 
-        let new_book_100 = Book {
-            id: 100,
-            title: "Unit Test title 100".into(),
-            author: "Unit Test author 100".into(),
-            posted_time: Some(NaiveDate::from_ymd_opt(2023, 02, 28).expect("none").and_hms_opt(06, 30, 0).unwrap()),
+        let new_book1 = Book {
+            id: BOOK_ID1,
+            title: BOOK_TITLE1.into(),
+            author: BOOK_AUTHOR1.into(),
+            posted_time: Some(Utc::now().naive_utc()),
         };
 
-        let new_book_200 = Book {
-            id: 200,
-            title: "Unit Test title 200".into(),
-            author: "Unit Test author 200".into(),
-            posted_time: Some(NaiveDate::from_ymd_opt(2023, 02, 28).expect("none").and_hms_opt(06, 30, 0).unwrap()),
+        let new_book2 = Book {
+            id: BOOK_ID2,
+            title: BOOK_TITLE2.into(),
+            author: BOOK_AUTHOR2.into(),
+            posted_time: Some(Utc::now().naive_utc()),
         };
 
-        let new_book_300 = Book {
-            id: 300,
-            title: "Unit Test title 300".into(),
-            author: "Unit Test author 300".into(),
-            posted_time: Some(NaiveDate::from_ymd_opt(2023, 02, 28).expect("none").and_hms_opt(06, 30, 0).unwrap()),
+        let new_book3 = Book {
+            id: BOOK_ID3,
+            title: BOOK_TITLE3.into(),
+            author: BOOK_AUTHOR3.into(),
+            posted_time: Some(Utc::now().naive_utc()),
         };
 
-        let stack: Vec<Book> = Vec::from([new_book_100, new_book_200, new_book_300]);
+        let book_stack: Vec<Book> = Vec::from([new_book1, new_book2, new_book3]);
 
-        let json_stack = web::Json(stack);
-        let http_response = post_bulk_insert(json_stack, shared_data).await;
+        let json_book_stack = web::Json(book_stack);
+        let http_response = post_bulk_insert(json_book_stack, shared_data).await.unwrap();
         assert_eq!(http_response.status(), StatusCode::OK);
     }
 
     #[actix_rt::test]
-    async fn test_books() {
+    async fn test_get_books() {
         dotenv().ok();
         let database_url = env::var("DATABASE_URL")
             .expect("DATABASE_URL is not set in .env file");
@@ -172,12 +175,12 @@ mod tests {
             db: db_pool,
         });
 
-        let http_response = get_books(shared_data).await;
-        assert_eq!(http_response.is_ok(), true);
+        let http_response = get_books(shared_data).await.unwrap();
+        assert_eq!(http_response.status(), StatusCode::OK);
     }
 
     #[actix_rt::test]
-    async fn test_book_by_id() {
+    async fn test_get_book_by_id() {
         dotenv().ok();
         let database_url = env::var("DATABASE_URL")
             .expect("DATABASE_URL is not set in .env file");
@@ -192,9 +195,9 @@ mod tests {
             db: db_pool,
         });
 
-        let param: web::Path<(i32)> = web::Path::from(100);
-        let http_response = get_book_by_id(param, shared_data).await;
-        assert_eq!(http_response.is_ok(), true);
+        let param: web::Path<(i32)> = web::Path::from(BOOK_ID1);
+        let http_response = get_book_by_id(param, shared_data).await.unwrap();
+        assert_eq!(http_response.status(), StatusCode::OK);
     }
 
     #[actix_rt::test]
@@ -214,17 +217,16 @@ mod tests {
         });
 
         let updated_book = Book {
-            id: 99,
+            id: BOOK_ID1,
             title: "Unit Test title updated".into(),
             author: "Unit Test author updated".into(),
-            posted_time: Some(NaiveDate::from_ymd_opt(2023, 02, 28).expect("none").and_hms_opt(06, 30, 0).unwrap()),
+            posted_time: Some(Utc::now().naive_utc()),
         };
         let param: web::Path<(i32)> = web::Path::from(updated_book.id);
         let json_updated_book = web::Json(updated_book);
-        let http_response = put_book_by_id(param, json_updated_book, shared_data).await;
-        assert_eq!(http_response.is_ok(), true);
+        let http_response = put_book_by_id(param, json_updated_book, shared_data).await.unwrap();
+        assert_eq!(http_response.status(), StatusCode::OK);
     }
-    */
 
     #[actix_rt::test]
     async fn test_delete_book_by_id() {
@@ -242,8 +244,8 @@ mod tests {
             db: db_pool,
         });
 
-        let param: web::Path<(i32)> = web::Path::from(99);
-        let http_response = delete_book_by_id(param, shared_data).await;
-        assert_eq!(http_response.is_ok(), true);
+        let param: web::Path<(i32)> = web::Path::from(BOOK_ID3);
+        let http_response = delete_book_by_id(param, shared_data).await.unwrap();
+        assert_eq!(http_response.status(), StatusCode::OK);
     }
 }
