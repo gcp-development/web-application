@@ -27,6 +27,8 @@ The example developed, will be focused on the back-end services and distributed 
 
 ## Web Application
 
+![image](https://user-images.githubusercontent.com/76512851/222775711-cfffb2c6-1aff-4e19-ba0d-ae81c5a1e13b.png)
+
 ### RESTful Web Service
 
 ### User Web Interface
