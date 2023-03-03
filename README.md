@@ -13,8 +13,8 @@ The example developed, will be focused on the back-end services and distributed 
 <ul>
 <li><a href="" target="_self">Web Application</a></li>
 <ul>
-<li><a href="" target="_self">RESTful Web Service</a>(library-service)</li>
-<li><a href="" target="_self">User Web Interface</a>(library-ui)</li>
+<li><a href="" target="_self">RESTful Web Service</a> (library-service)</li>
+<li><a href="" target="_self">User Web Interface</a> (library-ui)</li>
 </ul>
 <li><a href="" target="_self"></a></li>
  <ul>
