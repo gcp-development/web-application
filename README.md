@@ -11,12 +11,10 @@ The example developed, will be focused on the back-end services and distributed 
 
 ## Table of Contents<br>
 <ul>
-<li><a href="" target="_self"></a></li>
-<li><a href="" target="_self"></a></li>
+<li><a href="" target="_self">Web Application</a></li>
 <ul>
-<li><a href="" target="_self"></a></li>
-<li><a href="" target="_self"></a></li>
-<li><a href="" target="_self"></a></li>
+<li><a href="" target="_self">RESTful API</a></li>
+<li><a href="" target="_self">Web UI</a></li>
 </ul>
 <li><a href="" target="_self"></a></li>
  <ul>
