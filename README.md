@@ -24,9 +24,13 @@ The example developed, will be focused on the back-end services and distributed 
  </ul>
 </ul>
 <hr>
+
 ## Web Application
-### Web Application
-### Web Application
+
+### RESTful Web Service
+
+### User Web Interface
+
 <hr>
 References:<br>
 
