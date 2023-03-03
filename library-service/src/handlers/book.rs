@@ -1,5 +1,4 @@
 use actix_web::{web, HttpResponse};
-use crate::dal::*;
 use crate::dal::book::*;
 use crate::errors::BookError;
 use crate::model::book::Book;

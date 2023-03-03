@@ -2,6 +2,7 @@
 mod handlers;
 #[path = "./model/mod.rs"]
 mod model;
+#[path = "./dal/mod.rs"]
 mod dal;
 mod errors;
 mod routes;
