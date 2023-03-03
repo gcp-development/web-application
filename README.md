@@ -7,6 +7,25 @@ For the Web3 world, type safety (verifies and enforces type constraints at compi
 
 The example developed, will be focused on the back-end services and distributed software infrastructure demonstrating the advantages of using Rust for the Web3 world.
 
+<hr>
+
+## Table of Contents<br>
+<ul>
+<li><a href="" target="_self"></a></li>
+<li><a href="" target="_self"></a></li>
+<ul>
+<li><a href="" target="_self"></a></li>
+<li><a href="" target="_self"></a></li>
+<li><a href="" target="_self"></a></li>
+</ul>
+<li><a href="" target="_self"></a></li>
+ <ul>
+  <li><a href="" target="_self"></a></li>
+  <li><a href="" target="_self"></a></li>
+  <li><a href="" target="_self"></a></li>
+ </ul>
+</ul>
+<hr>
 
 <hr>
 References:<br>
