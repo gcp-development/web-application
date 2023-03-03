@@ -2,7 +2,7 @@
 mod handlers;
 #[path = "./model/mod.rs"]
 mod model;
-mod dao;
+mod dal;
 mod errors;
 mod routes;
 mod state;
@@ -14,7 +14,6 @@ use state::AppState;
 use std::env;
 use dotenv::dotenv;
 use sqlx::postgres::{PgPoolOptions};
-use crate::dao::db_migrations;
 
 #[actix_rt::main]
 async fn main() -> io::Result<()> {
@@ -24,7 +23,8 @@ async fn main() -> io::Result<()> {
         .expect("DATABASE_URL is not set in .env file");
 
     let db_pool = match PgPoolOptions::new()
-        .idle_timeout(std::time::Duration::from_secs(10))
+        .idle_timeout(std::time::Duration::from_secs(30))
+        .max_connections(20)
         .connect(&database_url)
         .await
     {

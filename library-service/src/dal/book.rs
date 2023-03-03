@@ -1,9 +1,8 @@
 use actix_web::HttpResponse;
 use chrono::Utc;
-use super::errors::BookError;
 use sqlx::postgres::PgPool;
 use crate::model::book::Book;
-use sqlx::migrate::Migrator;
+use crate::errors::BookError;
 
 pub async fn db_add_book(pool: &PgPool, book: Book) -> Result<HttpResponse, BookError> {
     let query_result = sqlx::query!("INSERT INTO public.books(id, title, author) VALUES ( $1, $2, $3)",

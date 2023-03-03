@@ -1,5 +1,6 @@
 use actix_web::{web, HttpResponse};
-use crate::dao::*;
+use crate::dal::*;
+use crate::dal::book::*;
 use crate::errors::BookError;
 use crate::model::book::Book;
 use crate::state::AppState;
@@ -80,6 +81,9 @@ mod tests {
     const BOOK_ID3: i32 = 103;
     const BOOK_TITLE3: &str = "Unit Test title 3";
     const BOOK_AUTHOR3: &str = "Unit Test author 3";
+    const BOOK_ID4: i32 = 1;
+    const BOOK_ID5: i32 = 2;
+    const BOOK_ID6: i32 = 3;
 
     #[actix_rt::test]
     async fn test_add_book() {
@@ -189,7 +193,7 @@ mod tests {
             db: db_pool,
         });
 
-        let param: web::Path<(i32)> = web::Path::from(BOOK_ID1);
+        let param: web::Path<i32> = web::Path::from(BOOK_ID4);
         let http_response = get_book_by_id(param, shared_data).await.unwrap();
         assert_eq!(http_response.status(), StatusCode::OK);
     }
@@ -211,12 +215,12 @@ mod tests {
         });
 
         let updated_book = Book {
-            id: BOOK_ID1,
+            id: BOOK_ID5,
             title: "Unit Test title updated".into(),
             author: "Unit Test author updated".into(),
             posted_time: Some(Utc::now().naive_utc()),
         };
-        let param: web::Path<(i32)> = web::Path::from(updated_book.id);
+        let param: web::Path<i32> = web::Path::from(updated_book.id);
         let json_updated_book = web::Json(updated_book);
         let http_response = put_book_by_id(param, json_updated_book, shared_data).await.unwrap();
         assert_eq!(http_response.status(), StatusCode::OK);
@@ -238,7 +242,7 @@ mod tests {
             db: db_pool,
         });
 
-        let param: web::Path<(i32)> = web::Path::from(BOOK_ID3);
+        let param: web::Path<i32> = web::Path::from(BOOK_ID6);
         let http_response = delete_book_by_id(param, shared_data).await.unwrap();
         assert_eq!(http_response.status(), StatusCode::OK);
     }
