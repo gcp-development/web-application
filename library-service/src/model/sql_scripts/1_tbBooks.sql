@@ -1,4 +1,4 @@
-CREATE TABLE books
+CREATE TABLE IF NOT EXISTS public.books
 (
     id serial primary key,
     title varchar(140) not null,

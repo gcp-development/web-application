@@ -1,7 +1,9 @@
+#[path = "./handlers/mod.rs"]
+mod handlers;
+#[path = "./model/mod.rs"]
+mod model;
 mod dao;
 mod errors;
-mod handlers;
-mod model;
 mod routes;
 mod state;
 use actix_web::{web, App, HttpServer};
@@ -12,6 +14,7 @@ use state::AppState;
 use std::env;
 use dotenv::dotenv;
 use sqlx::postgres::{PgPoolOptions};
+use crate::dao::db_migrations;
 
 #[actix_rt::main]
 async fn main() -> io::Result<()> {
@@ -19,11 +22,22 @@ async fn main() -> io::Result<()> {
 
     let database_url = env::var("DATABASE_URL")
         .expect("DATABASE_URL is not set in .env file");
-    let db_pool = PgPoolOptions::new()
+
+    let db_pool = match PgPoolOptions::new()
         .idle_timeout(std::time::Duration::from_secs(10))
         .connect(&database_url)
         .await
-        .unwrap();
+    {
+        Ok(db_pool) => {
+            println!("✅Connection to the database is successful!");
+            db_pool
+        }
+        Err(err) => {
+            println!("🔥 Failed to connect to the database: {:?}", err);
+            std::process::exit(1);
+        }
+    };
+
     let shared_data = web::Data::new(AppState {
         probe: "Probe test ok....".to_string(),
         library: Mutex::new(vec![]),
@@ -35,6 +49,7 @@ async fn main() -> io::Result<()> {
             .configure(general_routes)
             .configure(book_routes)
     };
+
     let hostname_port = env::var("SERVER_HOSTNAME_PORT")
         .expect("SERVER_HOSTNAME_PORT is not set in .env file");
     HttpServer::new(app).bind(hostname_port)?.run().await

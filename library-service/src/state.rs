@@ -1,6 +1,6 @@
-use super::model::Book;
 use std::sync::Mutex;
 use sqlx::postgres::PgPool;
+use crate::model::book::Book;
 
 pub struct AppState {
     pub probe: String,

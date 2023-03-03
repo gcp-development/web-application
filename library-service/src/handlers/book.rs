@@ -1,13 +1,8 @@
-use super::dao::*;
-use super::state::AppState;
 use actix_web::{web, HttpResponse};
-use super::model::Book;
+use crate::dao::*;
 use crate::errors::BookError;
-
-pub async fn get_probe(app_state: web::Data<AppState>) -> HttpResponse {
-    let probe_response = &app_state.probe;
-    HttpResponse::Ok().json(&probe_response)
-}
+use crate::model::book::Book;
+use crate::state::AppState;
 
 pub async fn post_add_book(
     new_book: web::Json<Book>,
@@ -73,7 +68,7 @@ mod tests {
     use sqlx::postgres::PgPoolOptions;
     use chrono::Utc;
 
-    const BOOK_ID0: i32 = 103;
+    const BOOK_ID0: i32 = 100;
     const BOOK_TITLE0: &str = "Unit Test title 0";
     const BOOK_AUTHOR0: &str = "Unit Test author 0";
     const BOOK_ID1: i32 = 101;

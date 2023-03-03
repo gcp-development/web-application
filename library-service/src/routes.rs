@@ -1,5 +1,6 @@
-use super::handlers::*;
 use actix_web::web;
+use crate::handlers::book::*;
+use crate::handlers::default::*;
 
 pub fn general_routes(cfg: &mut web::ServiceConfig) {
     cfg.route("/probe", web::get().to(get_probe));

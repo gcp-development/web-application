@@ -1,7 +1,9 @@
 use actix_web::HttpResponse;
+use chrono::Utc;
 use super::errors::BookError;
-use super::model::Book;
 use sqlx::postgres::PgPool;
+use crate::model::book::Book;
+use sqlx::migrate::Migrator;
 
 pub async fn db_add_book(pool: &PgPool, book: Book) -> Result<HttpResponse, BookError> {
     let query_result = sqlx::query!("INSERT INTO public.books(id, title, author) VALUES ( $1, $2, $3)",
@@ -83,11 +85,12 @@ pub async fn db_read_book_by_id(id: i32, pool: &PgPool) -> Result<Book, BookErro
 }
 
 pub async fn db_update_book_by_id(id: i32, updated_book: Book, pool: &PgPool) -> Result<Book, BookError> {
+    let timestamp = Some(Utc::now().naive_utc());
     let query_result = sqlx::query!("UPDATE books SET title= $2, author= $3, record_timestamp = $4 WHERE id = $1;",
         id,
         updated_book.title,
         updated_book.author,
-        updated_book.posted_time)
+        timestamp)
         .execute(pool)
         .await
         .unwrap();
@@ -97,7 +100,7 @@ pub async fn db_update_book_by_id(id: i32, updated_book: Book, pool: &PgPool) ->
             id: updated_book.id,
             title: updated_book.title.clone(),
             author: updated_book.author.clone(),
-            posted_time: Some(chrono::NaiveDateTime::from(updated_book.posted_time.unwrap())),
+            posted_time: timestamp,
         })
     } else {
         Err(BookError::NotFound("Book not updated.".into(), ))
