@@ -24,6 +24,9 @@ It's assumed that these software are installed and running:
 
 minikube version
 
+![image](https://user-images.githubusercontent.com/76512851/222912565-1742b8a7-2b23-45f2-9007-bb1ade990be1.png)
+
+Create a cluster
 ```bash
 minikube start --driver=docker -p demo
 ```
