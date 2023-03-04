@@ -119,9 +119,13 @@ kubectl apply -f 8_library-service.yml
 ![image](https://user-images.githubusercontent.com/76512851/222916925-22fc37a4-31c7-48e6-8a2a-dabdda858e63.png)
 
 
+Start the minikube [load balancer](https://minikube.sigs.k8s.io/docs/handbook/accessing/#loadbalancer-access)
 ```bash
 minikube tunnel -p demo
 ```
+![image](https://user-images.githubusercontent.com/76512851/222916983-2ba9841a-32af-431e-b1f4-486f0ebfb031.png)
+
+![image](https://user-images.githubusercontent.com/76512851/222917137-6a54dc5b-80f8-43b2-aaf1-d30603a270cb.png)
 
 
 <hr>
