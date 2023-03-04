@@ -104,14 +104,7 @@ Verifying pods.
 ```bash
 kubectl get pods --namespace=web-application
 ```
-
-
-```bash
-kubectl logs -f library-754659bc5d-j6jx2 --namespace=web-application
-```
-
 ![image](https://user-images.githubusercontent.com/76512851/222916601-584276d3-9cc1-4cd7-8f29-150cb1a01613.png)
-
 
 Log into the container.
 ```bash
