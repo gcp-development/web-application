@@ -30,7 +30,9 @@ Create a cluster
 ```bash
 minikube start --driver=docker -p demo
 ```
+![image](https://user-images.githubusercontent.com/76512851/222913292-c33b7a20-b00f-49f8-a8df-3bca70837d51.png)
 
+Create a namespace.
 ```bash
 kubectl apply -f 1_namespace.yml
 ```
