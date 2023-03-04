@@ -12,20 +12,10 @@ It's assumed that these software are installed and running:
 ## Table of Contents<br>
 <ul>
   <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#minikube-setup" target="_self">minikube setup</a></li>
-  <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#scenario-p2p-app" target="_self">Scenario p2p-app</a></li>
+  <li><a href="" target="_self"></a></li>
   <ul>
-    <li><a href="https://github.com/gcp-development/peer-to-peer/tree/main/p2p-setup#dockerfile" target="_self">Dokerfile</a></li>
-    <li><a href="https://github.com/gcp-development/peer-to-peer/tree/main/p2p-setup#pods" target="_self">Pods</a></li>
-  </ul>
-  <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#scenario-mdns-app">Scenario mdns-app</a></li>
-  <ul>
-    <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#dockerfile" target="_self">Dokerfile</a></li>
-    <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#pods" target="_self">Pods</a></li>
-  </ul>
-  <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#scenario-dht-app" target="_self">Scenario dht-app</a></li>
-  <ul>
-    <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#dockerfile-1" target="_self">Dokerfile</a></li>
-    <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#pods-1" target="_self">Pods</a></li>
+    <li><a href="" target="_self">Dokerfile</a></li>
+    <li><a href="" target="_self">Pods</a></li>
   </ul>
 </ul>
 <hr>
@@ -74,7 +64,7 @@ Create the sqlx-data.json file.
 ```bash
 cargo sqlx prepare
 ```
-Note : to list images just run "docker image ls"
+Note : to install the [sql-cli](https://crates.io/crates/sqlx-cli) only for postgres, just run "cargo install sqlx-cli --no-default-features --features native-tls,postgres"
 
 ```bash
 docker build -f /library-service-dockerfile.dev -t library-service:1.0 .
