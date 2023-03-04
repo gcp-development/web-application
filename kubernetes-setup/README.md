@@ -59,10 +59,13 @@ Create a namespace.
 ```bash
 kubectl apply -f 1_namespace.yml
 ```
+![image](https://user-images.githubusercontent.com/76512851/222913681-a1d8f917-2fed-4ffa-8ded-90470a354d43.png)
 
+Create environment variables.[ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
 ```bash
 kubectl apply -f 2_postgres-configmap.yml
 ```
+Note:This is only for demonstration purposes.ConfigMap does not provide secrecy or encryption. To store confidential data we should use [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 ```bash
 kubectl apply -f 3_postgres-pv.yml
