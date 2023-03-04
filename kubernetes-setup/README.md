@@ -142,6 +142,7 @@ Smoke test to the [postgres database](https://www.postgresql.org/) using pgAdmin
 ![image](https://user-images.githubusercontent.com/76512851/222918441-29c02a2b-c556-46b9-9fe1-abe820a39527.png)
 
 Connecting to the library database.
+
 ![image](https://user-images.githubusercontent.com/76512851/222918644-b17640c8-7c9d-451a-b407-a8a058a0d3b8.png)
 
 <hr>
