@@ -20,6 +20,29 @@ It's assumed that these software are installed and running:
 </ul>
 <hr>
 
+## library-service
+
+### Dockerfile
+
+Create the sqlx-data.json file.
+```bash
+cargo sqlx prepare
+```
+Note : to install the [sql-cli](https://crates.io/crates/sqlx-cli) only for postgres, just run "cargo install sqlx-cli --no-default-features --features native-tls,postgres"
+
+```bash
+docker build -f /library-service-dockerfile.dev -t library-service:1.0 .
+```
+Note : to list images just run "docker image ls"
+
+
+```bash
+docker tag p2p-pod-a:1.0 {docker.hub}/library-service:1.0
+```
+
+```bash
+docker push {docker.hub}/library-service:1.0
+```
 ## minikube setup
 
 minikube version
@@ -61,30 +84,6 @@ minikube tunnel -p demo
 kubectl apply -f 6_postgres-service.yml
 ```
 
-## library-service
-
-### Dockerfile
-
-Create the sqlx-data.json file.
-```bash
-cargo sqlx prepare
-```
-Note : to install the [sql-cli](https://crates.io/crates/sqlx-cli) only for postgres, just run "cargo install sqlx-cli --no-default-features --features native-tls,postgres"
-
-```bash
-docker build -f /library-service-dockerfile.dev -t library-service:1.0 .
-```
-Note : to list images just run "docker image ls"
-
-
-```bash
-docker tag p2p-pod-a:1.0 {docker.hub}/library-service:1.0
-```
-
-
-```bash
-docker push {docker.hub}/library-service:1.0
-```
 
 <hr>
 References:<br>
