@@ -11,8 +11,8 @@ It's assumed that these software are installed and running:
 
 ## Table of Contents<br>
 <ul>
-  <li><a href="https://github.com/gcp-development/peer-to-peer/blob/main/kubernetes-setup/README.md#minikube-setup" target="_self">minikube setup</a></li>
-  <li><a href="" target="_self"></a></li>
+  <li><a href="" target="_self">minikube setup</a></li>
+  <li><a href="" target="_self">library-service</a></li>
   <ul>
     <li><a href="" target="_self">Dokerfile</a></li>
     <li><a href="" target="_self">Pods</a></li>
@@ -83,6 +83,7 @@ docker push {docker.hub}/library-service:1.0
 
 <hr>
 References:<br>
+
 [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)<br>
 [minikube](https://minikube.sigs.k8s.io/docs/)<br>
 [Kubernetes Documentation](https://kubernetes.io/docs/home/)<br>
