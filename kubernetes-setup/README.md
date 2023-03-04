@@ -86,13 +86,13 @@ Deploy postgres.
 ```bash
 kubectl apply -f 5_postgres-deployment.yml
 ```
-
 ![image](https://user-images.githubusercontent.com/76512851/222915679-ebaec9de-6c94-4854-955e-ba37e7ca10e4.png)
 
 Create a [load balancer service](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for postgres.
 ```bash
 kubectl apply -f 6_postgres-service.yml
 ```
+![image](https://user-images.githubusercontent.com/76512851/222916006-6c6dd2f5-47ca-4198-b8a7-3149fd9f67f7.png)
 
 Deploy library-service application.
 ```bash
