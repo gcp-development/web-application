@@ -11,7 +11,7 @@ It's assumed that these software are installed and running:
 
 ## Table of Contents<br>
 <ul>
-  <li><a href="" target="_self">minikube setup</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#minikube-setup" target="_self">minikube setup</a></li>
   <li><a href="" target="_self">library-service</a></li>
   <ul>
     <li><a href="" target="_self">Dokerfile</a></li>
