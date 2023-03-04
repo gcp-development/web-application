@@ -116,6 +116,8 @@ Create a [load balancer service](https://kubernetes.io/docs/concepts/services-ne
 ```bash
 kubectl apply -f 8_library-service.yml
 ```
+![image](https://user-images.githubusercontent.com/76512851/222916925-22fc37a4-31c7-48e6-8a2a-dabdda858e63.png)
+
 
 ```bash
 minikube tunnel -p demo
