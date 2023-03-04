@@ -66,15 +66,21 @@ kubectl apply -f 2_postgres-configmap.yml
 ```
 Note:This is only for demonstration purposes. [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) does not provide secrecy or encryption. To store confidential data we should use [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
+![image](https://user-images.githubusercontent.com/76512851/222915388-f776f3bb-8ff3-478d-b3cf-a67b57582970.png)
+
 Create a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for [postgres](https://www.postgresql.org/).
 ```bash
 kubectl apply -f 3_postgres-pv.yml
 ```
 
-Create a PersistentVolumeClaim for postgres.
+![image](https://user-images.githubusercontent.com/76512851/222915466-8ed1e363-85b4-46b6-92fd-70a4730ae031.png)
+
+Create a persistent volume claim for postgres.
 ```bash
 kubectl apply -f 4_postgres-pvc.yml
 ```
+
+![image](https://user-images.githubusercontent.com/76512851/222915553-4752d118-04c8-4169-be83-260fd5d5564b.png)
 
 Deploy postgres.
 ```bash
