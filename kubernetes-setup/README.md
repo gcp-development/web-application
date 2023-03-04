@@ -66,24 +66,38 @@ kubectl apply -f 2_postgres-configmap.yml
 ```
 Note:This is only for demonstration purposes. [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) does not provide secrecy or encryption. To store confidential data we should use [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
+Create a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for [postgres](https://www.postgresql.org/).
 ```bash
 kubectl apply -f 3_postgres-pv.yml
 ```
 
+Create a PersistentVolumeClaim for postgres.
 ```bash
 kubectl apply -f 4_postgres-pvc.yml
 ```
 
+Deploy postgres.
 ```bash
 kubectl apply -f 5_postgres-deployment.yml
 ```
 
+Create a [load balancer service](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for postgres.
 ```bash
-minikube tunnel -p demo
+kubectl apply -f 6_postgres-service.yml
+```
+
+Deploy library-service application.
+```bash
+kubectl apply -f 7_library-deployment.yml
+```
+
+Create a [load balancer service](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for library-service.
+```bash
+kubectl apply -f 8_library-service.yml
 ```
 
 ```bash
-kubectl apply -f 6_postgres-service.yml
+minikube tunnel -p demo
 ```
 
 
