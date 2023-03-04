@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: library
+  namespace: web-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: library
+  template:
+    metadata:
+      labels:
+        app: library
+    spec:
+      containers:
+        - name: library
+          image: bsilveira1974/library-service:1.0
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 3000
