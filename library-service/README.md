@@ -8,6 +8,11 @@ To compile in release mode.
 cargo build --release
 ```
 
+To run the tests.
+```bash
+cargo test
+```
+
 To run the application.
 
 ```bash
