@@ -100,6 +100,15 @@ kubectl apply -f 7_library-deployment.yml
 ```
 ![image](https://user-images.githubusercontent.com/76512851/222916452-2f891197-f1ef-4fda-89b6-9e6b158427ca.png)
 
+Verifying pods.
+```bash
+kubectl get pods --namespace=web-application
+```
+
+
+```bash
+kubectl logs -f library-754659bc5d-j6jx2 --namespace=web-application
+```
 
 ![image](https://user-images.githubusercontent.com/76512851/222916601-584276d3-9cc1-4cd7-8f29-150cb1a01613.png)
 
@@ -108,12 +117,7 @@ Log into the container.
 ```bash
 kubectl logs -f library-754659bc5d-j6jx2 --namespace=web-application
 ```
-![image](https://user-images.githubusercontent.com/76512851/222916593-6aa303a3-6ed4-42e1-a2c5-a8f2e98a2a0c.png)
-
-
-
 ![image](https://user-images.githubusercontent.com/76512851/222916517-ff61b8a4-a7bb-4ef5-9e23-613a1415b362.png)
-
 
 Create a [load balancer service](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for library-service.
 ```bash
