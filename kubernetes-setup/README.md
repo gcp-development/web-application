@@ -127,6 +127,16 @@ minikube tunnel -p demo
 
 ![image](https://user-images.githubusercontent.com/76512851/222917137-6a54dc5b-80f8-43b2-aaf1-d30603a270cb.png)
 
+Get the [minikube ip](https://minikube.sigs.k8s.io/docs/commands/ip/) for the node.
+
+```bash
+minikube ip -p demo
+```
+![image](https://user-images.githubusercontent.com/76512851/222918074-f1a14a91-192e-4a80-809d-b57eac2dd91d.png)
+
+Add a host alias record in our /etc/hosts file.
+![image](https://user-images.githubusercontent.com/76512851/222917956-a33797a8-1061-460e-a8ab-82f928d9ddaa.png)
+
 
 <hr>
 References:<br>
