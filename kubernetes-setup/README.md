@@ -20,15 +20,15 @@ It's assumed that these software are installed and running:
 </ul>
 <hr>
 
-## library-service
-
-### Dockerfile
+## Dockerfile(library-service)
 
 Create the sqlx-data.json file.
 ```bash
 cargo sqlx prepare
 ```
 Note : to install the [sql-cli](https://crates.io/crates/sqlx-cli) only for postgres, just run "cargo install sqlx-cli --no-default-features --features native-tls,postgres"
+
+![image](https://user-images.githubusercontent.com/76512851/222965937-03ce8a0e-0b0a-46e5-a84e-bafa57fc058f.png)
 
 ```bash
 docker build -f /library-service-dockerfile.dev -t library-service:1.0 .
