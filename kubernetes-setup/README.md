@@ -34,15 +34,17 @@ Note : to install the [sql-cli](https://crates.io/crates/sqlx-cli) only for post
 
 ![image](https://user-images.githubusercontent.com/76512851/222965937-03ce8a0e-0b0a-46e5-a84e-bafa57fc058f.png)
 
+Create the library-service image.
 ```bash
 docker build -f /library-service-dockerfile.dev -t library-service:1.0 .
 ```
 Note : to list images just run "docker image ls"
 
+Tag our image to the docker-hub repository.
 ```bash
-docker tag p2p-pod-a:1.0 {docker.hub}/library-service:1.0
+docker tag library-service:1.0 {docker.hub}/library-service:1.0
 ```
-
+Push the image to the docker-hub repository.
 ```bash
 docker push {docker.hub}/library-service:1.0
 ```
