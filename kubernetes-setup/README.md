@@ -24,7 +24,7 @@ minikube version
 
 ![image](https://user-images.githubusercontent.com/76512851/222912565-1742b8a7-2b23-45f2-9007-bb1ade990be1.png)
 
-Create a [cluster](https://minikube.sigs.k8s.io/docs/commands/profile/)
+Create a [cluster](https://minikube.sigs.k8s.io/docs/commands/profile/).
 ```bash
 minikube start --driver=docker -p demo
 ```
