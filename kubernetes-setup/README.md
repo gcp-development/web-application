@@ -32,6 +32,8 @@ minikube start --driver=docker -p demo
 ```
 ![image](https://user-images.githubusercontent.com/76512851/222913292-c33b7a20-b00f-49f8-a8df-3bca70837d51.png)
 
+<hr>
+
 ## Dockerfile(library-service)
 
 Setup the connection string to reflect the kubernetes setup.
@@ -61,6 +63,9 @@ Push the image to the docker-hub repository.
 docker push {docker.hub}/library-service:1.0
 ```
 
+<hr>
+
+## Kubernetes manifests
 
 Create a namespace.
 ```bash
