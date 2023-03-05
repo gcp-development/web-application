@@ -150,6 +150,10 @@ Add a host alias record in our /etc/hosts file.
 
 ![image](https://user-images.githubusercontent.com/76512851/222917956-a33797a8-1061-460e-a8ab-82f928d9ddaa.png)
 
+<hr>
+
+## Smoke tests
+
 Smoke test to the [postgres database](https://www.postgresql.org/) using [pgAdmin](https://www.pgadmin.org/download/)
 
 ![image](https://user-images.githubusercontent.com/76512851/222918441-29c02a2b-c556-46b9-9fe1-abe820a39527.png)
