@@ -22,6 +22,10 @@ It's assumed that these software are installed and running:
 
 ## Dockerfile(library-service)
 
+Setup the connection string to reflect the kubernetes setup.
+
+![image](https://user-images.githubusercontent.com/76512851/222966080-9e1485a7-881c-40c1-b816-84b6dcdd8c5a.png)
+
 Create the sqlx-data.json file.
 ```bash
 cargo sqlx prepare
