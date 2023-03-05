@@ -113,13 +113,13 @@ kubectl apply -f 7_library-deployment.yml
 ```
 ![image](https://user-images.githubusercontent.com/76512851/222916452-2f891197-f1ef-4fda-89b6-9e6b158427ca.png)
 
-Verifying pods.
+Verifying the [pods](https://kubernetes.io/docs/concepts/workloads/pods/).
 ```bash
 kubectl get pods --namespace=web-application
 ```
 ![image](https://user-images.githubusercontent.com/76512851/222916601-584276d3-9cc1-4cd7-8f29-150cb1a01613.png)
 
-Log into the container.
+Log into the [container](https://kubernetes.io/docs/concepts/containers/).
 ```bash
 kubectl logs -f library-754659bc5d-j6jx2 --namespace=web-application
 ```
@@ -130,7 +130,6 @@ Create a [load balancer service](https://kubernetes.io/docs/concepts/services-ne
 kubectl apply -f 8_library-service.yml
 ```
 ![image](https://user-images.githubusercontent.com/76512851/222916925-22fc37a4-31c7-48e6-8a2a-dabdda858e63.png)
-
 
 Start the minikube [load balancer](https://minikube.sigs.k8s.io/docs/handbook/accessing/#loadbalancer-access)
 ```bash
@@ -151,7 +150,8 @@ Add a host alias record in our /etc/hosts file.
 
 ![image](https://user-images.githubusercontent.com/76512851/222917956-a33797a8-1061-460e-a8ab-82f928d9ddaa.png)
 
-Smoke test to the [postgres database](https://www.postgresql.org/) using pgAdmin(https://www.pgadmin.org/download/)
+Smoke test to the [postgres database](https://www.postgresql.org/) using [pgAdmin](https://www.pgadmin.org/download/)
+
 ![image](https://user-images.githubusercontent.com/76512851/222918441-29c02a2b-c556-46b9-9fe1-abe820a39527.png)
 
 Connecting to the library database.
