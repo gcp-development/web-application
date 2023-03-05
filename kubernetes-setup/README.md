@@ -154,13 +154,17 @@ Add a host alias record in our /etc/hosts file.
 
 ## Smoke tests
 
-Smoke test to the [postgres database](https://www.postgresql.org/) using [pgAdmin](https://www.pgadmin.org/download/)
+Test the [postgres database](https://www.postgresql.org/) using [pgAdmin](https://www.pgadmin.org/download/)
 
 ![image](https://user-images.githubusercontent.com/76512851/222918441-29c02a2b-c556-46b9-9fe1-abe820a39527.png)
 
 Connecting to the library database.
 
 ![image](https://user-images.githubusercontent.com/76512851/222918644-b17640c8-7c9d-451a-b407-a8a058a0d3b8.png)
+
+Test the library-service using [Postman](https://www.postman.com/downloads/)
+
+![image](https://user-images.githubusercontent.com/76512851/222967580-819bba06-fc85-476f-bd18-6cf88cf0bded.png)
 
 <hr>
 References:<br>
