@@ -20,6 +20,18 @@ It's assumed that these software are installed and running:
 </ul>
 <hr>
 
+## minikube setup
+
+minikube version
+
+![image](https://user-images.githubusercontent.com/76512851/222912565-1742b8a7-2b23-45f2-9007-bb1ade990be1.png)
+
+Create a cluster
+```bash
+minikube start --driver=docker -p demo
+```
+![image](https://user-images.githubusercontent.com/76512851/222913292-c33b7a20-b00f-49f8-a8df-3bca70837d51.png)
+
 ## Dockerfile(library-service)
 
 Setup the connection string to reflect the kubernetes setup.
@@ -48,17 +60,7 @@ Push the image to the docker-hub repository.
 ```bash
 docker push {docker.hub}/library-service:1.0
 ```
-## minikube setup
 
-minikube version
-
-![image](https://user-images.githubusercontent.com/76512851/222912565-1742b8a7-2b23-45f2-9007-bb1ade990be1.png)
-
-Create a cluster
-```bash
-minikube start --driver=docker -p demo
-```
-![image](https://user-images.githubusercontent.com/76512851/222913292-c33b7a20-b00f-49f8-a8df-3bca70837d51.png)
 
 Create a namespace.
 ```bash
