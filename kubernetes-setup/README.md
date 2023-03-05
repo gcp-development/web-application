@@ -110,7 +110,7 @@ Log into the container.
 ```bash
 kubectl logs -f library-754659bc5d-j6jx2 --namespace=web-application
 ```
-![image](https://user-images.githubusercontent.com/76512851/222916517-ff61b8a4-a7bb-4ef5-9e23-613a1415b362.png)
+![image](https://user-images.githubusercontent.com/76512851/222965759-62568463-ca39-4850-ab64-1cb53a0504f9.png)
 
 Create a [load balancer service](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for library-service.
 ```bash
