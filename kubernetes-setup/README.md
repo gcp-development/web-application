@@ -163,6 +163,7 @@ Connecting to the library database.
 ![image](https://user-images.githubusercontent.com/76512851/222918644-b17640c8-7c9d-451a-b407-a8a058a0d3b8.png)
 
 Execute this [sql script](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/1_tbBooks.sql).
+
 ![image](https://user-images.githubusercontent.com/76512851/222968007-704da7cc-0d64-437e-ba5a-ecb5fff981fb.png)
 
 Test the library-service using [Postman](https://www.postman.com/downloads/)
