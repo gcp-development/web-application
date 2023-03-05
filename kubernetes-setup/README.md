@@ -12,11 +12,9 @@ It's assumed that these software are installed and running:
 ## Table of Contents<br>
 <ul>
   <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#minikube-setup" target="_self">minikube setup</a></li>
-  <li><a href="" target="_self">library-service</a></li>
-  <ul>
-    <li><a href="" target="_self">Dokerfile</a></li>
-    <li><a href="" target="_self">Pods</a></li>
-  </ul>
+  <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#dockerfilelibrary-service" target="_self">dockerfile(library-service)</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/blob/main/kubernetes-setup/README.md#smoke-tests" target="_self">Smoke tests</a></li>
+    <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#kubernetes-manifests" target="_self">Kubernetes manifests</a></li>
 </ul>
 <hr>
 
