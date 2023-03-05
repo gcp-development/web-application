@@ -12,7 +12,7 @@ It's assumed that these software are installed and running:
 ## Table of Contents<br>
 <ul>
   <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#minikube-setup" target="_self">minikube setup</a></li>
-  <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#dockerfilelibrary-service" target="_self">dockerfile(library-service)</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#dockerfilelibrary-service" target="_self">Dockerfile(library-service)</a></li>
   <li><a href="https://github.com/gcp-development/web-application/blob/main/kubernetes-setup/README.md#smoke-tests" target="_self">Smoke tests</a></li>
     <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#kubernetes-manifests" target="_self">Kubernetes manifests</a></li>
 </ul>
@@ -24,7 +24,7 @@ minikube version
 
 ![image](https://user-images.githubusercontent.com/76512851/222912565-1742b8a7-2b23-45f2-9007-bb1ade990be1.png)
 
-Create a cluster
+Create a [cluster](https://minikube.sigs.k8s.io/docs/commands/profile/)
 ```bash
 minikube start --driver=docker -p demo
 ```
