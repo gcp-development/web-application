@@ -21,9 +21,10 @@ The example developed, will be focused on the back-end services and distributed 
 
 ## Web Application
 
-[Actix](https://actix.rs/docs) is a modern, light-weight web framework written in Rust. It provides an async HTTP server that offers safe concurrency and high performance.
 
-[SQLx](https://crates.io/crates/sqlx/) is a Rust crate that provides asynchronous database access in our case to postgres. It has built in connection pooling.
+[Actix](https://actix.rs/docs) is a modern, light-weight web framework written in [Rust](https://github.com/rust-lang/rust).
+
+[SQLx](https://crates.io/crates/sqlx/) is a Rust crate that provides asynchronous database access in our case to postgres.
 
 
 ![image](https://user-images.githubusercontent.com/76512851/222997611-1fcbe954-99d5-4c68-914f-3a71b34eee6e.png)
