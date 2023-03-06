@@ -51,8 +51,8 @@ Each route has a handler function and normally a database access function. The m
 Key points:
 
 <ul>
-  <li>Actix uses Async I/O, which enables an Actix web application to perform other tasks while waiting on I/O on a single thread. Actix has its own Async runtime that is based on [Tokio](https://tokio.rs/)(async library in Rust).</li>
-  <li>Actix allows to define custom application [state](https://github.com/gcp-development/web-application/blob/main/library-service/src/state.rs), and provides a mechanism to safely access this state from each handler function. Since each application instance of Actix runs in a separate thread, Actix provides a [safe mechanism](https://actix.rs/docs/application/#shared-mutable-state) to access and mutate this shared state without conflicts or data races.</li>
+  <li>Actix uses Async I/O, which enables an Actix web application to perform other tasks while waiting on I/O on a single thread. Actix has its own Async runtime that is based on <a href="https://tokio.rs/" target="_self">Tokio</a>(async library in Rust).</li>
+  <li>Actix allows to define custom application <a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/state.rs">state</a>, and provides a mechanism to safely access this state from each handler function. Since each application instance of Actix runs in a separate thread, Actix provides a [safe mechanism](https://actix.rs/docs/application/#shared-mutable-state) to access and mutate this shared state without conflicts or data races.</li>
   <li>SQLx is Built from the ground-up using async/await for maximum concurrency.</li>
   <li>The Postgres driver is written in pure Rust using zero unsafe code.</li>
 </ul>
