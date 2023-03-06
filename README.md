@@ -26,7 +26,7 @@ Our main objective is to buil a distributed web applications that are safe, effi
 With that in mind two key components were chosen to achieve those objectives:
 <ul>
   <li><a href="https://actix.rs/docs" target="_self">Actix</a> is a modern, light-weight web framework written in <a href="https://github.com/rust-lang/rust" target="_self">Rust</a>.</li>
-  <li><a href="https://actix.rs/docs](https://crates.io/crates/sqlx/" target="_self">SQLx</a> is a Rust crate that provides asynchronous database access in our case to postgres.</li>
+  <li><a href="https://actix.rs/docs](https://crates.io/crates/sqlx/" target="_self">SQLx</a> is a Rust crate that provides asynchronous database access in our case to <a href="https://www.postgresql.org/download/" target="_self">postgres</a>.</li>
 </ul>
 
 When considering open-source software my first look is on the team building the software and the community using and maintaining it. (Makes no point selecting a state of the art software that is supported by a one man show. Believe Me or not, this is one of the most common errors startups do.)
