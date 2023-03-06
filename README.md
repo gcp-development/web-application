@@ -57,13 +57,16 @@ Key points:
   <li>The Postgres driver is written in pure Rust using zero unsafe code.</li>
 </ul>
 
-<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L7" target="_self">post_add_book</a>
-<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L14" target="_self">post_bulk_insert</a>
-<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L21" target="_self">get_books</a>
-<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L28" target="_self">get_book_by_id</a>
-<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L39" target="_self">put_book_by_id</a>
-<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L51" target="_self">delete_book_by_id</a>
-
+Service Handlers:
+<ul>
+  <li><a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L7" target="_self">post_add_book</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L14" target="_self">post_bulk_insert</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L21" target="_self">get_books</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L28" target="_self">get_book_by_id</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L39" target="_self">put_book_by_id</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L51" target="_self">delete_book_by_id</a></li>
+</ul>
+  
 <hr>
 
 ### User Web Interface (library-ui)
