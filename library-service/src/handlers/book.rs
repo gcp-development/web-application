@@ -61,7 +61,6 @@ pub async fn delete_book_by_id(
 mod tests {
     use super::*;
     use std::env;
-    use std::sync::Mutex;
     use actix_web::http::StatusCode;
     use actix_web::web;
     use dotenv::dotenv;
@@ -96,7 +95,6 @@ mod tests {
             .unwrap();
         let shared_data = web::Data::new(AppState {
             probe: "Probe test ok....".to_string(),
-            library: Mutex::new(vec![]),
             db: db_pool,
         });
 
@@ -124,7 +122,6 @@ mod tests {
             .unwrap();
         let shared_data = web::Data::new(AppState {
             probe: "Probe test ok....".to_string(),
-            library: Mutex::new(vec![]),
             db: db_pool,
         });
 
@@ -168,7 +165,6 @@ mod tests {
             .unwrap();
         let shared_data = web::Data::new(AppState {
             probe: "Probe test ok....".to_string(),
-            library: Mutex::new(vec![]),
             db: db_pool,
         });
 
@@ -188,7 +184,6 @@ mod tests {
             .unwrap();
         let shared_data = web::Data::new(AppState {
             probe: "Probe test ok....".to_string(),
-            library: Mutex::new(vec![]),
             db: db_pool,
         });
 
@@ -209,7 +204,6 @@ mod tests {
             .unwrap();
         let shared_data = web::Data::new(AppState {
             probe: "Probe test ok....".to_string(),
-            library: Mutex::new(vec![]),
             db: db_pool,
         });
 
@@ -237,7 +231,6 @@ mod tests {
             .unwrap();
         let shared_data = web::Data::new(AppState {
             probe: "Probe test ok....".to_string(),
-            library: Mutex::new(vec![]),
             db: db_pool,
         });
 

@@ -9,7 +9,6 @@ mod routes;
 mod state;
 use actix_web::{web, App, HttpServer};
 use std::io;
-use std::sync::Mutex;
 use routes::*;
 use state::AppState;
 use std::env;
@@ -41,7 +40,6 @@ async fn main() -> io::Result<()> {
 
     let shared_data = web::Data::new(AppState {
         probe: "Probe test ok....".to_string(),
-        library: Mutex::new(vec![]),
         db: db_pool,
     });
     let app = move || {
