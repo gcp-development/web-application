@@ -13,8 +13,8 @@ It's assumed that these software are installed and running:
 <ul>
   <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#minikube-setup" target="_self">minikube setup</a></li>
   <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#dockerfilelibrary-service" target="_self">Dockerfile(library-service)</a></li>
+  <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#kubernetes-manifests" target="_self">Kubernetes manifests</a></li>
   <li><a href="https://github.com/gcp-development/web-application/blob/main/kubernetes-setup/README.md#smoke-tests" target="_self">Smoke tests</a></li>
-    <li><a href="https://github.com/gcp-development/web-application/tree/main/kubernetes-setup#kubernetes-manifests" target="_self">Kubernetes manifests</a></li>
 </ul>
 <hr>
 
