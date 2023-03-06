@@ -16,12 +16,6 @@ The example developed, will be focused on the back-end services and distributed 
 <li><a href="" target="_self">RESTful Web Service</a> (library-service)</li>
 <li><a href="" target="_self">User Web Interface</a> (library-ui)</li>
 </ul>
-<li><a href="" target="_self"></a></li>
- <ul>
-  <li><a href="" target="_self"></a></li>
-  <li><a href="" target="_self"></a></li>
-  <li><a href="" target="_self"></a></li>
- </ul>
 </ul>
 <hr>
 
@@ -29,11 +23,11 @@ The example developed, will be focused on the back-end services and distributed 
 
 ![image](https://user-images.githubusercontent.com/76512851/222997611-1fcbe954-99d5-4c68-914f-3a71b34eee6e.png)
 
-### RESTful Web Service
+### RESTful Web Service (library-service)
 
 <hr>
 
-### User Web Interface
+### User Web Interface (library-ui)
 
 <hr>
 References:<br>
