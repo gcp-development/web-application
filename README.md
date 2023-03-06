@@ -30,6 +30,7 @@ With that in mind two key components were chosen to achieve those objectives:
 </ul>
 
 When considering open-source software my first look is on the team building the software and the community using and maintaining it. (Makes no point selecting a state of the art software that is supported by a one man show. Believe Me or not, this is one of the most common errors startups do.)
+After saying that, having asynchronous support, ability to scale and maturity is essential in any startup product development. 
 
 ![image](https://user-images.githubusercontent.com/76512851/222997611-1fcbe954-99d5-4c68-914f-3a71b34eee6e.png)
 
