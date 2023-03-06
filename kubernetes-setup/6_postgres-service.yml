@@ -9,6 +9,5 @@ spec:
   type: LoadBalancer
   ports:
     - port: 5432
-      targetPort: 31555
   selector:
     app: postgres

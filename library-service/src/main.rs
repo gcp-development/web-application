@@ -51,7 +51,7 @@ async fn main() -> io::Result<()> {
             .configure(book_routes)
     };
 
-    let hostname_port = env::var("SERVER_HOSTNAME_PORT")
-        .expect("SERVER_HOSTNAME_PORT is not set in .env file");
+    let hostname_port = env::var("SERVER_HOSTNAME_PORT").expect("SERVER_HOSTNAME_PORT is not set in .env file");
+    println!("Http Server running on host:port = {:?}",hostname_port);
     HttpServer::new(app).bind(hostname_port)?.run().await
 }

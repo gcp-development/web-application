@@ -4,30 +4,24 @@ use sqlx::error::Error as SQLxError;
 use std::fmt;
 
 #[derive(Debug, Serialize)]
-pub enum BookError {
+pub enum ServiceError {
     DBError(String),
     ActixError(String),
     NotFound(String),
 }
 
-#[derive(Debug, Serialize)]
-pub struct ErrorResponse {
-    error_message: String,
-}
-
-
-impl BookError {
+impl ServiceError {
     fn error_response(&self) -> String {
         match self {
-            BookError::DBError(msg) => {
+            ServiceError::DBError(msg) => {
                 println!("Database error occurred: {:?}", msg);
                 "Database error".into()
             }
-            BookError::ActixError(msg) => {
+            ServiceError::ActixError(msg) => {
                 println!("Server error occurred: {:?}", msg);
                 "Internal server error".into()
             }
-            BookError::NotFound(msg) => {
+            ServiceError::NotFound(msg) => {
                 println!("Not found error occurred: {:?}", msg);
                 msg.into()
             }
@@ -35,36 +29,41 @@ impl BookError {
     }
 }
 
-impl error::ResponseError for BookError {
+impl fmt::Display for ServiceError {
+    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
+        write!(f, "{}", self)
+    }
+}
+
+impl From<actix_web::error::Error> for ServiceError {
+    fn from(err: actix_web::error::Error) -> Self {
+        ServiceError::ActixError(err.to_string())
+    }
+}
+
+impl From<SQLxError> for ServiceError {
+    fn from(err: SQLxError) -> Self {
+        ServiceError::DBError(err.to_string())
+    }
+}
+
+#[derive(Debug, Serialize)]
+pub struct ErrorResponse {
+    error_message: String,
+}
+
+impl error::ResponseError for ServiceError {
     fn status_code(&self) -> StatusCode {
         match self {
-            BookError::DBError(_msg) | BookError::ActixError(_msg) => {
+            ServiceError::DBError(_msg) | ServiceError::ActixError(_msg) => {
                 StatusCode::INTERNAL_SERVER_ERROR
             }
-            BookError::NotFound(_msg) => StatusCode::NOT_FOUND,
+            ServiceError::NotFound(_msg) => StatusCode::NOT_FOUND,
         }
     }
     fn error_response(&self) -> HttpResponse {
         HttpResponse::build(self.status_code()).json(ErrorResponse {
             error_message: self.error_response(),
         })
-    }
-}
-
-impl fmt::Display for BookError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
-        write!(f, "{}", self)
-    }
-}
-
-impl From<actix_web::error::Error> for BookError {
-    fn from(err: actix_web::error::Error) -> Self {
-        BookError::ActixError(err.to_string())
-    }
-}
-
-impl From<SQLxError> for BookError {
-    fn from(err: SQLxError) -> Self {
-        BookError::DBError(err.to_string())
     }
 }

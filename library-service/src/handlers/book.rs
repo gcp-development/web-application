@@ -1,26 +1,26 @@
 use actix_web::{web, HttpResponse};
 use crate::dal::book::*;
-use crate::errors::BookError;
+use crate::errors::ServiceError;
 use crate::model::book::Book;
 use crate::state::AppState;
 
 pub async fn post_add_book(
     new_book: web::Json<Book>,
     app_state: web::Data<AppState>,
-) ->  Result<HttpResponse, BookError> {
+) ->  Result<HttpResponse, ServiceError> {
     db_add_book(&app_state.db, new_book.into()).await
 }
 
 pub async fn post_bulk_insert(
     new_books: web::Json<Vec<Book>>,
     app_state: web::Data<AppState>,
-) -> Result<HttpResponse, BookError> {
+) -> Result<HttpResponse, ServiceError> {
     db_bulk_insert(&app_state.db, new_books.into_inner()).await
 }
 
 pub async fn get_books(
     app_state: web::Data<AppState>
-) -> Result<HttpResponse, BookError> {
+) -> Result<HttpResponse, ServiceError> {
     db_read_books(&app_state.db).await
         .map(|books| HttpResponse::Ok().json(books))
 }
@@ -28,7 +28,7 @@ pub async fn get_books(
 pub async fn get_book_by_id(
     param: web::Path<i32>,
     app_state: web::Data<AppState>,
-) -> Result<HttpResponse, BookError> {
+) -> Result<HttpResponse, ServiceError> {
     let tuple = param.into_inner();
     let id: i32 = tuple;
     db_read_book_by_id(id, &app_state.db)
@@ -40,7 +40,7 @@ pub async fn put_book_by_id(
     param: web::Path<i32>,
     updated_book: web::Json<Book>,
     app_state: web::Data<AppState>,
-) -> Result<HttpResponse, BookError> {
+) -> Result<HttpResponse, ServiceError> {
     let tuple = param.into_inner();
     let id: i32 = tuple;
     db_update_book_by_id(id, updated_book.into_inner(), &app_state.db)
@@ -51,7 +51,7 @@ pub async fn put_book_by_id(
 pub async fn delete_book_by_id(
     param: web::Path<i32>,
     app_state: web::Data<AppState>,
-) -> Result<HttpResponse, BookError> {
+) -> Result<HttpResponse, ServiceError> {
     let tuple = param.into_inner();
     let id: i32 = tuple;
     db_delete_book_by_id(id, &app_state.db).await

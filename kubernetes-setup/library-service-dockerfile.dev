@@ -14,6 +14,9 @@ COPY sqlx-data.json .
 # Build release application
 RUN cargo build --release
 
+# Copy the environment file for the kubernetes setup
+COPY .env .
+
 # Expose listening port for application
 EXPOSE 3000
 

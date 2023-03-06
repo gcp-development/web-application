@@ -9,6 +9,5 @@ spec:
   type: LoadBalancer
   ports:
     - port: 3000
-      targetPort: 31005
   selector:
     app: library
