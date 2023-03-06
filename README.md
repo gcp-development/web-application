@@ -37,6 +37,7 @@ We have the following environment setup using [kubernetes](https://github.com/gc
 
 ![image](https://user-images.githubusercontent.com/76512851/223080940-6f847eb7-8cff-41eb-8571-3e5419391618.png)
 
+Our web application is composed of a Rest API connected to a postgres database which forms a Microservice. The Rest API serves requests from the React user interface.
 
 ### RESTful Web Service (library-service)
 
