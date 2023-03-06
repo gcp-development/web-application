@@ -57,6 +57,13 @@ Key points:
   <li>The Postgres driver is written in pure Rust using zero unsafe code.</li>
 </ul>
 
+post_add_book
+post_bulk_insert
+get_books
+get_book_by_id
+put_book_by_id
+delete_book_by_id(
+
 <hr>
 
 ### User Web Interface (library-ui)
