@@ -21,7 +21,7 @@ The example developed, will be focused on the back-end services and distributed 
 
 ## Web Application
 
-Our main objective is to buil a distributed web applications that are safe, efficient, highly performant, and do not "break the piggy bank" to operate and maintain.
+Our main objective is to build a distributed web application that are safe, efficient, highly performant, and do not "break the piggy bank" to operate and maintain.
 
 With that in mind two key components were chosen to achieve those objectives:
 <ul>
@@ -32,7 +32,11 @@ With that in mind two key components were chosen to achieve those objectives:
 When considering open-source software my first look is on the team building the software and the community using and maintaining it. (Makes no point selecting a state of the art software that is supported by a one man show. Believe Me or not, this is one of the most common errors startups do.)
 After saying that, having asynchronous support, ability to scale and maturity is essential in any startup product development. Nevertheless, there are some very good alternatives options to the ones used for this demo. For a Rust web framework [axum](https://docs.rs/axum/latest/axum/) is also a sound choice and for the database access [SeaORM](https://www.sea-ql.org/SeaORM/docs/introduction/sea-orm/) (SeaORM is an object-relational mapper which SQLx is not).
 
+
+We have the following environment setup using [kubernetes](https://github.com/gcp-development/web-application/tree/main/kubernetes-setup) for our web application:
+
 ![image](https://user-images.githubusercontent.com/76512851/223080940-6f847eb7-8cff-41eb-8571-3e5419391618.png)
+
 
 ### RESTful Web Service (library-service)
 
