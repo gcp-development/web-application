@@ -32,7 +32,6 @@ With that in mind two key components were chosen to achieve those objectives:
 When considering open-source software my first look is on the team building the software and the community using and maintaining it. (Makes no point selecting a state of the art software that is supported by a one man show. Believe Me or not, this is one of the most common errors startups do.)
 After saying that, having asynchronous support, ability to scale and maturity is essential in any startup product development. Nevertheless, there are some very good alternatives options to the ones used for this demo. For a Rust web framework [axum](https://docs.rs/axum/latest/axum/) is also a sound choice and for the database access [SeaORM](https://www.sea-ql.org/SeaORM/docs/introduction/sea-orm/) (SeaORM is an object-relational mapper which SQLx is not).
 
-
 We have the following environment setup using [kubernetes](https://github.com/gcp-development/web-application/tree/main/kubernetes-setup) for our web application:
 
 ![image](https://user-images.githubusercontent.com/76512851/223080940-6f847eb7-8cff-41eb-8571-3e5419391618.png)
@@ -41,10 +40,11 @@ Our web application is composed of a Rust Rest API connected to a postgres datab
 
 ### RESTful Web Service (library-service)
 
-
-![image](https://user-images.githubusercontent.com/76512851/223122223-96d04dbf-053f-4d44-932e-9d90fc29e0eb.png)
+The project code is organized with separate and clearly marked areas to store code for handlers, database access functions, data models and database scripts. 
 
 ![image](https://user-images.githubusercontent.com/76512851/223094021-910d4695-d224-43bb-aade-ee255a0da1ce.png)
+
+![image](https://user-images.githubusercontent.com/76512851/223122223-96d04dbf-053f-4d44-932e-9d90fc29e0eb.png)
 
 <hr>
 
