@@ -1,4 +1,4 @@
-# Work in Progress
+# Web Application (Work in Progress)
 
 ## Motivation
 
