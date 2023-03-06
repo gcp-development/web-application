@@ -42,7 +42,7 @@ Create the sqlx-data.json file.
 ```bash
 cargo sqlx prepare
 ```
-Note : to install the [sql-cli](https://crates.io/crates/sqlx-cli) only for postgres, just run "cargo install sqlx-cli --no-default-features --features native-tls,postgres"
+Note : to install the [sqlx-cli](https://crates.io/crates/sqlx-cli) only for postgres, just run "cargo install sqlx-cli --no-default-features --features native-tls,postgres"
 
 ![image](https://user-images.githubusercontent.com/76512851/222965937-03ce8a0e-0b0a-46e5-a84e-bafa57fc058f.png)
 
@@ -117,7 +117,7 @@ kubectl get pods --namespace=web-application
 ```
 ![image](https://user-images.githubusercontent.com/76512851/222916601-584276d3-9cc1-4cd7-8f29-150cb1a01613.png)
 
-Log into the [container](https://kubernetes.io/docs/concepts/containers/).
+Verify the [container](https://kubernetes.io/docs/concepts/containers/) log.
 ```bash
 kubectl logs -f library-754659bc5d-j6jx2 --namespace=web-application
 ```
