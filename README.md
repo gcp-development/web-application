@@ -44,7 +44,7 @@ The project code is organized with separate and clearly marked areas to store co
 
 ![image](https://user-images.githubusercontent.com/76512851/223094021-910d4695-d224-43bb-aade-ee255a0da1ce.png)
 
-
+Each route have an handler function and a database access function.
 
 ![image](https://user-images.githubusercontent.com/76512851/223129476-a0458994-0178-47d9-b978-c3429f548ad5.png)
 
