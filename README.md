@@ -44,7 +44,7 @@ The project code is organized with separate and clearly marked areas to store co
 
 ![image](https://user-images.githubusercontent.com/76512851/223094021-910d4695-d224-43bb-aade-ee255a0da1ce.png)
 
-Each route has a handler function and normally a database access function. The main purpose of structuring our code is to make it easier for other people to read and support a CI/CD pipeline. For instance for this project all [tests](https://actix.rs/docs/testing/) are concentrated in the [handler section](https://github.com/gcp-development/web-application/tree/main/library-service/src/handlers). 
+Each route has a handler function and normally a database access function. The main purpose of structuring our code is to make it easier for other people to read and support a CI/CD pipeline. For instance for this project all [integration tests](https://actix.rs/docs/testing/) are concentrated in the [handler section](https://github.com/gcp-development/web-application/tree/main/library-service/src/handlers). 
 
 ![image](https://user-images.githubusercontent.com/76512851/223129476-a0458994-0178-47d9-b978-c3429f548ad5.png)
 
@@ -67,7 +67,7 @@ Service Handlers:
   <li><a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L51" target="_self">delete_book_by_id</a> Delete a book by id from table <a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/1_tbBooks.sql" target="_self">books<a/>.</li>
 </ul>
 
-Before runing the tests we need to create the table [books](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/1_tbBooks.sql) and run the script [test data](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/2_testData.sql).
+Before runing the integration tests we need to create the table [books](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/1_tbBooks.sql) and run the script [test data](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/2_testData.sql).
 
 <hr>
 
