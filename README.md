@@ -40,7 +40,7 @@ Our web application is composed of a Rust Rest API connected to a postgres datab
 
 ### RESTful Web Service (library-service)
 
-The project code is organized with separate and clearly marked areas to store code for handlers, database access functions, data models and database scripts. 
+The project code is organized with separate and clearly marked areas to store code for [handlers](https://github.com/gcp-development/web-application/tree/main/library-service/src/handlers), database access functions [(dal)](https://github.com/gcp-development/web-application/tree/main/library-service/src/dal), [data models](https://github.com/gcp-development/web-application/tree/main/library-service/src/model) and [database scripts](https://github.com/gcp-development/web-application/tree/main/library-service/src/model/sql_scripts). 
 
 ![image](https://user-images.githubusercontent.com/76512851/223094021-910d4695-d224-43bb-aade-ee255a0da1ce.png)
 
