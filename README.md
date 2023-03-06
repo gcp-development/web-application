@@ -46,7 +46,8 @@ The project code is organized with separate and clearly marked areas to store co
 
 
 
-![image](https://user-images.githubusercontent.com/76512851/223122223-96d04dbf-053f-4d44-932e-9d90fc29e0eb.png)
+![image](https://user-images.githubusercontent.com/76512851/223129476-a0458994-0178-47d9-b978-c3429f548ad5.png)
+
 
 <hr>
 
