@@ -57,12 +57,12 @@ Key points:
   <li>The Postgres driver is written in pure Rust using zero unsafe code.</li>
 </ul>
 
-post_add_book
-post_bulk_insert
-get_books
-get_book_by_id
-put_book_by_id
-delete_book_by_id(
+<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L7" target="_self">post_add_book</a>
+<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L14" target="_self">post_bulk_insert</a>
+<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L21" target="_self">get_books</a>
+<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L28" target="_self">get_book_by_id</a>
+<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L39" target="_self">put_book_by_id</a>
+<a href="https://github.com/gcp-development/web-application/blob/main/library-service/src/handlers/book.rs#L51" target="_self">delete_book_by_id</a>
 
 <hr>
 
