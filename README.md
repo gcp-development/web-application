@@ -41,6 +41,8 @@ Our web application is composed of a Rust Rest API connected to a postgres datab
 
 ### RESTful Web Service (library-service)
 
+![image](https://user-images.githubusercontent.com/76512851/223094021-910d4695-d224-43bb-aade-ee255a0da1ce.png)
+
 <hr>
 
 ### User Web Interface (library-ui)
