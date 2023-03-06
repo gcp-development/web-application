@@ -69,6 +69,7 @@ Service Handlers:
 
 Before runing the integration tests we need to create the table [books](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/1_tbBooks.sql) and run the script [test data](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/2_testData.sql) using pgAdmin for instance.
 
+![image](https://user-images.githubusercontent.com/76512851/223178107-efb93bb5-7806-485c-b031-df1b657d16d5.png)
 
 <hr>
 
