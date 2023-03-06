@@ -44,13 +44,13 @@ The project code is organized with separate and clearly marked areas to store co
 
 ![image](https://user-images.githubusercontent.com/76512851/223094021-910d4695-d224-43bb-aade-ee255a0da1ce.png)
 
-Each route has a handler function and normally a database access function. The main purpose of structuring our code is to make it easier for other people to read and support our CI/CD pipeline. For instance for this project  all tests are concentrated in the [handler section](https://github.com/gcp-development/web-application/tree/main/library-service/src/handlers). 
+Each route has a handler function and normally a database access function. The main purpose of structuring our code is to make it easier for other people to read and support our CI/CD pipeline. For instance for this project all [tests](https://actix.rs/docs/testing/) are concentrated in the [handler section](https://github.com/gcp-development/web-application/tree/main/library-service/src/handlers). 
 
 ![image](https://user-images.githubusercontent.com/76512851/223129476-a0458994-0178-47d9-b978-c3429f548ad5.png)
 
 Actix uses Async I/O, which enables an Actix web application to perform other tasks while waiting on I/O on a single thread. Actix has its own Async runtime that is based on [Tokio](https://tokio.rs/)(async library in Rust).
 
-Actix allows the web application to define custom application state, and provides a mechanism to safely access this state from each handler function. Since each application instance of Actix runs in a separate thread, Actix provides a safe mechanism to access and mutate this shared state without conflicts or data races.
+Actix allows to define custom application [state](https://github.com/gcp-development/web-application/blob/main/library-service/src/state.rs), and provides a mechanism to safely access this state from each handler function. Since each application instance of Actix runs in a separate thread, Actix provides a [safe mechanism](https://actix.rs/docs/application/#shared-mutable-state) to access and mutate this shared state without conflicts or data races.
 
 <hr>
 
