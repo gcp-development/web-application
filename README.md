@@ -31,6 +31,8 @@ The example developed, will be focused on the back-end services and distributed 
 
 ### RESTful Web Service
 
+<hr>
+
 ### User Web Interface
 
 <hr>
