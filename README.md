@@ -29,6 +29,8 @@ With that in mind two key components were chosen to achieve those objectives:
   <li><a href="https://actix.rs/docs](https://crates.io/crates/sqlx/" target="_self">SQLx</a> is a Rust crate that provides asynchronous database access in our case to postgres.</li>
 </ul>
 
+When considering open-source software my first look is on the team building the software and the community using it. Makes no point selecting a state of the art software that is supported by a one man show.
+
 ![image](https://user-images.githubusercontent.com/76512851/222997611-1fcbe954-99d5-4c68-914f-3a71b34eee6e.png)
 
 ### RESTful Web Service (library-service)
