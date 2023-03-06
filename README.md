@@ -37,7 +37,7 @@ We have the following environment setup using [kubernetes](https://github.com/gc
 
 ![image](https://user-images.githubusercontent.com/76512851/223080940-6f847eb7-8cff-41eb-8571-3e5419391618.png)
 
-Our web application is composed of a Rust Rest API connected to a postgres database which forms a [Microservice](https://microservices.io/) and a [React](https://reactjs.org/docs/getting-started.html) user interface served by the Rust Rest API.
+Our web application is composed of a Rust Rest API connected to a postgres database which forms a [Microservice](https://microservices.io/) and a [React](https://reactjs.org/docs/getting-started.html) user web interface served by the Rust Rest API.
 
 ### RESTful Web Service (library-service)
 
