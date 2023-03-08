@@ -7,7 +7,9 @@ mod dal;
 mod errors;
 mod routes;
 mod state;
-use actix_web::{web, App, HttpServer};
+
+use actix_web::{web, App, HttpServer, http};
+use actix_cors::Cors;
 use std::io;
 use routes::*;
 use state::AppState;
@@ -42,14 +44,27 @@ async fn main() -> io::Result<()> {
         probe: "Probe test ok....".to_string(),
         db: db_pool,
     });
+
     let app = move || {
+//The following section applies only to the development mode of React. Error handling in production mode is done with regular try/catch statements.
+//https://reactjs.org/docs/cross-origin-errors.html
+        let cors = Cors::default()
+            .allowed_origin("http://localhost:3000")
+            .allowed_methods(vec!["GET", "POST", "PUT", "PATCH", "DELETE"])
+            .allowed_headers(vec![http::header::AUTHORIZATION, http::header::ACCEPT])
+            .allowed_header(http::header::CONTENT_TYPE)
+            .max_age(3600);
         App::new()
+            .wrap(cors)
             .app_data(shared_data.clone())
             .configure(general_routes)
             .configure(book_routes)
     };
 
     let hostname_port = env::var("SERVER_HOSTNAME_PORT").expect("SERVER_HOSTNAME_PORT is not set in .env file");
-    println!("Http Server running on host:port = {:?}",hostname_port);
-    HttpServer::new(app).bind(hostname_port)?.run().await
+    println!("Http Server running on host:port = {:?}", hostname_port);
+    HttpServer::new(app)
+        .bind(hostname_port)?
+        .run()
+        .await
 }
