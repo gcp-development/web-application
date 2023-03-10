@@ -23,7 +23,8 @@ export function LibraryPage() {
   }, []);
 
   async function handleSave(newBook: Book) {
-    //newBook.id = 99;
+    //This is due the input type that does return the type number.
+    newBook.id = parseInt(newBook.id.toString());
     const newPost = await addBook(newBook);
     setBooks([newPost, ...books]);
   }

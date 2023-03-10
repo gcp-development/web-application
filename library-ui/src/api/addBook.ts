@@ -14,9 +14,6 @@ export async function addBook(newBook: Book) {
 }
 
 function assertIfNewItemIsBook(item: any): asserts item is Book {
-  if (!('id' in item)) {
-    throw new Error("Book doesn't contain id");
-  }
   if (typeof item.id !== 'number') {
     throw new Error('id is not a number');
   }
