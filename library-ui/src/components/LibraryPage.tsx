@@ -34,7 +34,7 @@ export function LibraryPage() {
   }
   return (
     <div className="w-96 mx-auto mt-6">
-      <h2 className="text-xl text-slate-900 font-bold">Posts</h2>
+      <h2 className="text-xl text-slate-900 font-bold">Library</h2>
       <NewBookForm onSave={handleSave} />
       <BooksList books={books} />
     </div>

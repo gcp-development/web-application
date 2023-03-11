@@ -48,7 +48,6 @@ export function NewBookForm({ onSave }: Props) {
         />
         <ValidationError fieldError={errors.id} />
       </div>
-
       <div className={fieldStyle}>
         <label htmlFor="title">Title</label>
         <input
@@ -63,7 +62,8 @@ export function NewBookForm({ onSave }: Props) {
       </div>
       <div className={fieldStyle}>
         <label htmlFor="author">Author</label>
-        <textarea
+        <input
+          type="text"
           id="author"
           {...register('author', {
             required: 'You must enter the description',

@@ -8,7 +8,9 @@ export function BooksList({ books }: Props) {
     <ul className="list-none">
       {books.map((book) => (
         <li key={book.id} className="border-b py-4">
-          <h3 className="text-slate-900 font-bold">{book.title}</h3>
+          <h3 className="text-slate-900 font-bold">
+            {book.id}-{book.title}
+          </h3>
           <p className=" text-slate-900 ">{book.author}</p>
         </li>
       ))}

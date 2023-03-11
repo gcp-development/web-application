@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h2{
+  margin-left: 110px;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 110px;
+  color: #777777;
+}
+
+input {
+  padding: 5px 10px;
+}
+
+button {
+  margin-left: 110px;
+  padding: 5px 10px;
+}
