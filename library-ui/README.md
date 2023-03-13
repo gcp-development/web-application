@@ -1,5 +1,7 @@
 # library-ui
 
+This [React App project with TypeScript](https://create-react-app.dev/docs/adding-typescript/), was developed using [Visual Code](https://code.visualstudio.com/download).
+
 ```bash
 nvm use 18.14.2
 npx create-react-app library-ui --template typescript
