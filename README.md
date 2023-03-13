@@ -80,7 +80,7 @@ The project code is organized with separate and clearly marked areas to store co
 ![image](https://user-images.githubusercontent.com/76512851/224685345-476db57f-017b-4d33-817f-c82abddf1916.png)
 
 
-In this small example were implement "must have features" in every user interface(UI), like [TanStack Query](https://tanstack.com/query/latest) providing asynchronous state management, server-state utilities and data fetching. And [React Router](https://reactrouter.com/en/main), which allow our app to update the URL from a link click without making another request for another document from the server.
+In this small example were implemented "must have features" in every modern user interface(UI), like [TanStack Query](https://tanstack.com/query/latest) providing asynchronous state management, server-state utilities and data fetching. And [React Router](https://reactrouter.com/en/main), which allow our app to update the URL from a link click without making another request for another document from the server.
 
 
 
