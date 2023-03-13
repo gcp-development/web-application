@@ -76,6 +76,12 @@ Before runing the integration tests we need to create the table [books](https://
 ### User Web Interface (library-ui)
 
 <hr>
+
+### Conclusion
+
+In a life span of 5 years, 90% of technology startups fail. 
+
+<hr>
 References:<br>
 
 [Actix Web framework](https://actix.rs/docs)<br>
