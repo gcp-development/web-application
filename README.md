@@ -79,7 +79,7 @@ Before runing the integration tests we need to create the table [books](https://
 
 ### Conclusion
 
-In a life span of 5 years, 90% of technology startups fail. 
+In a life span of 5 years, [90%](https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/?sh=39fb5cda6679) of [technology startups fail](https://www.rocketspace.com/tech-startups/why-tech-startups-fail-and-how-founders-can-bounce-back). Despite of not being the only reason, the common denominator present in all of those, was/is the wrong techical choices made. Those choices limited the time to market, the ability to scale and most important time to innovate. 
 
 <hr>
 References:<br>
