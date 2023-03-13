@@ -86,13 +86,13 @@ Also,were implemented two "must have features" in every modern UI. [TanStack Que
 Key points:
 <ul>
   <li>
-    React is a popular library for creating component-based frontends. React has the largest ecosystem out of any UI library, with very <a href="" target="_self">talent people</a> supporting it.
+    React is a popular library for creating component-based frontends. React has the largest ecosystem out of any UI library, with very <a href="https://reactjs.org/blog/2022/06/15/react-labs-what-we-have-been-working-on-june-2022.html" target="_self">talent people</a> supporting it.
   </li>
   <li>
     TypeScript provides a much richer type system on top of JavaScript. TypeScript uses the type system to allow <a href="https://code.visualstudio.com/docs/languages/typescript target="_self">code editors</a> to catch type errors as developers write code. 
   </li>
   <li>
-     Concurrent React, a new behind-the-scenes mechanism that enables React to prepare multiple versions of your UI at the same time.
+     <a href="https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis" target="_self">Concurrent React</a>,Until React 18, the React render process was synchronous and non-interruptable. As a result, the UI would lock during long render processes and not respond immediately to user input.
   </li>
   <li>
      React Router reduces the number of re-renders.
