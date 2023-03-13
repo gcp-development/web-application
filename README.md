@@ -79,6 +79,9 @@ The project code is organized with separate and clearly marked areas to store co
 
 ![image](https://user-images.githubusercontent.com/76512851/224685345-476db57f-017b-4d33-817f-c82abddf1916.png)
 
+React is a popular library for creating component-based frontends.TypeScript provides a much richer type system on top of JavaScript.
+When a JavaScript codebase grows, it can become hard to read and maintain. TypeScript’s type system solves this problem. TypeScript uses the type system to allow code editors to catch type errors as developers write problematic code. Code editors also use the type system to provide productivity
+features such as robust code navigation and code refactoring.
 
 ![image](https://user-images.githubusercontent.com/76512851/224684760-c92e380b-d1b6-487b-9379-872a772b907f.png)
 
