@@ -85,21 +85,24 @@ Also,were implemented two "must have features" in every modern UI. [TanStack Que
 
 Key points:
 <ul>
-<li>
-React is a popular library for creating component-based frontends. React has the largest ecosystem out of any UI library, with very <a href="" target="_self">talent people</a> supporting it.
-</li>
-<li>
-TypeScript provides a much richer type system on top of JavaScript. TypeScript uses the type system to allow <a href="https://code.visualstudio.com/docs/languages/typescript target="_self">code editors</a> to catch type errors as developers write code. 
-</li>
-<li>
-React Router reduces the number of re-renders.
-</li>
   <li>
-  React Query(TanStack Query) provides a client-side cache of the data.
+    React is a popular library for creating component-based frontends. React has the largest ecosystem out of any UI library, with very <a href="" target="_self">talent people</a> supporting it.
   </li>
-<li>
-  <a href="https://www.solidjs.com/" target="_self">SoliJS</a> is a very interesting alternative to React.
-</li>
+  <li>
+    TypeScript provides a much richer type system on top of JavaScript. TypeScript uses the type system to allow <a href="https://code.visualstudio.com/docs/languages/typescript target="_self">code editors</a> to catch type errors as developers write code. 
+  </li>
+  <li>
+     Concurrent React, a new behind-the-scenes mechanism that enables React to prepare multiple versions of your UI at the same time.
+  </li>
+  <li>
+     React Router reduces the number of re-renders.
+  </li>
+  <li>
+     React Query(TanStack Query) provides a client-side cache of the data.
+  </li>
+  <li>
+     <a href="https://www.solidjs.com/" target="_self">SoliJS</a> is a very interesting alternative to React.
+  </li>
 </ul>
 
 ![image](https://user-images.githubusercontent.com/76512851/224684760-c92e380b-d1b6-487b-9379-872a772b907f.png)
