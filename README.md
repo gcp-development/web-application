@@ -76,6 +76,9 @@ Before runing the integration tests we need to create the table [books](https://
 ### User Web Interface (library-ui)
 
 
+![image](https://user-images.githubusercontent.com/76512851/224685345-476db57f-017b-4d33-817f-c82abddf1916.png)
+
+
 ![image](https://user-images.githubusercontent.com/76512851/224684760-c92e380b-d1b6-487b-9379-872a772b907f.png)
 
 
