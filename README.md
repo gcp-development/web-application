@@ -79,7 +79,7 @@ The project code is organized with separate and clearly marked areas to store co
 
 ![image](https://user-images.githubusercontent.com/76512851/224685345-476db57f-017b-4d33-817f-c82abddf1916.png)
 
-For this small example the [React version 18](https://reactjs.org/blog/2022/03/29/react-v18.html) is used because, in [concurrent mode](https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react), React can work on several state updates concurrently.
+For this small example the [React version 18](https://reactjs.org/versions) is used because, in [concurrent mode](https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react), React can work on several state updates concurrently.
 
 Were also, implemented two "must have features" in every modern user interface(UI). [TanStack Query](https://tanstack.com/query/latest) providing asynchronous state management, server-state utilities and data fetching and [React Router](https://reactrouter.com/en/main), which allow our app to update the URL from a link click without making another request for another document from the server.
 
