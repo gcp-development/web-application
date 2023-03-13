@@ -11,8 +11,8 @@ npm i -D prettier eslint-config-prettier eslint-plugin-prettier
 npm i react-hook-form react-router-dom
 ```
 
-```bash
 To run the project
+```bash
 npm start
 ```
 <hr>
