@@ -89,7 +89,7 @@ Key points:
 React is a popular library for creating component-based frontends. React has the largest ecosystem out of any UI library with very <a href="" target="_self">talent people</a> supporting it.
 </li>
 <li>
-TypeScript provides a much richer type system on top of JavaScript. TypeScript uses the type system to allow [code editors](https://code.visualstudio.com/docs/languages/typescript) to catch type errors as developers write problematic code. 
+TypeScript provides a much richer type system on top of JavaScript. TypeScript uses the type system to allow <a href="https://code.visualstudio.com/docs/languages/typescript target="_self">code editors</a> to catch type errors as developers write code. 
 </li>
 <li>
   <a href="https://www.solidjs.com/" target="_self">SoliJS</a> is a very interesting alternative to React.
