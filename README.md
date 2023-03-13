@@ -75,7 +75,7 @@ Before runing the integration tests we need to create the table [books](https://
 
 ### User Web Interface (library-ui)
 
-The project code is organized with separate and clearly marked areas to store code for API functions, components and types.
+The project code is organized with separate and clearly marked areas to store code for [API functions](https://github.com/gcp-development/web-application/tree/main/library-ui/src/api), [components](https://github.com/gcp-development/web-application/tree/main/library-ui/src/components) and [types](https://github.com/gcp-development/web-application/tree/main/library-ui/src/types).
 
 ![image](https://user-images.githubusercontent.com/76512851/224685345-476db57f-017b-4d33-817f-c82abddf1916.png)
 
