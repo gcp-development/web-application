@@ -79,9 +79,9 @@ The project code is organized with separate and clearly marked areas to store co
 
 ![image](https://user-images.githubusercontent.com/76512851/224685345-476db57f-017b-4d33-817f-c82abddf1916.png)
 
-For this small example the [React version 18](https://reactjs.org/versions) was used because, in [concurrent mode](https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react), React can work on several state updates concurrently.
+For this small user interface(UI) the [React version 18](https://reactjs.org/versions) was used because, in [concurrent mode](https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react), React can work on several state updates concurrently.
 
-Also,were implemented two "must have features" in every modern user interface(UI). [TanStack Query](https://tanstack.com/query/latest) providing asynchronous state management, server-state utilities and data fetching and [React Router](https://reactrouter.com/en/main), which allow our app to update the URL from a link click without making another request for another document from the server.
+Also,were implemented two "must have features" in every modern UI. [TanStack Query](https://tanstack.com/query/latest) providing asynchronous state management, server-state utilities and data fetching and [React Router](https://reactrouter.com/en/main), which allow our app to update the URL from a link click without making another request for another document from the server.
 
 Key points:
 <ul>
@@ -91,14 +91,16 @@ React is a popular library for creating component-based frontends. React has the
 <li>
 TypeScript provides a much richer type system on top of JavaScript. TypeScript uses the type system to allow [code editors](https://code.visualstudio.com/docs/languages/typescript) to catch type errors as developers write problematic code. 
 </li>
+  <li>
+    
+  </li>
 <li>
-  <a href="https://www.solidjs.com/">SoliJS</a> is a very interesting alternative to React.
+  <a href="https://www.solidjs.com/" target="_self">SoliJS</a> is a very interesting alternative to React.
 </li>
 
 </ul>
 
 ![image](https://user-images.githubusercontent.com/76512851/224684760-c92e380b-d1b6-487b-9379-872a772b907f.png)
-
 
 <hr>
 
