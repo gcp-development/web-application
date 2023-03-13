@@ -92,8 +92,11 @@ React is a popular library for creating component-based frontends. React has the
 TypeScript provides a much richer type system on top of JavaScript. TypeScript uses the type system to allow <a href="https://code.visualstudio.com/docs/languages/typescript target="_self">code editors</a> to catch type errors as developers write code. 
 </li>
 <li>
-React Router reduces the number of re-renders, and React Query(TanStack Query) provides a client-side cache of the data.
+React Router reduces the number of re-renders.
 </li>
+  <li>
+  React Query(TanStack Query) provides a client-side cache of the data.
+  </li>
 <li>
   <a href="https://www.solidjs.com/" target="_self">SoliJS</a> is a very interesting alternative to React.
 </li>
