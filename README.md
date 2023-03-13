@@ -92,7 +92,7 @@ Key points:
     TypeScript provides a much richer type system on top of JavaScript. TypeScript uses the type system to allow <a href="https://code.visualstudio.com/docs/languages/typescript target="_self">code editors</a> to catch type errors as developers write code. 
   </li>
   <li>
-     <a href="https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis" target="_self">Concurrent React</a>,Until React 18, the React render process was synchronous and non-interruptable. As a result, the UI would lock during long render processes and not respond immediately to user input.
+     <a href="https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis" target="_self">Concurrent React</a>. Until React 18, the React render process was synchronous and non-interruptable. As a result, the UI would lock during long render processes and not respond immediately to user input.
   </li>
   <li>
      React Router reduces the number of re-renders.
