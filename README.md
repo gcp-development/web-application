@@ -75,6 +75,7 @@ Before runing the integration tests we need to create the table [books](https://
 
 ### User Web Interface (library-ui)
 
+The project code is organized with separate and clearly marked areas to store code for components.
 
 ![image](https://user-images.githubusercontent.com/76512851/224685345-476db57f-017b-4d33-817f-c82abddf1916.png)
 
