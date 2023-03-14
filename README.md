@@ -84,10 +84,10 @@ For providing asynchronous state management, server-state utilities and data fet
 
 By integrating these two libraries and the use of the React V18, we get the following key benefits:
 <ul>
-  <li>Enables React to prepare multiple versions of your UI at the same time.</li>
+  <li>Ability to prepare multiple versions of our UI at the same time.</li>
   <li>React Router’s data loader prevents an unnecessary re-render when data is loaded onto a page.</li>
   <li>React Query’s cache prevents unnecessary calls to the REST API.</li>
-<ul>
+</ul>
 
 SolidJS vs [React](https://www.solidjs.com/guides/comparison#react)
 
