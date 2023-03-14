@@ -88,7 +88,7 @@ SolidJS vs [React](https://www.solidjs.com/guides/comparison#react)
 [SolidJS](https://www.solidjs.com/) is an open source, reactive declarative JavaScript library with an API similar to React. There is no such thing "one better than the other". Its always about tradeoff [(js-framework-benchmark)](https://krausest.github.io/js-framework-benchmark/current.html), we have to give up something to gain something else. In every decision made as always, we should select two paths and keep an eye on both.
 
 Comparison Table
-| Feature| SolidJS(2021) | React(2016) |
+| Feature| SolidJS (2021) | React (2016) |
 | ------------- | ------------- | ------------- |
 | TypeScript support | = | = | 
 | Declarative nature | = | = | 
