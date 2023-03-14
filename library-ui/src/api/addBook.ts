@@ -1,6 +1,8 @@
 import { Book } from '../types/Book';
 
 export async function addBook(newBook: Book) {
+  //This is because the input type that does return the type number.
+  newBook.id = parseInt(newBook.id.toString());
   const response = await fetch(process.env.REACT_APP_API_URL!.concat('library/'), {
     method: 'POST',
     body: JSON.stringify(newBook),
