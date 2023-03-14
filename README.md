@@ -128,6 +128,10 @@ Key points:
   </li>
 </ul>
 
+Running the React UI
+
+The table [books](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/1_tbBooks.sql) needs to be create and run the script [test data](https://github.com/gcp-development/web-application/blob/main/library-service/src/model/sql_scripts/2_testData.sql) using [pgAdmin](https://www.pgadmin.org/download/) for instance.
+
 ![image](https://user-images.githubusercontent.com/76512851/224684760-c92e380b-d1b6-487b-9379-872a772b907f.png)
 
 <hr>
