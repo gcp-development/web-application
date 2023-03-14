@@ -83,6 +83,25 @@ For this small user interface(UI) the [React version 18](https://reactjs.org/ver
 
 Also,were implemented two "must have features" in every modern UI. [TanStack Query](https://tanstack.com/query/latest) providing asynchronous state management, server-state utilities and data fetching and [React Router](https://reactrouter.com/en/main), which allow our app to update the URL from a link click without making another request for another document from the server.
 
+SolidJS vs [React](https://www.solidjs.com/guides/comparison#react)
+
+[SolidJS](https://www.solidjs.com/) is an open source, reactive declarative JavaScript library with an API similar to React. There is no such thing "one better than the other". Its always about tradeoff, we have to give up something to gain something else. In every decision made as always, we should select two paths and keep an eye on both.
+
+[js-framework-benchmark](https://krausest.github.io/js-framework-benchmark/current.html)
+
+
+Key Features of Solid.js:
+<ul>
+  <li>TypeScript Support</li>
+  <li>JSX Support</li>
+  <li>Server-side Rendering</li>
+  <li>Asynchronous Rendering</li>
+  <li>Small Library Size</li>
+  <li>Easy Debugging and Profiling</li>
+  <li>Reactive and Declarative Programming</li>
+</ul>
+
+
 
 | Feature| SolidJS(2021) | React(2016) |
 | ------------- | ------------- | ------------- |
