@@ -1,7 +1,6 @@
 import { FieldError, useForm } from 'react-hook-form';
 import { ValidationError } from './ValidationError';
 import { Book } from '../types/Book';
-import { useEffect, useState } from 'react';
 
 type Props = {
   onSave: (newBook: Book) => void;
@@ -17,20 +16,6 @@ export function NewBookForm({ onSave }: Props) {
   function getEditorStyle(fieldError: FieldError | undefined) {
     return fieldError ? 'border-red-500' : '';
   }
-
-  const [bookId, setInput] = useState(0);
-
-  useEffect(() => {
-    console.log({ id: bookId }, typeof bookId);
-  }, [bookId]);
-
-  function handleChange(event: { target: { name: any; type: any; value: any } }) {
-    const { value } = event.target;
-    setInput((bookId) => {
-      return Number(value);
-    });
-  }
-
   return (
     <form noValidate className="border-b py-4" onSubmit={handleSubmit(onSave)}>
       <div className={fieldStyle}>
@@ -42,8 +27,6 @@ export function NewBookForm({ onSave }: Props) {
             required: 'You must enter a id',
           })}
           name="id"
-          value={bookId}
-          onChange={handleChange}
           className={getEditorStyle(errors.id)}
         />
         <ValidationError fieldError={errors.id} />
@@ -82,7 +65,7 @@ export function NewBookForm({ onSave }: Props) {
         </button>
         {isSubmitSuccessful && (
           <div role="alert" className="text-green-500 text-xs mt-1">
-            The post was successfully saved
+            The Book was successfully saved
           </div>
         )}
       </div>
