@@ -118,7 +118,7 @@ Key points:
      React Query(TanStack Query) provides a client-side cache of the data.
   </li>
   <li>
-     <a href="https://www.solidjs.com/" target="_self">SoliJS</a> is a very interesting alternative to React.
+     <a href="https://www.solidjs.com/" target="_self">SoliJS</a> is a very solid alternative to React.
   </li>
 </ul>
 
