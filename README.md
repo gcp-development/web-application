@@ -86,8 +86,9 @@ Also,were implemented two "must have features" in every modern UI. [TanStack Que
 
 | Feature| SolidJS | React |
 | ------------- | ------------- | ------------- |
-| State Management  | No built-in state management   | Built-in state management (state and setState)  |
-| JSX Support | No built-in support   | Built-in support  |
+| TypeScript support | Yes | Yes | 
+| State Management  | No built-in state management(third-party libraries)   | Built-in state management (state and setState)  |
+| JSX Support | No built-in support(third-party libraries)   | Built-in support  |
 
 Key points:
 <ul>
