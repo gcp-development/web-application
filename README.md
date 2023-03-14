@@ -86,9 +86,15 @@ Also,were implemented two "must have features" in every modern UI. [TanStack Que
 
 | Feature| SolidJS | React |
 | ------------- | ------------- | ------------- |
-| TypeScript support | Yes | Yes | 
-| State Management  | No built-in state management(third-party libraries)   | Built-in state management (state and setState)  |
-| JSX Support | No built-in support(third-party libraries)   | Built-in support  |
+| TypeScript support | = | = | 
+| Declarative nature | = | = | 
+| JSX Support | = | = |
+| Highly performant | + | - |
+| Direct manipulation of the DOM | Yes | No |
+| Server-side rendering  | = | = |
+| Conditional rendering | = | = |
+| Concurrent rendering | = | = |
+| Community and ecosystem | - | + |
 
 Key points:
 <ul>
