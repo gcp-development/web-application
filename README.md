@@ -81,12 +81,14 @@ The project code is organized with separate and clearly marked areas to store co
 
 The [React version 18](https://reactjs.org/versions) was used to build this user interface(UI), because of the [concurrent mode](https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react) that comes with this version. This new feature allows React to work on several state updates concurrently. 
 For providing asynchronous state management, server-state utilities and data fetching, [TanStack Query](https://tanstack.com/query/latest) was used. Together with [React Router](https://reactrouter.com/en/main), which allow this UI to update the URL from a link click without making another request for another document from the server.
+
 By integrating these two libraries and the use of the React V18, we get the following key benefits:
 <ul>
   <li>Enables React to prepare multiple versions of your UI at the same time.</li>
   <li>React Router’s data loader prevents an unnecessary re-render when data is loaded onto a page.</li>
   <li>React Query’s cache prevents unnecessary calls to the REST API.</li>
 <ul>
+
 SolidJS vs [React](https://www.solidjs.com/guides/comparison#react)
 
 [SolidJS](https://www.solidjs.com/) is an open source, reactive declarative JavaScript library with an API similar to React. There is no such thing "one better than the other". Its always about tradeoff [(js-framework-benchmark)](https://krausest.github.io/js-framework-benchmark/current.html), we have to give up something to gain something else. In every decision made, as always, we should select two paths chose one and keep an eye on both.
