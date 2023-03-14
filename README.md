@@ -84,10 +84,10 @@ For this small user interface(UI) the [React version 18](https://reactjs.org/ver
 Also,were implemented two "must have features" in every modern UI. [TanStack Query](https://tanstack.com/query/latest) providing asynchronous state management, server-state utilities and data fetching and [React Router](https://reactrouter.com/en/main), which allow our app to update the URL from a link click without making another request for another document from the server.
 
 
-| React  | SolidJS |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Feature| SolidJS | React |
+| ------------- | ------------- | ------------- |
+| State Management  | No built-in state management   | Built-in state management (state and setState)  |
+| JSX Support | No built-in support   | Built-in support  |
 
 Key points:
 <ul>
