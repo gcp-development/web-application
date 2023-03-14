@@ -149,3 +149,6 @@ References:<br>
 [PostgreSQL](https://www.postgresql.org/docs/current/index.html)<br>
 [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)<br>
 [Testing](https://doc.rust-lang.org/rust-by-example/testing.html)<br>
+[React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)<br>
+[Type Script Language](https://www.typescriptlang.org/)<br>
+
