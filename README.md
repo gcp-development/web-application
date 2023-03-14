@@ -79,10 +79,8 @@ The project code is organized with separate and clearly marked areas to store co
 
 ![image](https://user-images.githubusercontent.com/76512851/224685345-476db57f-017b-4d33-817f-c82abddf1916.png)
 
-The [React version 18](https://reactjs.org/versions) was used to build this user interface(UI). Because of the [concurrent mode](https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react) that comes with this version. This new feature allows React to work on several state updates concurrently. 
+The [React version 18](https://reactjs.org/versions) was used to build this user interface(UI), because of the [concurrent mode](https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react) that comes with this version. This new feature allows React to work on several state updates concurrently. 
 For providing asynchronous state management, server-state utilities and data fetching, [TanStack Query](https://tanstack.com/query/latest) was used. Together with [React Router](https://reactrouter.com/en/main), which allow this UI to update the URL from a link click without making another request for another document from the server.
-
-
 
 SolidJS vs [React](https://www.solidjs.com/guides/comparison#react)
 
