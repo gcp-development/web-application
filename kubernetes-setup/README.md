@@ -175,6 +175,8 @@ Test the library-service using [Postman](https://www.postman.com/downloads/)
 
 <hr>
 
+### Kubernetes manifests
+
 ```bash
 kubectl apply -f 9_ipfs-node-pv.yml
 ```
@@ -202,6 +204,7 @@ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://demo:32
 ```bash
 ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
 ```
+### Smoke tests
 
 <hr>
 
