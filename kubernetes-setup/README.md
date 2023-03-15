@@ -17,8 +17,8 @@ It's assumed that these software are installed and running:
   <li><a href="https://github.com/gcp-development/web-application/blob/main/kubernetes-setup/README.md#smoke-tests" target="_self">Smoke tests</a></li>
   <li><a href="https://github.com/gcp-development/web-application/blob/main/kubernetes-setup/README.md#interplanetary-file-systemipfs" target="_self"> InterPlanetary File System(IPFS)</a></li>
   <ul>
-    <li><a href="" target="_self">Kubernetes manifests</a></li>
-    <li><a href="https://github.com/gcp-development/web-application/blob/main/kubernetes-setup/README.md#smoke-tests-1" target="_self"></a>Smoke tests</li>
+    <li><a href="https://github.com/gcp-development/web-application/blob/main/kubernetes-setup/README.md#kubernetes-manifests-1" target="_self">Kubernetes manifests</a></li>
+    <li><a href="https://github.com/gcp-development/web-application/blob/main/kubernetes-setup/README.md#smoke-tests-1" target="_self">Smoke tests</a></li>
   </ul>
 </ul>
 <hr>
