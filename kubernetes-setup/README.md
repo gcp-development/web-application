@@ -169,6 +169,37 @@ Test the library-service using [Postman](https://www.postman.com/downloads/)
 ![image](https://user-images.githubusercontent.com/76512851/222967580-819bba06-fc85-476f-bd18-6cf88cf0bded.png)
 
 <hr>
+
+```bash
+kubectl apply -f 9_ipfs-node-pv.yml
+```
+
+```bash
+kubectl apply -f 10_ipfs-node-pvc.yml
+```
+
+```bash
+kubectl apply -f 11_ipfs-kubo-pod.yml
+```
+
+```bash
+kubectl apply -f 12_ipfs-service.yml
+```
+
+```bash
+kubectl exec -it ipfs-kubo --namespace=web-application -- sh
+```
+
+```bash
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://demo:32546", "http://localhost:3000", "http://127.0.0.1:5001", "https://webui.ipfs.io"]'
+```
+
+```bash
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
+```
+
+<hr>
+
 References:<br>
 
 [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)<br>
