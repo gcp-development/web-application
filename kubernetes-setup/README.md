@@ -175,6 +175,8 @@ Test the library-service using [Postman](https://www.postman.com/downloads/)
 
 <hr>
 
+## InterPlanetary File System(IPFS)
+
 ### Kubernetes manifests
 
 ```bash
@@ -204,6 +206,9 @@ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://demo:32
 ```bash
 ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
 ```
+
+<hr>
+
 ### Smoke tests
 
 <hr>
