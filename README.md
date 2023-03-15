@@ -15,8 +15,9 @@ The example developed, will be focused on the back-end services and distributed 
 <ul>
 <li><a href="https://github.com/gcp-development/web-application/blob/main/README.md#restful-web-service-library-service" target="_self">RESTful Web Service</a> (library-service)</li>
 <li><a href="https://github.com/gcp-development/web-application#user-web-interface-library-ui" target="_self">User Web Interface</a> (library-ui)</li>
-<li><a href="https://github.com/gcp-development/web-application#conclusion" target="_self">Conclusion</li></li>
+<li><a href="https://github.com/gcp-development/web-application/blob/main/README.md#ipfs" target="_self">InterPlanetary File System</li>
 </ul>
+<li><a href="https://github.com/gcp-development/web-application#conclusion" target="_self">Conclusion</li>
 </ul>
 <hr>
 
