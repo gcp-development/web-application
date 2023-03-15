@@ -218,4 +218,5 @@ References:<br>
 [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)<br>
 [minikube](https://minikube.sigs.k8s.io/docs/)<br>
 [Kubernetes Documentation](https://kubernetes.io/docs/home/)<br>
-[Rust Official Image](https://hub.docker.com/_/rust)
+[Rust Official Image](https://hub.docker.com/_/rust)<br>
+[IPFS-Node Kubo](https://github.com/ipfs/kubo#readme)
