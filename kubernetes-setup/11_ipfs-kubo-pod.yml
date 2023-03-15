@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ipfs-kubo
+  namespace: web-application
+  labels:
+    app: ipfs-node
+spec:
+  volumes:
+    - name: ipfs-storage
+      persistentVolumeClaim:
+        claimName: ipfs-node-pvc
+  containers:
+    - name: ipfs-node
+      image: ipfs/kubo:master-latest
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+        - name: ipfs-storage
+          mountPath: /data/ipfs
+  restartPolicy: Always
