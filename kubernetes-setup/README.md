@@ -219,6 +219,12 @@ minikube tunnel -p demo
 
 ![image](https://user-images.githubusercontent.com/76512851/225727024-a42aa1cb-cab9-47ac-a81f-01d6f865ebc8.png)
 
+```bash
+kubectl get svc --namespace=web-application
+```
+
+![image](https://user-images.githubusercontent.com/76512851/225727587-a14f5f78-3bad-4799-ab92-ed46702da424.png)
+
 <hr>
 
 ### Smoke tests
