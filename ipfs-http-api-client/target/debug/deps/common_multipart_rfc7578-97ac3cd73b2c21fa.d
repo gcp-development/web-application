@@ -1,0 +1,10 @@
+/home/silveira/projects/web-application/ipfs-http-api-client/target/debug/deps/common_multipart_rfc7578-97ac3cd73b2c21fa.rmeta: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/boundary.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/client_.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/error.rs
+
+/home/silveira/projects/web-application/ipfs-http-api-client/target/debug/deps/libcommon_multipart_rfc7578-97ac3cd73b2c21fa.rlib: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/boundary.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/client_.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/error.rs
+
+/home/silveira/projects/web-application/ipfs-http-api-client/target/debug/deps/common_multipart_rfc7578-97ac3cd73b2c21fa.d: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/boundary.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/client_.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/error.rs
+
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/lib.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/boundary.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/client_.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/error.rs:

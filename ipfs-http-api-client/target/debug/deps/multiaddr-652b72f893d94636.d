@@ -1,0 +1,11 @@
+/home/silveira/projects/web-application/ipfs-http-api-client/target/debug/deps/multiaddr-652b72f893d94636.rmeta: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/errors.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/onion_addr.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/protocol.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/from_url.rs
+
+/home/silveira/projects/web-application/ipfs-http-api-client/target/debug/deps/libmultiaddr-652b72f893d94636.rlib: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/errors.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/onion_addr.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/protocol.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/from_url.rs
+
+/home/silveira/projects/web-application/ipfs-http-api-client/target/debug/deps/multiaddr-652b72f893d94636.d: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/errors.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/onion_addr.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/protocol.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/from_url.rs
+
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/lib.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/errors.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/onion_addr.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/protocol.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/multiaddr-0.17.0/src/from_url.rs:
