@@ -192,6 +192,13 @@ kubectl apply -f 11_ipfs-kubo-pod.yml
 ```
 
 ```bash
+kubectl logs -f ipfs-kubo --namespace=web-application
+```
+
+![image](https://user-images.githubusercontent.com/76512851/225724929-e14cfe9b-5a8f-4d40-92a7-c78e3175e977.png)
+
+
+```bash
 kubectl apply -f 12_ipfs-service.yml
 ```
 
@@ -201,11 +208,16 @@ kubectl exec -it ipfs-kubo --namespace=web-application -- sh
 
 ```bash
 ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://demo:32546", "http://localhost:3000", "http://127.0.0.1:5001", "https://webui.ipfs.io"]'
-```
-
-```bash
 ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
 ```
+
+![image](https://user-images.githubusercontent.com/76512851/225726020-10e02eca-f07d-4820-bf87-56c253c2e11a.png)
+
+```bash
+minikube tunnel -p demo
+```
+
+![image](https://user-images.githubusercontent.com/76512851/225727024-a42aa1cb-cab9-47ac-a81f-01d6f865ebc8.png)
 
 <hr>
 
