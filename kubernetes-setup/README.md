@@ -229,6 +229,13 @@ kubectl get svc --namespace=web-application
 
 ### Smoke tests
 
+```bash
+http://demo:32546/webui
+```
+
+![image](https://user-images.githubusercontent.com/76512851/225729134-923b2580-86a6-4821-a3a2-37b704beb288.png)
+
+
 <hr>
 
 References:<br>
