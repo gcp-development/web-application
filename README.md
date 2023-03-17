@@ -158,6 +158,8 @@ Import the test.json file and copy the [CID](https://docs.ipfs.tech/concepts/con
 ![image](https://user-images.githubusercontent.com/76512851/225890906-98eb2266-0377-48b9-b1da-f234b0749931.png)
 
 
+![image](https://user-images.githubusercontent.com/76512851/225894751-e040061d-de61-49ea-9ef0-20e8df975ef4.png)
+
 
 
 <hr>
