@@ -155,9 +155,11 @@ IPFS Components
 
 
 Import the test.json file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
+      
 ![image](https://user-images.githubusercontent.com/76512851/225890906-98eb2266-0377-48b9-b1da-f234b0749931.png)
 
-
+The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is the path of the file.code] (https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/read-ipfs-file/)
+      
 ![image](https://user-images.githubusercontent.com/76512851/225894751-e040061d-de61-49ea-9ef0-20e8df975ef4.png)
 
 
