@@ -187,9 +187,12 @@ async fn main() {
 ```
       
 We also can access the file via browser https://ipfs.io/ipfs/QmYzyPxVtuZ1Vqby3NQHUEkWMjRq1nKuBGanazknDCnCvV using the [IPNS name](https://docs.ipfs.tech/concepts/ipns/).
+We can also use a [DNSLink](http://docs.ipfs.tech/concepts/dnslink/) address which looks like an IPNS address, but it uses a DNS name in place of a hashed public key.
 
 ![image](https://user-images.githubusercontent.com/76512851/225899330-55724627-bc4a-4fa4-af44-e931eeff806a.png)
 
+      
+      
 <hr>
 
 ### Conclusion
