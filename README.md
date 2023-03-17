@@ -184,7 +184,11 @@ async fn main() {
         Err(e) => eprintln!("error getting file: {}", e)
     }
 }
-```      
+```
+      
+We also can access the file via browser https://ipfs.io/ipfs/QmYzyPxVtuZ1Vqby3NQHUEkWMjRq1nKuBGanazknDCnCvV.
+
+![image](https://user-images.githubusercontent.com/76512851/225899330-55724627-bc4a-4fa4-af44-e931eeff806a.png)
 
 <hr>
 
