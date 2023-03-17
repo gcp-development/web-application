@@ -140,6 +140,8 @@ The table [books](https://github.com/gcp-development/web-application/blob/main/l
 
 ### IPFS
 
+[CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids)
+
 <hr>
 
 ### Conclusion
