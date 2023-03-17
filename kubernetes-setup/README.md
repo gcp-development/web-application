@@ -208,7 +208,7 @@ kubectl exec -it ipfs-kubo --namespace=web-application -- sh
 
 ```bash
 ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://demo:32546", "http://localhost:3000", "http://127.0.0.1:5001", "https://webui.ipfs.io"]'
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST", "GET"]'
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/225726020-10e02eca-f07d-4820-bf87-56c253c2e11a.png)
