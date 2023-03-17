@@ -1,5 +1,5 @@
 [package]
-name = "ipfs-http-api-client"
+name = "read-ipfs-file"
 version = "0.1.0"
 edition = "2021"
 
