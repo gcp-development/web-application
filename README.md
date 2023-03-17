@@ -140,6 +140,13 @@ The table [books](https://github.com/gcp-development/web-application/blob/main/l
 
 ### IPFS
 
+IPFS Components
+-Distributed Hash Table
+-Block Exchanges
+-Merkle DAG
+-Version Control System
+-Self-certifying File System
+      
 [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids)
 
 <hr>
