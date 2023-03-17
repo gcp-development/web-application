@@ -152,7 +152,13 @@ IPFS Components
 -Version Control System
 -Self-certifying File System
       
-[CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids)
+
+
+Import the test.json file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
+![image](https://user-images.githubusercontent.com/76512851/225890906-98eb2266-0377-48b9-b1da-f234b0749931.png)
+
+
+
 
 <hr>
 
