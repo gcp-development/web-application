@@ -160,11 +160,31 @@ Import the test.json file and copy the [CID](https://docs.ipfs.tech/concepts/con
 
 The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is a label used to point to material in IPFS.[(Project Read File)](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/read-ipfs-file/)
 
-      
-      
-![image](https://user-images.githubusercontent.com/76512851/225894751-e040061d-de61-49ea-9ef0-20e8df975ef4.png)
+```bash
+static IPFS_API: &str = "http://demo:32546/";
+static CID: &str = "QmYzyPxVtuZ1Vqby3NQHUEkWMjRq1nKuBGanazknDCnCvV";
 
+#[actix_rt::main]
+async fn main() {
+    let client = IpfsClient::from_str(&IPFS_API)
+        .unwrap();
 
+    match client
+        .get(CID)
+        .map_ok(|chunk| chunk.to_vec())
+        .try_concat()
+        .await
+    {
+        Ok(res) => {
+            let out = io::stdout();
+            let mut out = out.lock();
+
+            out.write_all(&res).unwrap();
+        }
+        Err(e) => eprintln!("error getting file: {}", e)
+    }
+}
+```      
 
 <hr>
 
