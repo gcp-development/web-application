@@ -153,7 +153,8 @@ IPFS Components
 -Self-certifying File System
       
 
-
+#### Unique identification via content addressing
+      
 Import the test.json file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
       
 ![image](https://user-images.githubusercontent.com/76512851/225890906-98eb2266-0377-48b9-b1da-f234b0749931.png)
@@ -191,8 +192,10 @@ We can also use a [DNSLink](http://docs.ipfs.tech/concepts/dnslink/) address whi
 
 ![image](https://user-images.githubusercontent.com/76512851/225899330-55724627-bc4a-4fa4-af44-e931eeff806a.png)
 
-      
-      
+#### Content linking via directed acyclic graphs (DAGs)
+
+#### <b>Content discovery via distributed hash tables (DHTs)</b>
+
 <hr>
 
 ### Conclusion
