@@ -194,11 +194,11 @@ We can also use a [DNSLink](http://docs.ipfs.tech/concepts/dnslink/) address whi
 
 #### Content linking via directed acyclic graphs (DAGs)
 
-Import these three files [book1.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book1.json),[book2.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book2.json) and [book3.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book3.json) copy the CID.
+Import these three files [book1.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book1.json), [book2.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book2.json), [book3.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book3.json) and copy their CID.
  
 ![image](https://user-images.githubusercontent.com/76512851/226326786-401e95a5-aef8-4273-9f54-b2aa82e80e1a.png)
       
-We are using therThe CID is a label used to point to material in IPFS.[(Project Create DAG)](https://github.com/gcp-development/web-application/tree/main/ipfs-http-api-client/create-ipfs-dag)
+Use those CID to create a DAG in IPFS.[(Project Create DAG)](https://github.com/gcp-development/web-application/tree/main/ipfs-http-api-client/create-ipfs-dag)
       
 ```bash
 use std::io::{Cursor};
