@@ -198,7 +198,7 @@ Import these three files [book1.json](https://github.com/gcp-development/web-app
  
 ![image](https://user-images.githubusercontent.com/76512851/226326786-401e95a5-aef8-4273-9f54-b2aa82e80e1a.png)
       
-Use those CID to create a DAG in IPFS.[(Project Create DAG)](https://github.com/gcp-development/web-application/tree/main/ipfs-http-api-client/create-ipfs-dag)
+Use those CIDs to create a [DAG](http://demo:30009/ipns/docs.ipfs.tech/concepts/merkle-dag/#merkle-directed-acyclic-graphs-dags) in IPFS.[(Project Create DAG)](https://github.com/gcp-development/web-application/tree/main/ipfs-http-api-client/create-ipfs-dag)
       
 ```bash
 use std::io::{Cursor};
