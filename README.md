@@ -239,6 +239,15 @@ async fn main() {
 }
 ```
 
+Running this piece of code you will get the CID from the DAG node.
+      
+![image](https://user-images.githubusercontent.com/76512851/226331270-2d1ad107-4cc3-4a40-a2cb-66496c2b0162.png)
+
+Use the CID(bafyreihw63bea7teb7araypl6sdhhhv57vohawroks4nxogorc2jx7b5oi) for searching the node DAG.
+      
+![image](https://user-images.githubusercontent.com/76512851/226332078-4ddef114-30a2-4552-b365-ad8d262239f6.png)
+
+      
 #### <b>Content discovery via distributed hash tables (DHTs)</b>
 
 <hr>
