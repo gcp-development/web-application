@@ -155,7 +155,7 @@ IPFS Components
 
 #### Unique identification via content addressing
       
-Import the test.json file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
+Import the [test.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/test.json) file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
       
 ![image](https://user-images.githubusercontent.com/76512851/225890906-98eb2266-0377-48b9-b1da-f234b0749931.png)
 
