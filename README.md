@@ -186,9 +186,6 @@ async fn main() {
     }
 }
 ```
-Import these three files [book1.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book1.json),[book2.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book2.json) and [book3.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book3.json) copy the CID.
- 
-![image](https://user-images.githubusercontent.com/76512851/226326786-401e95a5-aef8-4273-9f54-b2aa82e80e1a.png)
 
 We also can access the file via browser https://ipfs.io/ipfs/QmYzyPxVtuZ1Vqby3NQHUEkWMjRq1nKuBGanazknDCnCvV using the [IPNS name](https://docs.ipfs.tech/concepts/ipns/).
 We can also use a [DNSLink](http://docs.ipfs.tech/concepts/dnslink/) address which looks like an IPNS address, but it uses a DNS name in place of a hashed public key.
@@ -197,6 +194,10 @@ We can also use a [DNSLink](http://docs.ipfs.tech/concepts/dnslink/) address whi
 
 #### Content linking via directed acyclic graphs (DAGs)
 
+Import these three files [book1.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book1.json),[book2.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book2.json) and [book3.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book3.json) copy the CID.
+ 
+![image](https://user-images.githubusercontent.com/76512851/226326786-401e95a5-aef8-4273-9f54-b2aa82e80e1a.png)
+      
 We are using therThe CID is a label used to point to material in IPFS.[(Project Create DAG)](https://github.com/gcp-development/web-application/tree/main/ipfs-http-api-client/create-ipfs-dag)
       
 ```bash
