@@ -142,9 +142,9 @@ The table [books](https://github.com/gcp-development/web-application/blob/main/l
 
 Three fundamental principles to understanding IPFS:
 <ul>
-<li>Unique identification via content addressing(CID)</li>
-<li>Content linking via directed acyclic graphs (DAGs)</li>
-<li>Content discovery via distributed hash tables (DHTs)</li>
+<li><a href="https://github.com/gcp-development/web-application#unique-identification-via-content-addressing" target="_self">Unique identification via content addressing(CID)</a></li>
+<li><a href="https://github.com/gcp-development/web-application#content-linking-via-directed-acyclic-graphs-dags" target="_self">Content linking via directed acyclic graphs (DAGs)</a></li>
+<li><a href="" target="_self">Content discovery via distributed hash tables (DHTs)</a></li>
 </ul>
       
 IPFS Components
