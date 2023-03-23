@@ -140,6 +140,9 @@ The table [books](https://github.com/gcp-development/web-application/blob/main/l
 
 ### IPFS
 
+
+[Kubo RPC API](http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/)
+
 Three fundamental principles to understanding IPFS:
 <ul>
 <li><a href="https://github.com/gcp-development/web-application#unique-identification-via-content-addressing" target="_self">Unique identification via content addressing(CID)</a></li>
