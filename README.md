@@ -140,8 +140,10 @@ The table [books](https://github.com/gcp-development/web-application/blob/main/l
 
 ### IPFS
 
+InterPlanetary File System (IPFS) is a peer-to-peer distributed file system, seeks to connect all computing devices with the same system of files.
+IPFS is the combinational technology of the version controlling system and peer to peer network spreadover global namespace.
 
-[Kubo RPC API](http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/)
+In contrast to a central storage based file system, IPFS works on a decentralized system in which every user in the network holds a portion of the overall data, thus creating a resilient system for storage and sharing over the globe. Any user in the network is able to share a file and it will be accessible to everyone in the network by requesting it from a node which possesses it using the Distributed Hash Table (DHT). 
 
 Three fundamental principles to understanding IPFS:
 <ul>
@@ -149,7 +151,9 @@ Three fundamental principles to understanding IPFS:
 <li><a href="https://github.com/gcp-development/web-application#content-linking-via-directed-acyclic-graphs-dags" target="_self">Content linking via directed acyclic graphs (DAGs)</a></li>
 <li><a href="" target="_self">Content discovery via distributed hash tables (DHTs)</a></li>
 </ul>
-      
+
+[Kubo RPC API](http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/)
+
 IPFS Components
 -Distributed Hash Table
 -Block Exchanges
