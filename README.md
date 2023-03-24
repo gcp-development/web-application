@@ -178,10 +178,12 @@ We can access the file directly via browser https://ipfs.io/ipfs/QmTN78XgBo6fPaW
 
 #### Content linking via directed acyclic graphs (DAGs)
 
-Import the file [book2.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book2.json).
+Import the file [book2.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book2.json).
+      
 ![image](https://user-images.githubusercontent.com/76512851/227559021-67685565-4632-431a-befb-1236eae5130c.png)
       
-Import the file [book3.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book3.json).
+Import the file [book3.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book3.json).
+      
 ![image](https://user-images.githubusercontent.com/76512851/227558570-393b0b19-83aa-4922-a1b6-d282482c4a39.png)
 
       
