@@ -186,7 +186,13 @@ Import the file [book3.json](https://github.com/gcp-development/web-application/
       
 ![image](https://user-images.githubusercontent.com/76512851/227558570-393b0b19-83aa-4922-a1b6-d282482c4a39.png)
 
-      
+```bash
+[
+ { "/":"QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL"},
+ { "/":"QmYqo1Ack8g2rDX6TEoPA14oNASJrXEVB4oTEKv8So6Ect"},
+ {"/":"QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u"}
+]
+```
       
       
 ![image](https://user-images.githubusercontent.com/76512851/227553593-5645614b-5208-4eaa-8158-390c5f391a29.png)
