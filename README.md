@@ -186,7 +186,7 @@ Import the file [book3.json](https://github.com/gcp-development/web-application/
       
 ![image](https://user-images.githubusercontent.com/76512851/227558570-393b0b19-83aa-4922-a1b6-d282482c4a39.png)
 
-Import the Dag file [library.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-dag-put/library.json) using the  
+Import the DAG node file [library.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-dag-put/library.json) using the  
       
 Using the three CIDs of the files already imported(book1.json,book2.json and book3.json) to create a [DAG](http://demo:30009/ipns/docs.ipfs.tech/concepts/merkle-dag/#merkle-directed-acyclic-graphs-dags) in IPFS.[(Project Create Dag)](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-dag-put).
       
@@ -202,7 +202,7 @@ Copy the CID.
       
 ![image](https://user-images.githubusercontent.com/76512851/227553593-5645614b-5208-4eaa-8158-390c5f391a29.png)
 
-Using the CID "bafyreihw63bea7teb7araypl6sdhhhv57vohawroks4nxogorc2jx7b5oi" of the DAG created search for file in the kubo node webui(http://demo:32546/webui/).
+Using the CID "bafyreihw63bea7teb7araypl6sdhhhv57vohawroks4nxogorc2jx7b5oi" of the DAG node created search for it in the IPFS node webui(http://demo:32546/webui/).
 
 ![image](https://user-images.githubusercontent.com/76512851/227563963-35175cb3-2a74-4b8a-b1b2-690d9275c934.png)
       
