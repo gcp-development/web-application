@@ -178,50 +178,22 @@ We can access the file directly via browser https://ipfs.io/ipfs/QmTN78XgBo6fPaW
 
 #### Content linking via directed acyclic graphs (DAGs)
 
-Import these three files [book1.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book1.json), [book2.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book2.json), [book3.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book3.json) and copy their CID.
+Import these two files [book2.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book2.json), [book3.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/book3.json) and copy their CID.
+
+
+      
+      
+      
+![image](https://user-images.githubusercontent.com/76512851/227553593-5645614b-5208-4eaa-8158-390c5f391a29.png)
+
+      
+      
+
  
 ![image](https://user-images.githubusercontent.com/76512851/226326786-401e95a5-aef8-4273-9f54-b2aa82e80e1a.png)
       
 Use those CIDs to create a [DAG](http://demo:30009/ipns/docs.ipfs.tech/concepts/merkle-dag/#merkle-directed-acyclic-graphs-dags) in IPFS.[(Project Create DAG)](https://github.com/gcp-development/web-application/tree/main/ipfs-http-api-client/create-ipfs-dag)
       
-```bash
-use std::io::{Cursor};
-use futures::TryStreamExt;
-use ipfs_api_backend_actix::{IpfsApi, IpfsClient, TryFromUri};
-
-static IPFS_API: &str = "http://demo:32546/";
-
-#[actix_rt::main]
-async fn main() {
-    let client = IpfsClient::from_str(&IPFS_API)
-        .unwrap();
-
-    let dag_node = Cursor::new(r#"[{ "/":"QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL"]},{ "/":"QmYqo1Ack8g2rDX6TEoPA14oNASJrXEVB4oTEKv8So6Ect"},{"/":"QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u"}]"#);
-
-    let response = client
-        .dag_put(dag_node)
-        .await
-        .expect("error adding dag node");
-
-    let cid = response.cid.cid_string;
-
-    println!("CID:{}", cid);
-
-    match client
-        .dag_get(&cid)
-        .map_ok(|chunk| chunk.to_vec())
-        .try_concat()
-        .await
-    {
-        Ok(bytes) => {
-            println!("{}", String::from_utf8_lossy(&bytes[..]));
-        }
-        Err(e) => {
-            eprintln!("error reading dag node: {}", e);
-        }
-    }
-}
-```
 
 Running this piece of code you will get the CID from the DAG node.
       
