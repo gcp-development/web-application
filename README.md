@@ -164,42 +164,19 @@ IPFS Components
 
 #### Unique identification via content addressing
       
-Import the [test.json](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/test.json) file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
-      
-![image](https://user-images.githubusercontent.com/76512851/225890906-98eb2266-0377-48b9-b1da-f234b0749931.png)
+Import the [book1.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book1.json) file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
 
-The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is a label used to point to material in IPFS.[(Project Read File)](https://github.com/gcp-development/web-application/blob/main/ipfs-http-api-client/read-ipfs-file/)
+![image](https://user-images.githubusercontent.com/76512851/227532596-327ccdf7-1790-4d8b-9dfa-898171c6b192.png)
 
-```bash
-static IPFS_API: &str = "http://demo:32546/";
-static CID: &str = "QmYzyPxVtuZ1Vqby3NQHUEkWMjRq1nKuBGanazknDCnCvV";
+The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is a label used to point to material in IPFS.[(Project Import File)](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-add)
 
-#[actix_rt::main]
-async fn main() {
-    let client = IpfsClient::from_str(&IPFS_API)
-        .unwrap();
+Search for file using the CID "QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL".
 
-    match client
-        .get(CID)
-        .map_ok(|chunk| chunk.to_vec())
-        .try_concat()
-        .await
-    {
-        Ok(res) => {
-            let out = io::stdout();
-            let mut out = out.lock();
+![image](https://user-images.githubusercontent.com/76512851/227533885-9083e545-a1f8-4262-845b-d955114650b7.png)
 
-            out.write_all(&res).unwrap();
-        }
-        Err(e) => eprintln!("error getting file: {}", e)
-    }
-}
-```
+We can access the file directly via browser https://ipfs.io/ipfs/QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL using the [IPNS name](https://docs.ipfs.tech/concepts/ipns/). We can also use a [DNSLink](http://docs.ipfs.tech/concepts/dnslink/) address which looks like an IPNS address, but it uses a DNS name in place of a hashed public key.
 
-We also can access the file via browser https://ipfs.io/ipfs/QmYzyPxVtuZ1Vqby3NQHUEkWMjRq1nKuBGanazknDCnCvV using the [IPNS name](https://docs.ipfs.tech/concepts/ipns/).
-We can also use a [DNSLink](http://docs.ipfs.tech/concepts/dnslink/) address which looks like an IPNS address, but it uses a DNS name in place of a hashed public key.
-
-![image](https://user-images.githubusercontent.com/76512851/225899330-55724627-bc4a-4fa4-af44-e931eeff806a.png)
+![image](https://user-images.githubusercontent.com/76512851/227534320-5eb3df09-2658-40b5-9ddb-d94b5371ef09.png)
 
 #### Content linking via directed acyclic graphs (DAGs)
 
