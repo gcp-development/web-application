@@ -168,7 +168,7 @@ The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifier
 
 ![image](https://user-images.githubusercontent.com/76512851/227532596-327ccdf7-1790-4d8b-9dfa-898171c6b192.png)
 
-Search for file using the CID "QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL".
+Search for file using the CID "QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL" in the kubo node webui(http://demo:32546/webui/).
 
 ![image](https://user-images.githubusercontent.com/76512851/227533885-9083e545-a1f8-4262-845b-d955114650b7.png)
 
