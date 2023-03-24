@@ -41,8 +41,8 @@ async fn handle_add_file(api_server:String,name:String,path:String) -> Result<Bo
         StatusCode::OK => {
             let body_bytes = response.body().await.unwrap();
             let body_str = std::str::from_utf8(&body_bytes).unwrap();
-            let result = body_str.replace("Body:b", "");
-            let book_obj: Book = serde_json::from_str(&result).unwrap();
+            //let result = body_str.replace("Body:b", "");
+            let book_obj: Book = serde_json::from_str(&body_str).unwrap();
             Ok(book_obj)
         },
         _ => Err(error::ErrorInternalServerError("Error:file not uploaded.")),
@@ -51,9 +51,9 @@ async fn handle_add_file(api_server:String,name:String,path:String) -> Result<Bo
 
 #[actix_web::main]
 async fn main() {
-    let res = handle_add_file("http://demo:32546".to_string(), "book3.json".to_string(), "book3.json".to_string());
+    let res = handle_add_file("http://demo:32546".to_string(), "book2.json".to_string(), "book2.json".to_string());
     let book = res.await.unwrap();
-    println!("Name:{:?}", book.name);
-    println!("Hash:{:?}", book.hash);
-    println!("Size:{:?}", book.size);
+    println!("Name:{}", book.name);
+    println!("Hash:{}", book.hash);
+    println!("Size:{}", book.size);
 }
