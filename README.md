@@ -152,7 +152,7 @@ Three fundamental principles to understanding IPFS:
 <li><a href="" target="_self">Content discovery via distributed hash tables (DHTs)</a></li>
 </ul>
 
-The examples provided were developed using the [Kubo RPC AP]I(https://docs.ipfs.tech/reference/kubo/rpc/#kubo-rpc-api-v0-reference) together with the [awc](https://crates.io/crates/awc) and [actix-multipart-rfc7578](https://crates.io/crates/actix-multipart-rfc7578).
+The examples provided were developed using the [Kubo RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#kubo-rpc-api-v0-reference) together with the [awc](https://crates.io/crates/awc) and [actix-multipart-rfc7578](https://crates.io/crates/actix-multipart-rfc7578) crates.
 
 IPFS Components
 -Distributed Hash Table
