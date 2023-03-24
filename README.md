@@ -186,6 +186,8 @@ Import the file [book3.json](https://github.com/gcp-development/web-application/
       
 ![image](https://user-images.githubusercontent.com/76512851/227558570-393b0b19-83aa-4922-a1b6-d282482c4a39.png)
 
+Import the Dag file [library.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-dag-put/library.json) using the  [(Project Import Dag)](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-dag-put).
+      
 ```bash
 [
  { "/":"QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL"},
@@ -193,7 +195,7 @@ Import the file [book3.json](https://github.com/gcp-development/web-application/
  {"/":"QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u"}
 ]
 ```
-      
+
       
 ![image](https://user-images.githubusercontent.com/76512851/227553593-5645614b-5208-4eaa-8158-390c5f391a29.png)
 
