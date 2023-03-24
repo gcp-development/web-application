@@ -164,11 +164,9 @@ IPFS Components
 
 #### Unique identification via content addressing
       
-Import the [book1.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book1.json) file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
+The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is a label used to point to material in IPFS. Import the [book1.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book1.json) using the [(Project Import File)](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-add) file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
 
 ![image](https://user-images.githubusercontent.com/76512851/227532596-327ccdf7-1790-4d8b-9dfa-898171c6b192.png)
-
-The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is a label used to point to material in IPFS.[(Project Import File)](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-add)
 
 Search for file using the CID "QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL".
 
