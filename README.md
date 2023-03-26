@@ -178,7 +178,7 @@ We can access the file directly via browser https://ipfs.io/ipfs/QmTN78XgBo6fPaW
 
 #### Content linking via directed acyclic graphs (DAGs)
 
-Directed acyclic graphs (DAGs) are a hierarchical data structure.
+[Directed acyclic graphs (DAGs)](http://demo:30009/ipns/docs.ipfs.tech/concepts/merkle-dag/) are a hierarchical data structure.
       
 Import the file [book2.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book2.json).
       
