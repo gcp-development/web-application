@@ -202,7 +202,7 @@ Copy the CID.
       
 ![image](https://user-images.githubusercontent.com/76512851/227553593-5645614b-5208-4eaa-8158-390c5f391a29.png)
 
-Using the CID "bafyreihw63bea7teb7araypl6sdhhhv57vohawroks4nxogorc2jx7b5oi" of the DAG node created search for it in the IPFS node webui(http://demo:32546/webui/).
+Using the CID "bafyreihw63bea7teb7araypl6sdhhhv57vohawroks4nxogorc2jx7b5oi" of the DAG node created. Search for the DAG node in the IPFS Kubo webui (http://demo:32546/webui/).
 
 ![image](https://user-images.githubusercontent.com/76512851/227563963-35175cb3-2a74-4b8a-b1b2-690d9275c934.png)
       
