@@ -207,7 +207,8 @@ Using the CID "bafyreihw63bea7teb7araypl6sdhhhv57vohawroks4nxogorc2jx7b5oi" of t
 ![image](https://user-images.githubusercontent.com/76512851/227563963-35175cb3-2a74-4b8a-b1b2-690d9275c934.png)
       
 #### <b>Content discovery via distributed hash tables (DHTs)</b>
-
+      
+[Distributed Hash Tables](http://docs.ipfs.tech/concepts/dht) are a form of a distributed database that can store and retrieve information associated with a key in a network of peer nodes that can join and leave the network at any time. The nodes coordinate among themselves to balance and store data in the network without any central coordinating party.
 
 [IPNS Name](https://github.com/ipfs/specs/blob/main/ipns/IPNS.md#ipns-name)
 
