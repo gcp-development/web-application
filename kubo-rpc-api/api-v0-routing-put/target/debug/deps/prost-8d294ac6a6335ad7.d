@@ -1,0 +1,12 @@
+/home/silveira/projects/web-application/kubo-rpc-api/api-v0-routing-put/target/debug/deps/prost-8d294ac6a6335ad7.rmeta: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/error.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/message.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/types.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/encoding.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/../README.md
+
+/home/silveira/projects/web-application/kubo-rpc-api/api-v0-routing-put/target/debug/deps/libprost-8d294ac6a6335ad7.rlib: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/error.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/message.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/types.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/encoding.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/../README.md
+
+/home/silveira/projects/web-application/kubo-rpc-api/api-v0-routing-put/target/debug/deps/prost-8d294ac6a6335ad7.d: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/error.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/message.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/types.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/encoding.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/../README.md
+
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/lib.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/error.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/message.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/types.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/encoding.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/prost-0.11.8/src/../README.md:

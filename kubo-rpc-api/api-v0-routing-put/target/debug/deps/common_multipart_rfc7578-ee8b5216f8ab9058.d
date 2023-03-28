@@ -1,0 +1,10 @@
+/home/silveira/projects/web-application/kubo-rpc-api/api-v0-routing-put/target/debug/deps/common_multipart_rfc7578-ee8b5216f8ab9058.rmeta: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/boundary.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/client_.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/error.rs
+
+/home/silveira/projects/web-application/kubo-rpc-api/api-v0-routing-put/target/debug/deps/libcommon_multipart_rfc7578-ee8b5216f8ab9058.rlib: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/boundary.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/client_.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/error.rs
+
+/home/silveira/projects/web-application/kubo-rpc-api/api-v0-routing-put/target/debug/deps/common_multipart_rfc7578-ee8b5216f8ab9058.d: /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/lib.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/boundary.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/client_.rs /home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/error.rs
+
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/lib.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/boundary.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/client_.rs:
+/home/silveira/.cargo/registry/src/github.com-1ecc6299db9ec823/common-multipart-rfc7578-0.6.0/src/error.rs:
