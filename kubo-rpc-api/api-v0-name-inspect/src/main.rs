@@ -6,29 +6,59 @@ use actix_web::http::StatusCode;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
+struct Data {
+    #[serde(alias = "Sequence")]
+    pub sequence: i64,
+    #[serde(alias = "TTL")]
+    pub ttl: i64,
+    #[serde(alias = "Validity")]
+    pub validity: String,
+    #[serde(alias = "ValidityType")]
+    pub validity_type: i32,
+    #[serde(alias = "Value")]
+    pub value: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 struct Validation {
+    #[serde(alias = "PublicKey")]
     pub public_key: String,
+    #[serde(alias = "Reason")]
     pub reason: String,
-    pub valid: String,
+    #[serde(alias = "Valid")]
+    pub valid: bool,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct Entry {
-    pub data: String,
+    #[serde(alias = "Data")]
+    //pub data: String,
+    pub data: Data,
+    #[serde(alias = "PublicKey")]
     pub public_key: String,
-    pub sequence: String,
+    #[serde(alias = "Sequence")]
+    pub sequence: i64,
+    #[serde(alias = "SignatureV1")]
     pub signature_v1: String,
+    #[serde(alias = "SignatureV2")]
     pub signature_v2: String,
-    pub ttl: String,
+    #[serde(alias = "TTL")]
+    pub ttl: i64,
+    #[serde(alias = "Validity")]
     pub validity: String,
-    pub validity_type: String,
+    #[serde(alias = "ValidityType")]
+    pub validity_type: i32,
+    #[serde(alias = "Value")]
     pub value: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct IpnsRecord {
-    pub entry: Entry,
-    pub validation: Validation,
+    #[serde(alias = "Entry")]
+    //pub entry: Entry,
+    pub entry: String,
+    #[serde(alias = "Validation")]
+    pub validation: Option<Validation>,
 }
 
 async fn handle_inspect_ipns_record(api_server:String,name:String,path:String) -> Result<IpnsRecord, Error> {
@@ -61,19 +91,21 @@ async fn handle_inspect_ipns_record(api_server:String,name:String,path:String) -
 #[actix_web::main]
 async fn main() {
 
-    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "IPNS_Record.txt".to_string(), "IPNS_Record.txt".to_string());
+    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "signed.ipns-record".to_string(), "signed.ipns-record".to_string());
     let ipns_record = res.await.unwrap();
-    println!("Public key:{}", ipns_record.validation.public_key);
-    println!("Reason:{}", ipns_record.validation.reason);
-    println!("Valid:{}", ipns_record.validation.valid);
+    println!("entry:{}", ipns_record.entry);
+    //println!("validation:{}", ipns_record.validation.unwra);
+    //println!("Public key:{}", ipns_record.validation.public_key);
+    //println!("Reason:{}", ipns_record.validation.reason);
+    //println!("Valid:{}", ipns_record.validation.valid);
 
-    /*
+/*
     let url = "http://demo:32546/api/v0/name/inspect";
 
     let client = Client::new();
     let mut form = multipart::Form::default();
 
-    form.add_file("IPNS_Record.txt", "IPNS_Record.txt").unwrap();
+    form.add_file("signed.ipns-record", "signed.ipns-record").unwrap();
 
     let mut response = client
         .post(url)
@@ -88,6 +120,5 @@ async fn main() {
     //let dag_obj: Dag = serde_json::from_str(&body_str).unwrap();
     //println!("Cid:{}",dag_obj.cid.cid_string);
         // let book_obj: Book = serde_json::from_str(&result).unwrap();
-
-     */
+*/
 }
