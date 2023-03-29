@@ -6,17 +6,29 @@ use actix_web::http::StatusCode;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
+struct Content {
+    #[serde(alias = "bytes")]
+    pub bytes: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+struct DocumentBytes {
+    #[serde(alias = "/")]
+    pub name: Content,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 struct Data {
     #[serde(alias = "Sequence")]
     pub sequence: i64,
     #[serde(alias = "TTL")]
     pub ttl: i64,
     #[serde(alias = "Validity")]
-    pub validity: String,
+    pub validity: DocumentBytes,
     #[serde(alias = "ValidityType")]
     pub validity_type: i32,
     #[serde(alias = "Value")]
-    pub value: String,
+    pub value: DocumentBytes,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -55,15 +67,15 @@ struct Entry {
 #[derive(Serialize, Deserialize, Debug)]
 struct IpnsRecord {
     #[serde(alias = "Entry")]
-    //pub entry: Entry,
-    pub entry: String,
+    pub entry: Entry,
+    //pub entry: String,
     #[serde(alias = "Validation")]
     pub validation: Option<Validation>,
 }
 
-async fn handle_inspect_ipns_record(api_server:String,name:String,path:String) -> Result<IpnsRecord, Error> {
-
-    let url=api_server+ "/api/v0/name/inspect";
+async fn handle_inspect_ipns_record(api_server:String,verify:String,name:String,path:String) -> Result<IpnsRecord, Error> {
+    let a = api_server + "/api/v0/name/inspect?verify=";
+    let url = a + verify.as_str();
 
     let client = Client::new();
     let mut form = multipart::Form::default();
@@ -90,16 +102,18 @@ async fn handle_inspect_ipns_record(api_server:String,name:String,path:String) -
 
 #[actix_web::main]
 async fn main() {
-
-    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "signed.ipns-record".to_string(), "signed.ipns-record".to_string());
+    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "/ipns/12D3KooWLTSofM6cdCNGjQ5Rnid1EN3Vyorcb2M6QoBsEPyf1Y6a".to_string(), "signed.ipns-record".to_string(), "signed.ipns-record".to_string());
     let ipns_record = res.await.unwrap();
-    println!("entry:{}", ipns_record.entry);
-    //println!("validation:{}", ipns_record.validation.unwra);
-    //println!("Public key:{}", ipns_record.validation.public_key);
-    //println!("Reason:{}", ipns_record.validation.reason);
-    //println!("Valid:{}", ipns_record.validation.valid);
+    match ipns_record.validation {
+        Some(item) => {
+            println!("Public key:{}", item.public_key);
+            println!("Reason:{}", item.reason);
+            println!("Valid:{}", item.valid);
+        },
+        None => { println!("Empty"); },
+    }
 
-/*
+    /*
     let url = "http://demo:32546/api/v0/name/inspect";
 
     let client = Client::new();
