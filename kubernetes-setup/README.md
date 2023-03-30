@@ -179,24 +179,30 @@ Test the library-service using [Postman](https://www.postman.com/downloads/)
 
 ### Kubernetes manifests
 
+Create a persistent volume for [kubo(IPFS-Node)](https://github.com/ipfs/kubo).
+
 ```bash
 kubectl apply -f 9_ipfs-node-pv.yml
 ```
 
+Create a persistent volume claim for postgres.
 ```bash
 kubectl apply -f 10_ipfs-node-pvc.yml
 ```
 
+Create a pod for kubo(IPFS-Node).
 ```bash
 kubectl apply -f 11_ipfs-kubo-pod.yml
 ```
 
+Verify the container log.
 ```bash
 kubectl logs -f ipfs-kubo --namespace=web-application
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/225724929-e14cfe9b-5a8f-4d40-92a7-c78e3175e977.png)
 
+Create a load balancer service for kubo(IPFS-Node).
 
 ```bash
 kubectl apply -f 12_ipfs-service.yml
