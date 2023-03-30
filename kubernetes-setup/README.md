@@ -228,6 +228,7 @@ minikube tunnel -p demo
 
 ![image](https://user-images.githubusercontent.com/76512851/225727024-a42aa1cb-cab9-47ac-a81f-01d6f865ebc8.png)
 
+Get the services for the kubo(IPFS-Node).
 ```bash
 kubectl get svc --namespace=web-application
 ```
