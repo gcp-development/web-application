@@ -219,12 +219,17 @@ DHTs have the following properties:
 <li>Scalable: System should function efficiently with even thousands or millions of nodes.</li>
 </ul>
 
-DHTs support the following 2 functions:
+DHTs support the following 3 functions:
 <ul>
-<li>put (key, value)(We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a></li>
-<li>get (key)(We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-put<a></li>
+      <li>put (key, value)(We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a>)</li>
+      <li>get (key)(We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-put<a>)</li>
+      <li>provide(key)(We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-provide" target="_self">Kubo RPC api-v0-routing-provide<a>)</li>
 </ul>
 
+     
+      
+      
+      
 [IPNS Name](https://github.com/ipfs/specs/blob/main/ipns/IPNS.md#ipns-name)
 
 ```bash
