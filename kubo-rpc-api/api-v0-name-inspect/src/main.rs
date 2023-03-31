@@ -74,8 +74,8 @@ struct IpnsRecord {
 }
 
 async fn handle_inspect_ipns_record(api_server:String,verify:String,name:String,path:String) -> Result<IpnsRecord, Error> {
-    let a = api_server + "/api/v0/name/inspect?verify=";
-    let url = a + verify.as_str();
+    let base_address = api_server + "/api/v0/name/inspect?verify=";
+    let url = base_address + verify.as_str();
 
     let client = Client::new();
     let mut form = multipart::Form::default();
@@ -102,7 +102,7 @@ async fn handle_inspect_ipns_record(api_server:String,verify:String,name:String,
 
 #[actix_web::main]
 async fn main() {
-    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "/ipns/12D3KooWLTSofM6cdCNGjQ5Rnid1EN3Vyorcb2M6QoBsEPyf1Y6a".to_string(), "signed.ipns-record".to_string(), "signed.ipns-record".to_string());
+    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "/ipns/k51qzi5uqu5diufu0chq3wsfdvuwkuolnnzpl32yl8ze3t9ug0vthwt7ljgx8t".to_string(), "signed.ipns-record".to_string(), "signed.ipns-record".to_string());
     let ipns_record = res.await.unwrap();
     match ipns_record.validation {
         Some(item) => {
@@ -112,27 +112,4 @@ async fn main() {
         },
         None => { println!("Empty"); },
     }
-
-    /*
-    let url = "http://demo:32546/api/v0/name/inspect";
-
-    let client = Client::new();
-    let mut form = multipart::Form::default();
-
-    form.add_file("signed.ipns-record", "signed.ipns-record").unwrap();
-
-    let mut response = client
-        .post(url)
-        .content_type(form.content_type())
-        .send_body(multipart::Body::from(form))
-        .await
-        .unwrap();
-
-    let body_bytes = response.body().await.unwrap();
-    let body_str = std::str::from_utf8(&body_bytes).unwrap();
-    println!("Body:{}", body_str);
-    //let dag_obj: Dag = serde_json::from_str(&body_str).unwrap();
-    //println!("Cid:{}",dag_obj.cid.cid_string);
-        // let book_obj: Book = serde_json::from_str(&result).unwrap();
-*/
 }
