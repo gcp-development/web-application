@@ -222,7 +222,7 @@ DHTs have the following properties:
 DHTs support the following 3 functions:
 <ul>
       <li>put (key, value) Write a key/value pair to the routing system. (We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a>)</li>
-      <li>get (key) Given a key, query the routing system for its best value. (We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-put<a>)</li>
+      <li>get (key) Given a key, query the routing system for its best value. (We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-get<a>)</li>
       <li>provide(key) Announce to the network that you are providing given values.(We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-provide" target="_self">Kubo RPC api-v0-routing-provide<a>)</li>
 </ul>
 
