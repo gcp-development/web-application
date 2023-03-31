@@ -154,6 +154,8 @@ Three fundamental principles to understanding IPFS:
 
 The examples provided were developed using the [Kubo RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#kubo-rpc-api-v0-reference) together with the [actix-web](https://docs.rs/actix-web/latest/actix_web/) ,[awc](https://crates.io/crates/awc) and [actix-multipart-rfc7578](https://crates.io/crates/actix-multipart-rfc7578) crates.
 
+<hr>
+      
 #### Unique identification via content addressing
       
 The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is a label used to point to material in IPFS. Import the [book1.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book1.json) using the [(Project Import File)](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-add) file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
@@ -167,6 +169,8 @@ Search for file using the CID "QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL" i
 We can access the file directly via browser https://ipfs.io/ipfs/QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL using the [IPNS name](https://docs.ipfs.tech/concepts/ipns/). We can also use a [DNSLink](http://docs.ipfs.tech/concepts/dnslink/) address which looks like an IPNS address, but it uses a DNS name in place of a hashed public key.
 
 ![image](https://user-images.githubusercontent.com/76512851/227534320-5eb3df09-2658-40b5-9ddb-d94b5371ef09.png)
+
+<hr>
 
 #### Content linking via directed acyclic graphs (DAGs)
 
@@ -199,6 +203,8 @@ Copy the CID.
 Using the CID "bafyreihw63bea7teb7araypl6sdhhhv57vohawroks4nxogorc2jx7b5oi" of the DAG node created. Search for the DAG node in the IPFS Kubo webui (http://demo:32546/webui/).
 
 ![image](https://user-images.githubusercontent.com/76512851/227563963-35175cb3-2a74-4b8a-b1b2-690d9275c934.png)
+
+<hr>
       
 #### <b>Content discovery via distributed hash tables (DHTs)</b>
       
