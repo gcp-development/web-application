@@ -212,6 +212,19 @@ Using the CID "bafyreihw63bea7teb7araypl6sdhhhv57vohawroks4nxogorc2jx7b5oi" of t
       
 [Distributed Hash Tables](http://docs.ipfs.tech/concepts/dht) are a form of a distributed database that can store and retrieve information associated with a key in a network of peer nodes that can join and leave the network at any time. The nodes coordinate among themselves to balance and store data in the network without any central coordinating party.
 
+DHTs have the following properties:
+<ul>
+<li>Decentralised & Autonomous: Nodes collectively form the system without any central authority.</li>
+<li>Fault Tolerant: System is reliable with lots of nodes joining, leaving, and failing at all times.</li>
+<li>Scalable: System should function efficiently with even thousands or millions of nodes.</li>
+</ul>
+
+DHTs support the following 2 functions:
+<ul>
+<li>put (key, value)(We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a></li>
+<li>get (key)(We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-put<a></li>
+</ul>
+
 [IPNS Name](https://github.com/ipfs/specs/blob/main/ipns/IPNS.md#ipns-name)
 
 ```bash
