@@ -149,18 +149,10 @@ Three fundamental principles to understanding IPFS:
 <ul>
 <li><a href="https://github.com/gcp-development/web-application#unique-identification-via-content-addressing" target="_self">Unique identification via content addressing(CID)</a></li>
 <li><a href="https://github.com/gcp-development/web-application#content-linking-via-directed-acyclic-graphs-dags" target="_self">Content linking via directed acyclic graphs (DAGs)</a></li>
-<li><a href="" target="_self">Content discovery via distributed hash tables (DHTs)</a></li>
+<li><a href="https://github.com/gcp-development/web-application/blob/main/README.md#content-discovery-via-distributed-hash-tables-dhts" target="_self">Content discovery via distributed hash tables (DHTs)</a></li>
 </ul>
 
-The examples provided were developed using the [Kubo RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#kubo-rpc-api-v0-reference) together with the [awc](https://crates.io/crates/awc) and [actix-multipart-rfc7578](https://crates.io/crates/actix-multipart-rfc7578) crates.
-
-IPFS Components
--Distributed Hash Table
--Block Exchanges
--Merkle DAG
--Version Control System
--Self-certifying File System
-      
+The examples provided were developed using the [Kubo RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#kubo-rpc-api-v0-reference) together with the [actix-web](https://docs.rs/actix-web/latest/actix_web/) ,[awc](https://crates.io/crates/awc) and [actix-multipart-rfc7578](https://crates.io/crates/actix-multipart-rfc7578) crates.
 
 #### Unique identification via content addressing
       
