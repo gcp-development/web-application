@@ -219,9 +219,9 @@ DHTs have the following properties:
 
 DHTs support the following 3 basic functions:
 <ul>
-      <li>put (key, value) We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a> (Write a key/value pair to the routing system.)</li>
-      <li>get (key) We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-get<a> (Given a key, query the routing system for its best value.)</li>
-      <li>provide (key) We are going to use the <a href="http://demo:30009/ipns/docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-provide" target="_self">Kubo RPC api-v0-routing-provide<a> (Announce to the network that we are providing given values.)</li>
+      <li>put (key, value) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a> (Write a key/value pair to the routing system.)</li>
+      <li>get (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-get<a> (Given a key, query the routing system for its best value.)</li>
+      <li>provide (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-provide" target="_self">Kubo RPC api-v0-routing-provide<a> (Announce to the network that we are providing given values.)</li>
 </ul>
 
      
