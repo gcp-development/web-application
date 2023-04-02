@@ -241,7 +241,7 @@ Execute the [GO(go1.20.2)](https://go.dev/doc/install) script [ipnsRecord.go](ht
       
 ![image](https://user-images.githubusercontent.com/76512851/229357924-1fcdaa96-d6f8-4bcc-ad34-ac29e338cd08.png)
 
-Copy the private-key-ipns-record.bin file to the scr path and run the Rust project [api-v0-key-import](https://docs.ipfs.tech/reference/kubo/rpc/#api-v0-key-import).
+Copy the private-key-ipns-record.bin file to the src path and run the Rust project [api-v0-key-import](https://docs.ipfs.tech/reference/kubo/rpc/#api-v0-key-import).
 
 ![image](https://user-images.githubusercontent.com/76512851/229357726-c3395f78-a078-4e6c-b2f9-5a1c3576d821.png)
 
