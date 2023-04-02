@@ -225,11 +225,11 @@ As a simple example the diagram below represents a ring overlay network(logical 
       
 ![image](https://user-images.githubusercontent.com/76512851/229341361-4f42dd57-91ac-46a1-bc85-fb75a55921f5.png)
       
-For this example we are using the DHT to map a data identifier to a peer; this is a provider recordstype of key-value pairing. It's used to find content and advertise content.
+For this example we are using the DHT to map a data identifier to a peer; this is a provider records type of key-value pairing. It's used to find and advertise content.
       
       
       
-DHTs support the following 3 basic functions:
+Most of the DHTs implementations support the following 3 basic functions:
 <ul>
       <li>put (key, value) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a> (Write a key/value pair to the routing system.)</li>
       <li>get (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-get<a> (Given a key, query the routing system for its best value.)</li>
