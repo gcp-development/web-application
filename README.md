@@ -152,7 +152,7 @@ Three fundamental principles to understanding IPFS:
 <li><a href="https://github.com/gcp-development/web-application/blob/main/README.md#content-discovery-via-distributed-hash-tables-dhts" target="_self">Content discovery via distributed hash tables (DHTs)</a></li>
 </ul>
 
-The examples provided were developed using the [Kubo RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#kubo-rpc-api-v0-reference) together with the [actix-web](https://docs.rs/actix-web/latest/actix_web/) ,[awc](https://crates.io/crates/awc) and [actix-multipart-rfc7578](https://crates.io/crates/actix-multipart-rfc7578) crates.
+The examples provided were developed using the [Kubo RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#kubo-rpc-api-v0-reference) together with the [actix-web](https://docs.rs/actix-web/latest/actix_web/), [awc](https://crates.io/crates/awc) and [actix-multipart-rfc7578](https://crates.io/crates/actix-multipart-rfc7578) crates.
 
 Note: A Rust implementation of a IFPS node ([iroh](https://iroh.computer/)) is currently being developed. But unfortunately is not mature enough for the examples needed.
 
@@ -228,7 +228,6 @@ As a simple example the diagram below represents a ring overlay network (logical
 For this example we are using the DHT to map a data identifier to a peer; this is a "Provider records" type of key-value pairing. It's used to find and advertise content.
 There are other two main types, "IPNS records" (map an [IPNS key](https://specs.ipfs.tech/ipns/ipns-record/#ipns-keys) to a [IPNS record](https://specs.ipfs.tech/ipns/ipns-record/#ipns-record)) and "Peer records" (map a Peer Id to a set of multi addresses at which the peer may be reach)      
       
-      
 Most of the DHTs implementations support the following 3 basic functions:
 <ul>
       <li>put (key, value) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a> (Write a key/value pair to the routing system.)</li>
@@ -236,13 +235,18 @@ Most of the DHTs implementations support the following 3 basic functions:
       <li>provide (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-provide" target="_self">Kubo RPC api-v0-routing-provide<a> (Announce to the network that we are providing given values.)</li>
 </ul>
 
-     
- 
+How to create an IPNS record ?
+
+Execute the GO script [ipnsRecord.go](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/create-ipns-record/ipnsRecord.go).
+Execute the Rust project [api-v0-name-inspect](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-name-inspect).      
+Execute the Rust project [api-v0-routing-put](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-routing-put).
+      
+      
       
 [IPNS Name](https://github.com/ipfs/specs/blob/main/ipns/IPNS.md#ipns-name)
 
 ```bash
-/ipfs/QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL
+/ipfn/QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL
 ```
 
 [IPNS Record](https://github.com/ipfs/specs/blob/main/ipns/IPNS.md#ipns-record)
