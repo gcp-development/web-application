@@ -237,8 +237,10 @@ Most of the DHTs implementations support the following 3 basic functions:
 
 How to create an IPNS record ?
 
-Execute the GO script [ipnsRecord.go](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/create-ipns-record/ipnsRecord.go).
-Execute the Rust project [api-v0-name-inspect](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-name-inspect).      
+Execute the GO[(go1.20.2)](https://go.dev/doc/install) script [ipnsRecord.go](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/create-ipns-record/ipnsRecord.go).
+      
+Execute the Rust project [api-v0-name-inspect](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-name-inspect).
+ 
 Execute the Rust project [api-v0-routing-put](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-routing-put).
       
       
@@ -246,7 +248,7 @@ Execute the Rust project [api-v0-routing-put](https://github.com/gcp-development
 [IPNS Name](https://specs.ipfs.tech/ipns/ipns-record/#ipns-name)
 
 ```bash
-/ipfn/QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL
+/ipfn/
 ```
 
 [IPNS Record](https://specs.ipfs.tech/ipns/ipns-record/#ipns-record)
