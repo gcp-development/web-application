@@ -226,9 +226,11 @@ DHTs support the following 3 basic functions:
       <li>provide (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-provide" target="_self">Kubo RPC api-v0-routing-provide<a> (Announce to the network that we are providing given values.)</li>
 </ul>
 
-     
+
+![image](https://user-images.githubusercontent.com/76512851/229337402-d9c8d68a-71e6-4d3d-a881-b100ce52d5c6.png)
+    
       
-      
+ 
       
 [IPNS Name](https://github.com/ipfs/specs/blob/main/ipns/IPNS.md#ipns-name)
 
