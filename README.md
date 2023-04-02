@@ -266,7 +266,38 @@ Run the Rust project [api-v0-routing-put](https://github.com/gcp-development/web
 
 [IPNS Record](https://specs.ipfs.tech/ipns/ipns-record/#ipns-record)
 ```bash
-value:"/ipfs/QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL" signatureV1:"\006m\2020\352 [\214\263U\301\316\233\350\355\336\233k*\323\350\224\340\310M}:\030\252\353\034\321\024\251\000\262\277\341\356\305\317\241\303\333P\377\214\200|v\337w\210}\337oi\337\226S\326\3268\274\266\177t3\360\362\2102\365\002\347\237\nL\306-\327\346\306\203%d\265\366\023o},|\007N~.3\326\354\222\325\223B!\031\035\333\352a\005`\353c\031h\027A\365@VBk\316j?\341@\265P\372\225\220\006\223\035\007e\2307O\330\306\007\340\303\2275.\346\333\003\344|BjY\3135gN$<\344\310.\360m-l\217\251\376\036\005\033\226\263u.\220\357\020BA.Wg\274\010\020\246t\376\2430\273\317\010\020\324\270\272\225\353E\233\324\345\032\370f'\004$\302b\244\333\275\033Q\263?(\031\005\212;\221)\274\356\321\213\272\036\021\"\247L\362\002H\357\332\217\321\321Y\341\262fr\017\343" validityType:EOL validity:"2023-03-26T15:14:20.243330515Z" sequence:0 ttl:86400000000000 signatureV2:"r\032#\007e\364\321\350Nt\314\013wFj,\276lIqq\367\022\200\260\316\314\365\"\370\3638F\367\252\206\346DB\000\266\207\273\345XB\245zC\251\3531P\274R\031wDu\221\352O\215\336A\034\252\241&\237 M\334\263\376\314\271\240\026E\265\233Qp\360\322\251\354\242^aN \363\374\021\333\007\257p(\2752\322\304\267\356aF\024\246\253<\307\234\226\\\221\357\227\032\242X\300\276\347\373\tT\203m\335\3126\361\270\300\033\221\313.-\334\251\340\203\342\367\374sce\233\262\250\307\370\201#\335\342\206\005\226\010a\336\n\340\211\313\013\247\326\256\263\002\214+\357\204\242\377\364\261]\177=r\2344\255#\305\362v\234\375p\350u\247\350\205y|O \271G\305\247\334dI\256\263?\261\244\324{\321\326\362\177\362TME\244\223\307\"Q\213Q\335\207\236\223,\"\346+0\202\177\264e\254(\313EE\273" data:"\245cTTL\033\000\000N\224\221O\000\000eValueX4/ipfs/QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosLhSequence\000hValidityX\0362023-03-26T15:14:20.243330515ZlValidityType\000"
+{
+    "Entry": {
+        "Value": "/ipfs/QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u",
+        "ValidityType": 0,
+        "Validity": "2023-04-03T13:29:58.128901162Z",
+        "Sequence": 0,
+        "TTL": 60000000000,
+        "PublicKey": "mCAASpgIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSVhekFyk3/EIdJW530Zip/MeliHGDumXpbT6dBB/BWTP8wv7ioRXAiH0fs9v6Uflglw1VqN+08gs4ScbWkeRaVP1Q2d+lzffeTwiG4eZm/O9OGmdPQfXP/nSOVsKjDITxrVnYLoLLXnHpRcSMuueqpULMpxKj1aT3tSetn7YgrC1TuT3A40RVtwi8ODly9dMkzYH1lqzqMNtqHFumAyPN1hgEDHN2awbQs7KDLsvHF/LFUVlq/xZb6mbmiZBhIfv/YpvTNA9sYZVvL02Q1NqqOvcg0T5SY/lLNv8w1PZuePV58ZMJOHYHgP22MR5hnmrSYOlpebbU8A3EJCgG9FGvAgMBAAE",
+        "SignatureV1": "meWDwdTYzNsaCrn/rP6IVaa5cnmqs5tYA6OKN1p647UcoGGDrurSgVXvIKmjIlKr6JigJB6NL2cnRksDdX+vYQdSNejb2bqtne+bG7jmc2hpj4xQHMWpVdgKdN1GwG1rJdcrEJnzqt0eNhiwKOMmhC8ynlx7B/8vzw+70unxCyBaWeXnumJYKXzymSRIe2UdI87WRzu6NEJh7QJuIBOuwlGjAyRepCAodUCVqr/Fl2hAtdlyRGmavtwGda6TmVp9Xi2F+o2qOwLJEvA6fMiR5uH0YoXnMdN7DY3IVr0+BmKnPyCsoCx+X5OsVofCkWpEKFvJKfY9ILeqxEp/7DbvabQ",
+        "SignatureV2": "modrb+wC4mBtUahM/KhSm1tYWhUj73fENvmceLAklbYYVfWwnmAHl1VGrlOmDVrdJv40+7gQgQcMUTwfk1S9XWqwopbBHhfKZxb0RFIoGy/Fmpay0rHpYBzLJBM5ah+Xcz6rnfo0FsNSjLz4PFl/dG4gNPNL1Pv9W01G3abjTEcZoTm8BOh7wRkbagG1eO/UayKaXeCRVgd/9xfKF9XJs0jo3RIbbf4lXbWme1j7k8vO861OCEp+bky9P5eQ/dnYnjxhysE6HkvbofqJxg9VVfyhe7DC46ZXu0FVmw2PznrsHz+mPRogZwawVrqxh+6YBkbJTJhd4YoEZdd5MEnZUaA",
+        "Data": {
+            "Sequence": 0,
+            "TTL": 60000000000,
+            "Validity": {
+                "/": {
+                    "bytes": "MjAyMy0wNC0wM1QxMzoyOTo1OC4xMjg5MDExNjJa"
+                }
+            },
+            "ValidityType": 0,
+            "Value": {
+                "/": {
+                    "bytes": "L2lwZnMvUW1VZlY0bTJQVU01NTlMU3ZEc0prb3oxS29mVFZxMjVSRFh3VzV1TWRqTmI0dQ"
+                }
+            }
+        }
+    },
+    "Validation": {
+        "Valid": true,
+        "Reason": "",
+        "PublicKey": "QmUYNURRiUgNo1YevHW7XH8dDTqw3ywKdUZN6PiVP1deJe"
+    }
+}
 ```
 
 <hr>
