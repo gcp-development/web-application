@@ -246,10 +246,10 @@ Copy the private-key-ipns-record.bin file to the src path and run the Rust proje
 ![image](https://user-images.githubusercontent.com/76512851/229357726-c3395f78-a078-4e6c-b2f9-5a1c3576d821.png)
 
 ```bash
-k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j
+/ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j
 ```
 
-Copy the signed-ipns-record.bin file to the src path and run the Rust project [api-v0-name-inspect](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-name-inspect).
+Copy the signed-ipns-record.bin file to the src path and run the Rust project [api-v0-name-inspect](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-name-inspect) against the IPNS name /ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j.
       
 ![image](https://user-images.githubusercontent.com/76512851/229359402-e00f5a0e-c78d-418f-8de0-8ff396261ca0.png)
       
