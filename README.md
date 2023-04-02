@@ -218,7 +218,15 @@ DHTs have the following properties:
 <li>Fault Tolerant: System is reliable with lots of nodes joining, leaving, and failing at all times.</li>
 <li>Scalable: System should function efficiently with even thousands or millions of nodes.</li>
 </ul>
+      
+How does DHT work ?
 
+As a simple example the diagram below represents a ring overlay network with 6 nodes(peers) and each node(Hash Key) has a set of data identifying keys(Hash Value). Each of the 6 nodes will handle 5 data identifying keys making our hash table buckets independent nodes in a network. 
+      
+
+      
+      
+      
 DHTs support the following 3 basic functions:
 <ul>
       <li>put (key, value) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a> (Write a key/value pair to the routing system.)</li>
@@ -226,10 +234,7 @@ DHTs support the following 3 basic functions:
       <li>provide (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-provide" target="_self">Kubo RPC api-v0-routing-provide<a> (Announce to the network that we are providing given values.)</li>
 </ul>
 
-
-![image](https://user-images.githubusercontent.com/76512851/229337402-d9c8d68a-71e6-4d3d-a881-b100ce52d5c6.png)
-    
-      
+     
  
       
 [IPNS Name](https://github.com/ipfs/specs/blob/main/ipns/IPNS.md#ipns-name)
