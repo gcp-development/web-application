@@ -223,7 +223,7 @@ How does DHT work ?
 
 As a simple example the diagram below represents a ring overlay network(logical network implemented on top of some underlying network) with 6 nodes. To find out which node(peer) will get to store a specific key we just need to hash that key. Each node will have a hash value(Peer Id) and will store 5 keys making our hash table buckets independent nodes in that ring overlay network.
       
-![image](https://user-images.githubusercontent.com/76512851/229341361-4f42dd57-91ac-46a1-bc85-fb75a55921f5.png)
+![image](https://user-images.githubusercontent.com/76512851/229342962-9ba3226b-e5ed-4c88-a7d9-c2dd405b8b40.png)
       
 For this example we are using the DHT to map a data identifier to a peer; this is a "Provider records" type of key-value pairing. It's used to find and advertise content.
 There are other two main types, "IPNS records" (map an IPNS key to a IPNS record) and "Peer records" (map a Peer Id to a set of multi addresses at which the peer may be reach)      
