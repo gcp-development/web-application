@@ -102,7 +102,7 @@ async fn handle_inspect_ipns_record(api_server:String,verify:String,name:String,
 
 #[actix_web::main]
 async fn main() {
-    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "/ipns/k51qzi5uqu5diufu0chq3wsfdvuwkuolnnzpl32yl8ze3t9ug0vthwt7ljgx8t".to_string(), "signed.ipns-record".to_string(), "signed.ipns-record".to_string());
+    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "/ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j".to_string(), "signed-ipns-record.bin".to_string(), "signed-ipns-record.bin".to_string());
     let ipns_record = res.await.unwrap();
     match ipns_record.validation {
         Some(item) => {

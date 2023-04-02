@@ -1,94 +1,103 @@
-use std::fmt::Debug;
-use std::ops::Add;
 use actix_multipart_rfc7578::client::{multipart};
 use awc::{Client};
 use actix_web::{error,Error,Result};
 use actix_web::http::StatusCode;
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize, Deserializer, Serialize};
+use std::time::Duration;
 
-use prost::{self, Enumeration, Message};
-use chrono::{Duration, SecondsFormat, Utc};
-use strum::Display;
 
-#[derive(
-Clone,
-Copy,
-Debug,
-PartialEq,
-Eq,
-Hash,
-PartialOrd,
-Ord,
-Enumeration,
-Display,
-Serialize,
-Deserialize,
-)]
-#[repr(i32)]
-pub enum ValidityType {
-    EOL = 0,
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+struct Response {
+    #[serde(rename = "Addrs", deserialize_with = "nullable_vector")]
+    pub multi_addresses: Vec<String>,
+    #[serde(rename = "ID")]
+    pub peer_id: String,
 }
 
-#[actix_web::main]
-async fn main() {
-    /*
-    let params = [("arg","/ipns/12D3KooWLTSofM6cdCNGjQ5Rnid1EN3Vyorcb2M6QoBsEPyf1Y6a")];
+fn nullable_vector<'de, D>(deserializer: D) -> Result<Vec<String>, D::Error>
+    where D: Deserializer<'de>
+{
+    let opt = Option::deserialize(deserializer)?;
+    match opt {
+        None => {
+            let x= Vec::new();
+            Ok(x)
+        }
+        Some(x) => {
+            Ok(x)
+        }
+    }
+    //Ok(opt.unwrap_or_else( Vec<serde_json::Value::String()>::new()))
+}
 
-    let url = "http://demo:32546/api/v0/routing/put";
+#[derive(Serialize, Deserialize)]
+struct Route {
+    #[serde(rename = "Extra")]
+    pub extra: String,
+    #[serde(rename = "ID")]
+    pub peer_id: String,
+    #[serde(rename = "Responses")]
+    pub responses: Vec<Response>,
+    #[serde(rename = "Type")]
+    pub r#type: i32,
+}
+
+async fn handle_routing_put(api_server:String,arg:String,name:String,path:String) -> Result<Route, Error> {
+    let base_address = api_server + "/api/v0/routing/put?arg=";
+    let url = base_address + arg.as_str();
 
     let client = Client::new();
     let mut form = multipart::Form::default();
 
-    form.add_file("library.json", "library.json").unwrap();
+    form.add_file(name, path).unwrap();
 
     let mut response = client
         .post(url)
+        .timeout(Duration::from_secs(120))
         .content_type(form.content_type())
-        //.send_form(&params)
         .send_body(multipart::Body::from(form))
         .await
         .unwrap();
 
-    let body_bytes = response.body().await.unwrap();
-    let body_str = std::str::from_utf8(&body_bytes).unwrap();
-    println!("Body:{}", body_str);
-    //let dag_obj: Dag = serde_json::from_str(&body_str).unwrap();
-    //println!("Cid:{}",dag_obj.cid.cid_string);
-    //   let result = body_str.replace("Body:b", "");
-    // let book_obj: Book = serde_json::from_str(&result).unwrap();
-
-*/
-    let valid_for = chrono::Duration::days(364);
-    //let b = Duration::minutes(55);
-    let signer="k51qzi5uqu5dg88xo6rqurksk3jbg5bkql8y5k04q1tt8t2ld4cus6l5oc50o8";
-    let cid = "QmTN78XgBo6fPaWrDhsPf6yzJkcuqpEUBqVRtHu3i5yosL";
-    let value = format!("/ipfs/{}", cid.to_string()).into_bytes();
-
-    let validity = chrono::Utc::now()
-        .add(valid_for)
-        .to_rfc3339_opts(SecondsFormat::Nanos, false)
-        .into_bytes();
-
-    let validity_type = ValidityType::EOL;
-
-    let signing_input_v1 = {
-        let mut data = Vec::with_capacity(
-            value.len() + validity.len() + 3, /* b"EOL".len() == 3 */
-        );
-
-        data.extend(value.iter());
-        data.extend(validity.iter());
-        data.extend(validity_type.to_string().as_bytes());
-
-        data
-    };
-
-    let mut pub_key = signer.crypto_key().encode_to_vec(); // Protobuf encoding
-
-    if pub_key.len() <= 42 {
-        pub_key.clear();
+    match response.status() {
+        StatusCode::OK => {
+            let body_bytes = response.body().await.unwrap();
+            let body_str = std::str::from_utf8(&body_bytes).unwrap();
+            println!("{}",body_str);
+            let route_obj: Route = serde_json::from_str(&body_str).unwrap();
+            Ok(route_obj)
+        },
+        _ => Err(error::ErrorInternalServerError("Error:route not created.")),
     }
+}
 
-    let signature_v1 = signer.try_sign(&signing_input_v1)?;
-    let signature_v1 = signature_v1.as_bytes().to_vec();
+#[actix_web::main]
+async fn main() {
+    let res = handle_routing_put("http://demo:32546".to_string(), "/ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j".to_string(), "signed-ipns-record.bin".to_string(), "signed-ipns-record.bin".to_string());
+    let route = res.await.unwrap();
+    println!("Extra:{}", route.extra);
+    println!("Peer Id:{}", route.peer_id);
+    println!("type:{}", route.r#type);
+    match route.responses.len() > 1 {
+        true => {
+            for item1 in route.responses.iter() {
+                println!("Peer Id: {}", item1.peer_id);
+                //for item2 in item1.multi_addresses.iter() {
+                //    println!("Multiaddress : {}", item2);
+               // }
+                /*match &item1.multi_addresses {
+                    Some(vector) => {
+                        for item2 in vector.iter() {
+                            println!("Multiaddress : {}", item2);
+                        }
+                    },
+                    None => {
+                        println!("Empty");
+                    }
+                }*/
+            }
+        },
+        _ => { println!("Empty"); },
+    }
 }
