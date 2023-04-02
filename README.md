@@ -221,7 +221,7 @@ DHTs have the following properties:
       
 How does DHT work ?
 
-As a simple example the diagram below represents a ring overlay network(logical network implemented on top of some underlying network) with 6 nodes. To find out which node(peer) will get to store a specific key we just need to hash that key. Each node will have a hash value(Peer Id) and will store 5 keys making our hash table buckets independent nodes in that ring overlay network.
+As a simple example the diagram below represents a ring overlay network(logical network implemented on top of some underlying network) with 6 nodes. To find out which node(peer) will get to store a specific key we just need to hash that key. Each node will have a hash value(Peer Id) and will store 5 keys. Making each node an independent hash table bucket in that ring overlay network.
       
 ![image](https://user-images.githubusercontent.com/76512851/229342962-9ba3226b-e5ed-4c88-a7d9-c2dd405b8b40.png)
       
