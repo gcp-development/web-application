@@ -256,7 +256,7 @@ Copy the signed-ipns-record.bin file to the src path and run the Rust project [a
 [IPNS Name](https://specs.ipfs.tech/ipns/ipns-record/#ipns-name)
 
 ```bash
-/ipfn/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j
+/ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j
 ```
 
 [IPNS Record](https://specs.ipfs.tech/ipns/ipns-record/#ipns-record)
