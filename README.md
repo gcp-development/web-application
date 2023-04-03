@@ -303,7 +303,7 @@ To get the new route created just, run the Rust project [api-v0-routing-get](htt
       
 ![image](https://user-images.githubusercontent.com/76512851/229458025-43cc1879-b034-43c3-aad9-5f1f37263d6c.png)
       
-To resolve the IPNS name k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j we will use the Rust project [api-v0-name-resolve]()
+To resolve the IPNS name k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j we will use the Rust project [api-v0-name-resolve](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-name-resolve)
       
 ![image](https://user-images.githubusercontent.com/76512851/229470868-b3ac421d-e89e-45c4-a3f9-f96c8b181158.png)
 
