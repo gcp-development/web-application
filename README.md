@@ -300,6 +300,9 @@ Copy the signed-ipns-record.bin file to the src path and run the Rust project [a
 ![image](https://user-images.githubusercontent.com/76512851/229452909-4e9da6cc-1944-4a0e-8e81-18c55f68269a.png)
       
 
+To get the new route created just, run the Rust project [api-v0-routing-put](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-routing-put).
+      
+![image](https://user-images.githubusercontent.com/76512851/229458025-43cc1879-b034-43c3-aad9-5f1f37263d6c.png)
       
 
 <hr>
