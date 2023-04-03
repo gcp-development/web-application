@@ -307,10 +307,13 @@ To resolve the IPNS name k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8
       
 ![image](https://user-images.githubusercontent.com/76512851/229470868-b3ac421d-e89e-45c4-a3f9-f96c8b181158.png)
 
+IPFS CID
 ```bash
 /ipfs/QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u
 ```
-
+Note: IPNS names are mutable pointers to immutable pointers IPFS CIDs (immutable because they're derived from the content).
+      
+      
 <hr>
 
 ### Conclusion
