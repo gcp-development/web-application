@@ -153,6 +153,8 @@ Three fundamental principles to understanding IPFS:
 </ul>
 
 The examples provided were developed using the [Kubo RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#kubo-rpc-api-v0-reference) together with the [actix-web](https://docs.rs/actix-web/latest/actix_web/), [awc](https://crates.io/crates/awc) and [actix-multipart-rfc7578](https://crates.io/crates/actix-multipart-rfc7578) crates.
+      
+![image](https://user-images.githubusercontent.com/76512851/229612684-30c3e220-c14f-42b5-860a-36c118b0034f.png)
 
 Note: A Rust implementation of a IFPS node ([iroh](https://iroh.computer/)) is currently being developed. But unfortunately is not mature enough for the examples needed.
 
