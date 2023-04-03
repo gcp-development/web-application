@@ -160,7 +160,7 @@ Note: A Rust implementation of a IFPS node ([iroh](https://iroh.computer/)) is c
       
 #### Unique identification via content addressing
       
-The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is a label used to point to material in IPFS. Import the [book1.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book1.json) using the [(Project Import File)](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-add) file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
+The [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids) is a label used to point to material in IPFS. Import the [book1.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-add/book1.json) using the Rust project [api-v0-add](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-add) file and copy the [CID](https://docs.ipfs.tech/concepts/content-addressing/#content-identifiers-cids).
 
 ![image](https://user-images.githubusercontent.com/76512851/227532596-327ccdf7-1790-4d8b-9dfa-898171c6b192.png)
 
@@ -186,7 +186,7 @@ Import the file [book3.json](https://github.com/gcp-development/web-application/
       
 ![image](https://user-images.githubusercontent.com/76512851/227558570-393b0b19-83aa-4922-a1b6-d282482c4a39.png)
 
-Import the DAG node file [library.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-dag-put/library.json) using the [(Project Create Dag)](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-dag-put).
+Import the DAG node file [library.json](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/api-v0-dag-put/library.json) using the the Rust project [api-v0-dag-put](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-dag-put).
       
 Using the three CIDs of the files already imported(book1.json,book2.json and book3.json) to create a [DAG](http://demo:30009/ipns/docs.ipfs.tech/concepts/merkle-dag/#merkle-directed-acyclic-graphs-dags) in IPFS.
       
