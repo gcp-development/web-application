@@ -319,6 +319,12 @@ Resolve the IPNS Name in the browser (https://ipfs.io/ipns/k2k4r8lpp59iv154i7dfn
 Resolve the IPFS CIDin the browser (https://ipfs.io/ipfs/QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u)
 ![image](https://user-images.githubusercontent.com/76512851/229567352-fcae6bd0-2fd2-473e-ae4c-f6122c92e30e.png)
 
+
+To announce the new IPFS CID to the overlay network just, run the Rust project [api-v0-routing-provide](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-routing-provide).
+
+List of the peer Ids.
+
+![image](https://user-images.githubusercontent.com/76512851/229569317-c39f2a62-4b5d-42e2-b6a4-a5cf81edd9b6.png)
       
 <hr>
 
