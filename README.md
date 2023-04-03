@@ -252,16 +252,10 @@ Copy the private-key-ipns-record.bin file to the src path and run the Rust proje
 Copy the signed-ipns-record.bin file to the src path and run the Rust project [api-v0-name-inspect](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-name-inspect) against the IPNS name /ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j.
       
 ![image](https://user-images.githubusercontent.com/76512851/229359402-e00f5a0e-c78d-418f-8de0-8ff396261ca0.png)
-      
-      
-Run the Rust project [api-v0-routing-put](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-routing-put).
-      
-      
-      
 [IPNS Name](https://specs.ipfs.tech/ipns/ipns-record/#ipns-name)
 
 ```bash
-/ipfn/
+/ipfn/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j
 ```
 
 [IPNS Record](https://specs.ipfs.tech/ipns/ipns-record/#ipns-record)
@@ -299,6 +293,14 @@ Run the Rust project [api-v0-routing-put](https://github.com/gcp-development/web
     }
 }
 ```
+      
+      
+Copy the signed-ipns-record.bin file to the src path and run the Rust project [api-v0-routing-put](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-routing-put).
+
+![image](https://user-images.githubusercontent.com/76512851/229452909-4e9da6cc-1944-4a0e-8e81-18c55f68269a.png)
+      
+
+      
 
 <hr>
 
