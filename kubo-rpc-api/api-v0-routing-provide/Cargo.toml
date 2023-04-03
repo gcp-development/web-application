@@ -1,0 +1,10 @@
+[package]
+name = "api-v0-routing-provide"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.3.1"
+awc = { version = "3.1.1", features = [ "openssl" ] }
+serde = { version = "1.0.158", features = ["derive"] }
+serde_json= "1.0.94"
