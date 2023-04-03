@@ -312,7 +312,13 @@ IPFS CID
 /ipfs/QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u
 ```
 Note: IPNS names are mutable pointers to immutable pointers IPFS CIDs (immutable because they're derived from the content).
-      
+
+IPNS Name (https://ipfs.io/ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j)
+![image](https://user-images.githubusercontent.com/76512851/229567669-c73abb7f-6715-4b1c-bad9-49f5f9e8a01b.png)
+
+IPFS CID (https://ipfs.io/ipfs/QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u)
+![image](https://user-images.githubusercontent.com/76512851/229567352-fcae6bd0-2fd2-473e-ae4c-f6122c92e30e.png)
+
       
 <hr>
 
