@@ -230,12 +230,12 @@ There are other two main types, "IPNS records" (map an [IPNS key](https://specs.
       
 Most of the DHTs implementations support the following 3 basic functions:
 <ul>
-      <li>put (key, value) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a> (Write a key/value pair to the <a href="http://demo:30009/ipns/docs.ipfs.tech/concepts/dht/#routing-tables" target="_self">routing system</a>.)</li>
-      <li>get (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-get<a> (Given a key, query the <a href="http://demo:30009/ipns/docs.ipfs.tech/concepts/dht/#routing-tables" target="_self">routing system</a> for its best value.)</li>
+      <li>put (key, value) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-put" target="_self">Kubo RPC api-v0-routing-put<a> (Write a key/value pair to the <a href="http://docs.ipfs.tech/concepts/dht/#routing-tables" target="_self">routing system</a>.)</li>
+      <li>get (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-get" target="_self">Kubo RPC api-v0-routing-get<a> (Given a key, query the <a href="http://docs.ipfs.tech/concepts/dht/#routing-tables" target="_self">routing system</a> for its best value.)</li>
       <li>provide (key) We are going to use the <a href="http://docs.ipfs.tech/reference/kubo/rpc/#api-v0-routing-provide" target="_self">Kubo RPC api-v0-routing-provide<a> (Announce to the network that we are providing given values.)</li>
 </ul>
 
-How to create an IPNS record ?
+How to create an [IPNS record](http://docs.ipfs.tech/concepts/dht/#ipns-records) ?
 
 Execute the [GO(go1.20.2)](https://go.dev/doc/install) script [ipnsRecord.go](https://github.com/gcp-development/web-application/blob/main/kubo-rpc-api/create-ipns-record/ipnsRecord.go).
       
