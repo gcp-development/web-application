@@ -13,7 +13,7 @@ pub struct Key {
     pub name: String,
 }
 
-async fn handle_add_file(api_server:String,arg:String,name:String,path:String) -> Result<Key, Error> {
+async fn handle_key_import(api_server:String,arg:String,name:String,path:String) -> Result<Key, Error> {
     let base_address = api_server + "/api/v0/key/import?arg=";
     let url = base_address + arg.as_str();
 
@@ -42,7 +42,7 @@ async fn handle_add_file(api_server:String,arg:String,name:String,path:String) -
 
 #[actix_web::main]
 async fn main() {
-    let res = handle_add_file("http://demo:32546".to_string(), "book3.json".to_string(), "private-key-ipns-record.bin".to_string(), "private-key-ipns-record.bin".to_string());
+    let res = handle_key_import("http://demo:32546".to_string(), "book3.json".to_string(), "private-key-ipns-record.bin".to_string(), "private-key-ipns-record.bin".to_string());
     let key = res.await.unwrap();
     println!("Id:{}", key.id);
     println!("Name:{}", key.name);

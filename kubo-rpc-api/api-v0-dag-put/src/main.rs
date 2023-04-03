@@ -17,7 +17,7 @@ pub struct Record {
     pub cid_string: String,
 }
 
-async fn handle_add_dag(api_server:String,name:String,path:String) -> Result<Dag, Error> {
+async fn handle_dag_put(api_server:String,name:String,path:String) -> Result<Dag, Error> {
 
     let url=api_server+ "/api/v0/dag/put";
 
@@ -46,7 +46,7 @@ async fn handle_add_dag(api_server:String,name:String,path:String) -> Result<Dag
 
 #[actix_web::main]
 async fn main() {
-    let res = handle_add_dag("http://demo:32546".to_string(), "library.json".to_string(), "library.json".to_string());
+    let res = handle_dag_put("http://demo:32546".to_string(), "library.json".to_string(), "library.json".to_string());
     let dag = res.await.unwrap();
     println!("Cid:{}", dag.cid.cid_string);
 }

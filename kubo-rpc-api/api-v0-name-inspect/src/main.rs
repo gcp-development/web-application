@@ -73,7 +73,7 @@ struct IpnsRecord {
     pub validation: Option<Validation>,
 }
 
-async fn handle_inspect_ipns_record(api_server:String,verify:String,name:String,path:String) -> Result<IpnsRecord, Error> {
+async fn handle_name_inspect(api_server:String,verify:String,name:String,path:String) -> Result<IpnsRecord, Error> {
     let base_address = api_server + "/api/v0/name/inspect?verify=";
     let url = base_address + verify.as_str();
 
@@ -102,7 +102,7 @@ async fn handle_inspect_ipns_record(api_server:String,verify:String,name:String,
 
 #[actix_web::main]
 async fn main() {
-    let res = handle_inspect_ipns_record("http://demo:32546".to_string(), "/ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j".to_string(), "signed-ipns-record.bin".to_string(), "signed-ipns-record.bin".to_string());
+    let res = handle_name_inspect("http://demo:32546".to_string(), "/ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j".to_string(), "signed-ipns-record.bin".to_string(), "signed-ipns-record.bin".to_string());
     let ipns_record = res.await.unwrap();
     match ipns_record.validation {
         Some(item) => {
