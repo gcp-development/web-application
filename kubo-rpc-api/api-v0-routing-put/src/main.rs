@@ -5,30 +5,20 @@ use actix_web::http::StatusCode;
 use serde::{Deserialize, Deserializer, Serialize};
 use std::time::Duration;
 
-
-
 #[derive(Serialize, Deserialize, Debug, Clone)]
 struct Response {
-    #[serde(rename = "Addrs", deserialize_with = "nullable_vector")]
+    #[serde(rename = "Addrs")]
     pub multi_addresses: Vec<String>,
     #[serde(rename = "ID")]
     pub peer_id: String,
 }
 
-fn nullable_vector<'de, D>(deserializer: D) -> Result<Vec<String>, D::Error>
-    where D: Deserializer<'de>
+fn null_checker<'de, D, T>(deserializer: D) -> Result<T, D::Error>
+    where
+        D: Deserializer<'de>,
+        T: Deserialize<'de> + Default
 {
-    let opt = Option::deserialize(deserializer)?;
-    match opt {
-        None => {
-            let x= Vec::new();
-            Ok(x)
-        }
-        Some(x) => {
-            Ok(x)
-        }
-    }
-    //Ok(opt.unwrap_or_else( Vec<serde_json::Value::String()>::new()))
+    Ok(Option::<T>::deserialize(deserializer)?.unwrap_or_default())
 }
 
 #[derive(Serialize, Deserialize)]
@@ -37,7 +27,7 @@ struct Route {
     pub extra: String,
     #[serde(rename = "ID")]
     pub peer_id: String,
-    #[serde(rename = "Responses")]
+    #[serde(rename = "Responses", deserialize_with = "null_checker")]
     pub responses: Vec<Response>,
     #[serde(rename = "Type")]
     pub r#type: i32,
@@ -64,7 +54,6 @@ async fn handle_routing_put(api_server:String,arg:String,name:String,path:String
         StatusCode::OK => {
             let body_bytes = response.body().await.unwrap();
             let body_str = std::str::from_utf8(&body_bytes).unwrap();
-            println!("{}",body_str);
             let route_obj: Route = serde_json::from_str(&body_str).unwrap();
             Ok(route_obj)
         },
@@ -83,19 +72,9 @@ async fn main() {
         true => {
             for item1 in route.responses.iter() {
                 println!("Peer Id: {}", item1.peer_id);
-                //for item2 in item1.multi_addresses.iter() {
-                //    println!("Multiaddress : {}", item2);
-               // }
-                /*match &item1.multi_addresses {
-                    Some(vector) => {
-                        for item2 in vector.iter() {
-                            println!("Multiaddress : {}", item2);
-                        }
-                    },
-                    None => {
-                        println!("Empty");
-                    }
-                }*/
+                for item2 in item1.multi_addresses.iter() {
+                    println!("Multiaddress : {}", item2);
+                }
             }
         },
         _ => { println!("Empty"); },
