@@ -20,7 +20,7 @@ fn null_checker<'de, D, T>(deserializer: D) -> Result<T, D::Error>
     Ok(Option::<T>::deserialize(deserializer)?.unwrap_or_default())
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 struct Route {
     #[serde(rename = "Extra")]
     pub extra: String,
@@ -32,7 +32,7 @@ struct Route {
     pub r#type: i32,
 }
 
-async fn handle_routing_provide(api_server:String,arg:String) -> Result<Route, Error> {
+async fn handle_routing_provide(api_server:String,arg:String) -> Result<Vec<Route>, Error> {
     let base_address = api_server + "/api/v0/routing/provide?arg=";
     let url = base_address + arg.as_str();
 
@@ -49,8 +49,12 @@ async fn handle_routing_provide(api_server:String,arg:String) -> Result<Route, E
         StatusCode::OK => {
             let body_bytes = response.body().await.unwrap();
             let body_str = std::str::from_utf8(&body_bytes).unwrap();
-            let route_obj: Route = serde_json::from_str(&body_str).unwrap();
-            Ok(route_obj)
+            let routes_iter = serde_json::Deserializer::from_str(body_str).into_iter::<Route>();
+            let mut routes_obj: Vec<Route> = Vec::new();
+            for route in routes_iter {
+                routes_obj.push(route.unwrap().clone());
+            }
+            Ok(routes_obj)
         },
         _ => Err(error::ErrorInternalServerError("Error:route not created.")),
     }
@@ -59,11 +63,14 @@ async fn handle_routing_provide(api_server:String,arg:String) -> Result<Route, E
 #[actix_web::main]
 async fn main() {
     let res = handle_routing_provide("http://demo:32546".to_string(), "QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u".to_string());
-    let route = res.await.unwrap();
-    println!("Extra:{}", route.extra);
-    println!("Peer Id:{}", route.peer_id);
-    println!("type:{}", route.r#type);
-    match route.responses.len() > 1 {
+    let routes = res.await.unwrap();
+    for route in routes.iter() {
+        println!("Extra:{}", route.extra);
+        println!("Peer Id:{}", route.peer_id);
+        println!("type:{}", route.r#type);
+    }
+
+    /*match route.responses.len() > 1 {
         true => {
             for item1 in route.responses.iter() {
                 println!("Peer Id: {}", item1.peer_id);
@@ -73,5 +80,5 @@ async fn main() {
             }
         },
         _ => { println!("Empty"); },
-    }
+    }*/
 }

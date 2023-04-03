@@ -63,7 +63,7 @@ async fn handle_routing_put(api_server:String,arg:String,name:String,path:String
 
 #[actix_web::main]
 async fn main() {
-    let res = handle_routing_put("http://demo:32546".to_string(), "/ipns/k2k4r8lpp59iv154i7dfnd5m99tke25rqhqaybpssnk3ds5h5t5boe8j".to_string(), "signed-ipns-record.bin".to_string(), "signed-ipns-record.bin".to_string());
+    let res = handle_routing_put("http://demo:32546".to_string(), "/ipns/k2k4r8lbv082sldx7z4vcikdhqjl40v3a8nxsyay6adrxevch3egzu6t".to_string(), "signed-ipns-record.bin".to_string(), "signed-ipns-record.bin".to_string());
     let route = res.await.unwrap();
     println!("Extra:{}", route.extra);
     println!("Peer Id:{}", route.peer_id);

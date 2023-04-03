@@ -262,6 +262,7 @@ dependencies = [
  "actix-web",
  "awc",
  "serde",
+ "serde-jsonlines",
  "serde_json",
 ]
 
@@ -942,6 +943,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3c04e8343c3daeec41f58990b9d77068df31209f2af111e059e9fe9646693065"
 dependencies = [
  "serde_derive",
+]
+
+[[package]]
+name = "serde-jsonlines"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4684abdec99c1de7e507a3516c82385ff74d54c385973846b079bfd9f5920d35"
+dependencies = [
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
