@@ -1,6 +1,6 @@
 # api-v0-key-import
 
-This Rust RESTful API was developed using the [Intellij Community](https://www.jetbrains.com/idea/download/#section=linux) with the [Rust plugin](https://www.jetbrains.com/rust/).
+This project was developed using the [Intellij Community](https://www.jetbrains.com/idea/download/#section=linux) with the [Rust plugin](https://www.jetbrains.com/rust/).
 
 To compile in release mode.
 
