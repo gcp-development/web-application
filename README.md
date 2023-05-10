@@ -156,7 +156,7 @@ The examples provided were developed using the [Kubo RPC API](https://docs.ipfs.
       
 ![image](https://user-images.githubusercontent.com/76512851/229612684-30c3e220-c14f-42b5-860a-36c118b0034f.png)
 
-Note: A Rust implementation of a IFPS node ([iroh](https://iroh.computer/)) is currently being developed. But unfortunately is not mature enough for the examples needed.
+Note: A Rust implementation of a IPFS node ([iroh](https://iroh.computer/)) is currently being developed. But unfortunately is not mature enough for the examples needed.
 
 <hr>
       
@@ -320,7 +320,6 @@ Resolve the IPNS Name in the browser (https://ipfs.io/ipns/k2k4r8lpp59iv154i7dfn
 
 Resolve the IPFS CID in the browser (https://ipfs.io/ipfs/QmUfV4m2PUM559LSvDsJkoz1KofTVq25RDXwW5uMdjNb4u)
 ![image](https://user-images.githubusercontent.com/76512851/229567352-fcae6bd0-2fd2-473e-ae4c-f6122c92e30e.png)
-
 
 To announce the new IPFS CID to the overlay network just, run the Rust project [api-v0-routing-provide](https://github.com/gcp-development/web-application/tree/main/kubo-rpc-api/api-v0-routing-provide).
 
