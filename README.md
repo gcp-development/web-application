@@ -23,7 +23,7 @@ The examples developed, will be focused on the back-end services and distributed
 
 ## Web Application
 
-Our main objective is to build a distributed web application that are safe, efficient, highly performant, and do not "break the piggy bank" to operate and maintain.
+Our main objective is to understand how to build a distributed web application that are safe, efficient, highly performant, and do not "break the piggy bank" to operate and maintain. We are going to look at two type of storages a central storage(Postgres) and a distributed storage (IPFS).
 
 With that in mind two key components were chosen to achieve those objectives:
 <ul>
