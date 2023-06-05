@@ -6,7 +6,7 @@ Install the React 18 version.
 ```bash
 nvm install 18.14.2
 ```
-Note:nvm install node # "node" is an alias for the latest version.
+Note:nvm install node, "node" is an alias for the latest version.
 
 List installed versions.
 ```bash
