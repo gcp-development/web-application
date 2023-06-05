@@ -2,7 +2,7 @@
 
 This [React App project with TypeScript](https://create-react-app.dev/docs/adding-typescript/), was developed using [Visual Code](https://code.visualstudio.com/download) and using [Firefox React Developer Tools](https://addons.mozilla.org/en-GB/firefox/addon/react-devtools/)
 
-Install the React 18 version.
+Install the node 18.14.2 version.
 ```bash
 nvm install 18.14.2
 ```
